@@ -69,6 +69,14 @@ body { background-color: #FBF9F4; }
       </div>
     </div>
 
+    <!-- Opening quote (used in Einstieg-Station) -->
+    <div id="quoteBox" class="mb-8 max-w-2xl w-full hidden">
+      <blockquote class="relative px-6 md:px-8 py-5 border-l-2 border-secondary/50 bg-surface-container-low rounded-r-lg">
+        <p id="quoteText" class="font-headline italic text-lg md:text-xl text-primary-container leading-relaxed"></p>
+        <footer id="quoteAuthor" class="font-label text-[11px] uppercase tracking-widest text-secondary mt-3"></footer>
+      </blockquote>
+    </div>
+
     <div id="descriptionBox" class="mb-8 max-w-2xl w-full hidden">
       <p id="description" class="text-lg md:text-xl font-light text-on-background/80 leading-relaxed whitespace-pre-line"></p>
     </div>
@@ -153,6 +161,9 @@ const el = {
   phaseTitle: document.getElementById('phaseTitle'),
   hostNoteBox: document.getElementById('hostNoteBox'),
   hostNote: document.getElementById('hostNote'),
+  quoteBox: document.getElementById('quoteBox'),
+  quoteText: document.getElementById('quoteText'),
+  quoteAuthor: document.getElementById('quoteAuthor'),
   descriptionBox: document.getElementById('descriptionBox'),
   description: document.getElementById('description'),
   questionBox: document.getElementById('questionBox'),
@@ -250,6 +261,7 @@ function renderItems(items) {
 
 function hideAllContentBoxes() {
   el.hostNoteBox.classList.add('hidden');
+  el.quoteBox.classList.add('hidden');
   el.descriptionBox.classList.add('hidden');
   el.questionBox.classList.add('hidden');
   el.itemsBox.classList.add('hidden');
@@ -274,6 +286,12 @@ function render() {
     el.feedbackForm.classList.remove('hidden');
   } else {
     if (s.hostNote) { el.hostNote.textContent = s.hostNote; el.hostNoteBox.classList.remove('hidden'); }
+    if (s.quote) {
+      el.quoteText.textContent = '„' + s.quote.text + '"';
+      el.quoteAuthor.textContent = s.quote.author ? '— ' + s.quote.author : '';
+      el.quoteAuthor.style.display = s.quote.author ? 'block' : 'none';
+      el.quoteBox.classList.remove('hidden');
+    }
     if (s.description) { el.description.textContent = s.description; el.descriptionBox.classList.remove('hidden'); }
     if (s.question) { el.question.textContent = s.question; el.questionBox.classList.remove('hidden'); }
     if (s.items && s.items.length) {
