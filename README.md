@@ -24,4 +24,10 @@ Strukturierte Themenabende für kleine Gruppen. Kein Moderator nötig — nur ih
 
 ## Deployment
 
-Cloudflare Pages ist mit diesem Repo verbunden. Jeder Push auf `main` → Auto-Deploy.
+GitHub Pages ist auf `main` aktiviert. Jeder Push auf `main` löst einen automatischen Build aus.
+
+- **Live:** https://tilian86.github.io/lebensfunken/
+- **Build-Status:** `gh api repos/tilian86/lebensfunken/pages --jq .status`
+- **Deploy-Workflow:** `git add . && git commit -m "…" && git push`
+
+Custom Domain (optional): CNAME-Datei im Repo anlegen + DNS-Eintrag auf `tilian86.github.io`.
