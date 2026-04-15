@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lebensfunken — Abende, die hängen bleiben</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#f0bd8b",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "secondary-fixed": "#ffdcc4",
+                    "tertiary-fixed": "#ffdcbd",
+                    "tertiary": "#261200",
+                    "secondary": "#924c00",
+                    "on-tertiary-container": "#b7895b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#623f18",
+                    "inverse-surface": "#30312e",
+                    "primary-fixed": "#d0e9d4",
+                    "secondary-fixed-dim": "#ffb781",
+                    "secondary-container": "#fda055",
+                    "primary": "#061b0e",
+                    "primary-container": "#1b3022",
+                    "surface-variant": "#e4e2dd",
+                    "on-secondary-fixed-variant": "#6f3800",
+                    "surface-dim": "#dbdad5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#0b2013",
+                    "inverse-on-surface": "#f2f1ec",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#422401",
+                    "inverse-primary": "#b4cdb8",
+                    "on-secondary-fixed": "#2f1400",
+                    "outline": "#737973",
+                    "surface-container-highest": "#e4e2dd",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "on-background": "#1b1c19",
+                    "on-primary-container": "#819986",
+                    "surface-bright": "#fbf9f4",
+                    "surface-tint": "#4d6453",
+                    "on-surface-variant": "#434843",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#703800",
+                    "background": "#fbf9f4",
+                    "surface-container-high": "#eae8e3",
+                    "surface-container": "#f0eee9",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c3c8c1",
+                    "on-surface": "#1b1c19",
+                    "on-tertiary-fixed": "#2c1600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 150px;
+            opacity: 1;
+            background-color: #FBF9F4;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-secondary-fixed">
+<div class="grain-overlay"></div>
+<nav class="w-full top-0 border-none bg-[#FBF9F4] sticky z-50">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<a href="index.html" class="text-2xl font-serif italic text-[#1B3022]">Lebensfunken</a>
+<div class="hidden md:flex items-center space-y-0 space-x-12 font-['Noto_Serif'] tracking-tight leading-relaxed">
+<a class="text-[#1B1C19] font-bold border-b border-[#924C00] hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
+<a class="text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
+<a class="text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="#wie-es-funktioniert">Wie's geht</a>
+</div>
+</div>
+<div class="bg-[#F5F3EE] h-[1px] w-full block"></div>
+</nav>
+<main class="max-w-screen-2xl mx-auto px-8">
+<section class="py-24 md:py-40 flex flex-col items-start max-w-4xl">
+<p class="font-label text-xs uppercase tracking-widest text-secondary mb-6">Zeit für Tiefe</p>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tight text-primary-container leading-[1.1] mb-8">
+Abende, die hängen bleiben.
+</h1>
+<p class="font-headline italic text-2xl md:text-3xl text-on-surface-variant leading-relaxed mb-12 max-w-2xl">
+Strukturierte Themenabende für kleine Gruppen. Keine Moderation nötig — nur ihr und ein gutes Gespräch.
+</p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a href="themen.html" class="bg-primary-container text-on-primary px-10 py-5 text-sm uppercase tracking-widest font-semibold rounded-lg hover:opacity-90 transition-opacity active:scale-[0.98]">
+Themenabend starten
+</a>
+<a href="#wie-es-funktioniert" class="border border-outline-variant/30 text-on-background px-10 py-5 text-sm uppercase tracking-widest font-semibold rounded-lg hover:bg-surface-container-low transition-colors">
+Wie es funktioniert
+</a>
+</div>
+</section>
+<div class="flex justify-center py-12">
+<div class="flex gap-4">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+</div>
+</div>
+<section id="wie-es-funktioniert" class="py-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-6">
+<span class="font-headline italic text-4xl text-secondary/30">01</span>
+<h3 class="font-headline text-2xl font-bold text-primary-container">Thema wählen</h3>
+<p class="text-on-surface-variant leading-relaxed">
+Wähle aus kuratierten Themenfeldern den Funken aus, der deine Gruppe am meisten inspiriert. Jedes Set enthält sorgfältig gestaltete Impulse.
+</p>
+</div>
+<div class="space-y-6">
+<span class="font-headline italic text-4xl text-secondary/30">02</span>
+<h3 class="font-headline text-2xl font-bold text-primary-container">Gruppe einladen</h3>
+<p class="text-on-surface-variant leading-relaxed">
+Teile den digitalen Salon mit deinen Freunden. Ob in Person oder Remote – unser Interface begleitet euch durch den Abend.
+</p>
+</div>
+<div class="space-y-6">
+<span class="font-headline italic text-4xl text-secondary/30">03</span>
+<h3 class="font-headline text-2xl font-bold text-primary-container">Durch den Abend führen lassen</h3>
+<p class="text-on-surface-variant leading-relaxed">
+Kein Gastgeber-Stress. Lebensfunken gibt die Struktur vor, stellt die richtigen Fragen zur richtigen Zeit und lässt Raum für echte Begegnung.
+</p>
+</div>
+</div>
+</section>
+<section class="py-24">
+<div class="mb-16">
+<p class="font-label text-xs uppercase tracking-widest text-secondary mb-4">Themensets</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-primary-container">Kuratierte Funken</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6">
+<a href="thema.html?id=bindung" class="md:col-span-6 lg:col-span-8 lg:row-span-2 relative bg-primary-container p-6 rounded-lg group cursor-pointer overflow-hidden">
+<div class="aspect-[4/3] lg:aspect-auto lg:h-[calc(100%-120px)] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Wine glasses in candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBor9suvn-xFQGUPG_UbB1MaifycThZmUPJRX2-WNWOZhly_8jdzzkA0MXabSI3-CEd2HO7gldmaQ4-kX4hYZWBIyyCZFgv9DLNYB5DZ2WY0Ss7C_8QnhAZN_eYWD9F3AoqgOh5n9K9Wv4Y-UIUqZyG-VZhlWBPWYaTNP70rpZLQCoOBq-9VsaXRJ62v8xo7SYTLEnELzwn6bO3TdDlXs2FUoJlD0aD0IkcIU5xUMq9M1cQ_VP1yDJSW_aevQpAwCZKrfWF0ds0EHbX"/>
+<div class="absolute inset-0 bg-primary-container/20 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute top-4 left-4 bg-secondary text-on-primary px-3 py-1 text-[10px] uppercase tracking-widest font-semibold rounded">Ausgearbeitet</span>
+</div>
+<h4 class="font-headline text-2xl md:text-3xl font-bold text-on-primary mb-2">Welches Bindungsmuster prägt mich?</h4>
+<p class="text-xs uppercase tracking-widest text-on-primary/60">2 Std. 5 Min. • 4-6 Personen • 7 Stationen</p>
+</a>
+<a href="thema.html?id=werte" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Notebook" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKT8rovh0Bg2sBiYCzihK4d2xg68wZRDcA5CVOfjhFK8Lq_xMt-JauAkJiVQjLFp9UUeQl2Ol7emWI9MuGnPjDSas-kTya6GMXgxEvJUGMj0J94FU8-qWfiIZyzhrGNrYE2JlcZ7JbTcpgJHPQhr9GPUr46yrXhA6QwreP3M-rC0bxglm3EuO1vjc5S56wa1T3L8l1YaGCa7CqeH1qG__3IKcDU-TDTwFQsxP4NuXcMihsY_JcQdKl7XoCvvO-E0LcQjjz6s-UdEHn"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Was sind meine Werte?</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">1 Std. 50 Min. • 4-8 Personen</p>
+</a>
+<a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer md:mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Candle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx3zc_372HZ2FnhMqRihODyYdH0O6QMhHorRxsi1pNG5H6yo27lR3uFj5kEpa_bZr6NyMTZMkNLzxhVFFrWOAWg62u4rwi9mqyFdCHrVY3-O-ZOBWT-4kuNVD5hHIfeuAHO8OfvTaFZmYMfj-kYak3WqVQZF6RIYra-FyBU_I2AjVbDZVt0JjNJj2RSBpOn2Us3TyGl-oc_Da2fdvd3_WYWlkDPaFgXfDXm_5WLY5Q9p-ssyPjMUjYVmwfk1RS19Dq2edt7wPpu1R2"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Was ist mir wirklich wichtig?</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">90 Minuten • Fokusabend</p>
+</a>
+<a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxbjqrLpObJ-WD47GvSPuVQIAi2NVN5ZnoVNgvrsdtCZLaj4qrsZF2HrzHhwsJxLgvnVJILKatnzlr-owOjC4Vwjsj8zZLzjxILS_tEIw2mEMKfb-zeXJMntnWcVcuPa9PYApGzgjcOkjrCAXO4pfQeKu2mkuLgmuZAib-diXx3G3-UD0YnoBhDw7Ce18lglGHQsmkYnYtlXA3uXQy7ubFaeStRwPaH_tvjawicIlIFmIJNz1hbpyZCZKx3FSF1NFKo_bj2ggPwLZZ"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Wofür stehe ich?</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">120 Minuten • Intensiv</p>
+</a>
+<a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Landscape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGJu-_hBQUfMgGqaCQAYs1H6AFjL5dK4gVKhHP7NsoVNFIbSk-TQyo0-fEJqwcpbO9GCCSDlhI3HMYtGoY4EQ7NHiBklOiV0LQ-CNBeklSYmw0yNL3mphU1Ocav-12_PYQKRjuxpj6DPJLEhIWa4iumFZihxaG20tE0r3Ox3AeL_Phj3b3XJy3cUtKvCKFYcOfc7HUj1kqmdYtWMqD8-i_IAyHfDHsEffMyYqANt4NMTHQLEHn1fcI3Hn-g7kqXJF3g1X8khkw0odF"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Mein idealer Tag</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Visionary Session</p>
+</a>
+<a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer md:-mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Wine glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBor9suvn-xFQGUPG_UbB1MaifycThZmUPJRX2-WNWOZhly_8jdzzkA0MXabSI3-CEd2HO7gldmaQ4-kX4hYZWBIyyCZFgv9DLNYB5DZ2WY0Ss7C_8QnhAZN_eYWD9F3AoqgOh5n9K9Wv4Y-UIUqZyG-VZhlWBPWYaTNP70rpZLQCoOBq-9VsaXRJ62v8xo7SYTLEnELzwn6bO3TdDlXs2FUoJlD0aD0IkcIU5xUMq9M1cQ_VP1yDJSW_aevQpAwCZKrfWF0ds0EHbX"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Beziehungen, die mich prägen</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Emotional Connectivity</p>
+</a>
+<a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Night sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASxrTq6qbyjcPIszUistGKA093J37XGuKEfXb7-hB0RKkT2HvXmspPfpdXuWkgqmBwjOialAQhLeV7nZvf_8ywA6kv8uYw_yqrgYfJZYUn5_x7sPkbUMe-WmqC8VlDNAhfply8WJlUZxo0ovwfs0z7nWfJzGGjckVrDJg4W-q5KFtH6OxwdK56mFymrmK3aO1nDuY1lhm6brUvLXgXgkhnDEyN_X6NpKBcEpNCuAZLTtT1XXxPR6ichv8AudBs5fTwVEpz-JqXpuf-"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">In 10 Jahren</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Future Pathing</p>
+</a>
+</div>
+</section>
+<section class="py-32 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+<div class="max-w-4xl mx-auto space-y-24">
+<blockquote class="relative">
+<span class="material-symbols-outlined absolute -top-10 -left-10 text-6xl text-secondary/10">format_quote</span>
+<p class="font-headline text-3xl md:text-4xl text-primary-container leading-snug">
+„Wir dachten, wir kennen uns in- und auswendig. Lebensfunken hat uns Fragen gestellt, die wir uns in zehn Jahren Freundschaft nie getraut haben."
+</p>
+<footer class="mt-8 font-label text-sm uppercase tracking-widest text-secondary">— Sarah &amp; Jonas, Berlin</footer>
+</blockquote>
+<blockquote class="relative md:pl-24">
+<p class="font-headline text-3xl md:text-4xl text-primary-container leading-snug">
+„Ein Abend ohne Handys, ohne Oberflächlichkeit. Ein Abend, der sich anfühlte wie ein Kapitel in einem guten Buch."
+</p>
+<footer class="mt-8 font-label text-sm uppercase tracking-widest text-secondary">— Elena, Gastgeberin</footer>
+</blockquote>
+</div>
+</section>
+<section class="py-24 mb-24 bg-primary-container p-12 md:p-24 rounded-xl text-center">
+<h2 class="font-headline text-4xl md:text-6xl text-on-primary font-bold mb-8 italic">Bereit für den ersten Funken?</h2>
+<p class="text-on-primary/70 text-lg mb-12 max-w-xl mx-auto">
+Wähle dein Thema und starte einen Abend, über den ihr noch lange sprechen werdet.
+</p>
+<a href="themen.html" class="inline-block bg-secondary text-on-primary px-12 py-6 text-sm uppercase tracking-widest font-bold rounded-lg hover:bg-on-tertiary-container transition-colors">
+Themenkatalog ansehen
+</a>
+</section>
+</main>
+<footer class="bg-[#F0EEE9] text-[#1B3022] font-['Inter'] text-xs tracking-wider uppercase border-t-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-sm mb-8 md:mb-0 normal-case tracking-normal">Lebensfunken</div>
+<div class="flex flex-col md:flex-row gap-8 items-center mb-8 md:mb-0">
+<a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Philosophie</a>
+<a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Kontakt</a>
+<a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Impressum</a>
+</div>
+<div class="text-[#1B1C19]/50">© 2026 Lebensfunken</div>
+</div>
+</footer>
+<script>
+// Map theme titles to URL-safe IDs used by thema.html
+const TITLE_TO_ID = {
+  'Was sind meine Werte?': 'werte',
+  'Was ist mir wirklich wichtig?': 'prioritaeten',
+  'Wofür stehe ich?': 'stehe',
+  'Mein idealer Tag': 'tag',
+  'Beziehungen, die mich prägen': 'beziehungen',
+  'In 10 Jahren': 'zehnjahre'
+};
+document.querySelectorAll('a[href="thema.html"]').forEach(a => {
+  const titleEl = a.querySelector('h3, h4') || a.closest('article')?.querySelector('h3, h4');
+  if (titleEl) {
+    const id = TITLE_TO_ID[titleEl.textContent.trim()];
+    if (id) a.href = 'thema.html?id=' + id;
+  }
+});
+</script>
+</body>
+</html>

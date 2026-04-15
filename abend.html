@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abend-Flow — Lebensfunken</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#f0bd8b", "on-primary-fixed-variant": "#364c3c", "secondary-fixed": "#ffdcc4", "tertiary-fixed": "#ffdcbd", "tertiary": "#261200", "secondary": "#924c00", "on-tertiary-container": "#b7895b", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#623f18", "inverse-surface": "#30312e", "primary-fixed": "#d0e9d4", "secondary-fixed-dim": "#ffb781", "secondary-container": "#fda055", "primary": "#061b0e", "primary-container": "#1b3022", "surface-variant": "#e4e2dd", "on-secondary-fixed-variant": "#6f3800", "surface-dim": "#dbdad5", "on-primary": "#ffffff", "on-primary-fixed": "#0b2013", "inverse-on-surface": "#f2f1ec", "error": "#ba1a1a", "tertiary-container": "#422401", "inverse-primary": "#b4cdb8", "on-secondary-fixed": "#2f1400", "outline": "#737973", "surface-container-highest": "#e4e2dd", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-background": "#1b1c19", "on-primary-container": "#819986", "surface-bright": "#fbf9f4", "surface-tint": "#4d6453", "on-surface-variant": "#434843", "on-tertiary": "#ffffff", "surface-container-low": "#f5f3ee", "primary-fixed-dim": "#b4cdb8", "on-secondary": "#ffffff", "surface": "#fbf9f4", "on-secondary-container": "#703800", "background": "#fbf9f4", "surface-container-high": "#eae8e3", "surface-container": "#f0eee9", "on-error": "#ffffff", "outline-variant": "#c3c8c1", "on-surface": "#1b1c19", "on-tertiary-fixed": "#2c1600"
+            },
+            "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            "fontFamily": {"headline": ["Noto Serif"], "body": ["Inter"], "label": ["Inter"]}
+          },
+        },
+      }
+    </script>
+<style>
+body { background-color: #FBF9F4; }
+.film-grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.02; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.fadein { animation: fadein .3s ease-out; }
+@keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body class="font-body text-on-background selection:bg-on-tertiary-container/20">
+<div class="film-grain"></div>
+<main class="min-h-screen w-full flex flex-col p-6 md:p-12 relative">
+<!-- Header -->
+<header class="w-full max-w-screen-2xl mx-auto flex justify-between items-start opacity-70 mb-8">
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-1" id="themeLabel">Abend-Flow</span>
+<a href="index.html" class="font-headline italic text-xl text-primary-container">Lebensfunken</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right hidden md:block">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60 block">Timer</span>
+<span id="timer" class="font-headline text-3xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
+</div>
+<a id="closeLink" href="thema.html" class="p-2 hover:bg-surface-container transition-colors rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</a>
+</div>
+</header>
+
+<!-- Content Section -->
+<section class="flex-1 w-full max-w-4xl mx-auto flex flex-col items-center justify-center py-8">
+  <!-- Progress + phase label -->
+  <div class="mb-8 text-center">
+    <p id="phaseLabel" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-3">—</p>
+    <div id="progressBar" class="flex items-center gap-2 justify-center"></div>
+  </div>
+
+  <!-- Mobile timer (visible only on small screens) -->
+  <div class="md:hidden mb-6 text-center">
+    <span id="timerMobile" class="font-headline text-5xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
+  </div>
+
+  <!-- Phase title -->
+  <h1 id="phaseTitle" class="font-headline text-3xl md:text-5xl text-primary-container leading-tight tracking-tight mb-8 text-center fadein">
+    —
+  </h1>
+
+  <!-- Host note (small label with context) -->
+  <div id="hostNoteBox" class="mb-8 max-w-2xl w-full hidden">
+    <div class="flex items-start gap-3 bg-surface-container-low rounded-lg p-4 border-l-2 border-secondary/40">
+      <span class="material-symbols-outlined text-secondary/70 mt-0.5 text-lg">record_voice_over</span>
+      <p id="hostNote" class="text-sm text-on-surface-variant leading-relaxed italic"></p>
+    </div>
+  </div>
+
+  <!-- Description (body text, optionally with paragraphs) -->
+  <div id="descriptionBox" class="mb-8 max-w-2xl w-full hidden">
+    <p id="description" class="text-lg md:text-xl font-light text-on-background/80 leading-relaxed whitespace-pre-line"></p>
+  </div>
+
+  <!-- Question (highlighted italic) -->
+  <div id="questionBox" class="mb-10 max-w-2xl w-full hidden">
+    <p id="question" class="text-xl md:text-3xl font-headline italic text-primary-container text-center leading-snug"></p>
+  </div>
+
+  <!-- Items grid (for typology / scenarios / lists) -->
+  <div id="itemsBox" class="mb-10 w-full max-w-5xl hidden">
+    <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-outline-variant/20">
+  <button id="prevBtn" class="flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors disabled:opacity-30 disabled:cursor-not-allowed order-2 md:order-1" disabled>
+    <span class="material-symbols-outlined text-base">arrow_back</span>
+    <span class="font-label text-xs uppercase tracking-widest">Zurück</span>
+  </button>
+  <div class="flex items-center gap-6 md:gap-8 order-1 md:order-2">
+    <button id="toggleTimerBtn" class="group flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors">
+      <span id="toggleTimerIcon" class="material-symbols-outlined text-lg">pause</span>
+      <span id="toggleTimerLabel" class="font-label text-xs uppercase tracking-widest hidden md:inline">Timer pausieren</span>
+    </button>
+    <button id="nextBtn" class="bg-primary-container text-on-primary px-8 md:px-10 py-4 md:py-5 rounded-lg font-label text-xs md:text-sm uppercase tracking-[0.15em] flex items-center gap-3 md:gap-4 hover:bg-primary transition-all active:scale-[0.98]">
+      <span id="nextBtnLabel">Weiter</span>
+      <span class="material-symbols-outlined text-base">arrow_forward</span>
+    </button>
+  </div>
+  <div class="hidden md:block order-3 w-24"></div>
+</footer>
+
+<!-- Decorative corners -->
+<div class="absolute bottom-0 left-0 p-12 opacity-10 pointer-events-none hidden md:block">
+  <div class="w-64 h-64 border-l border-b border-primary-container rounded-bl-xl"></div>
+</div>
+</main>
+<script src="themes.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+const themaId = params.get('thema') || 'bindung';
+const theme = window.THEMES[themaId] || window.THEMES.bindung;
+
+let currentIdx = 0;
+let timeLeft = theme.stations[0].duration;
+let timerInterval = null;
+let paused = false;
+
+const el = {
+  themeLabel: document.getElementById('themeLabel'),
+  phaseLabel: document.getElementById('phaseLabel'),
+  progressBar: document.getElementById('progressBar'),
+  phaseTitle: document.getElementById('phaseTitle'),
+  hostNoteBox: document.getElementById('hostNoteBox'),
+  hostNote: document.getElementById('hostNote'),
+  descriptionBox: document.getElementById('descriptionBox'),
+  description: document.getElementById('description'),
+  questionBox: document.getElementById('questionBox'),
+  question: document.getElementById('question'),
+  itemsBox: document.getElementById('itemsBox'),
+  itemsGrid: document.getElementById('itemsGrid'),
+  timer: document.getElementById('timer'),
+  timerMobile: document.getElementById('timerMobile'),
+  prevBtn: document.getElementById('prevBtn'),
+  nextBtn: document.getElementById('nextBtn'),
+  nextBtnLabel: document.getElementById('nextBtnLabel'),
+  toggleTimerBtn: document.getElementById('toggleTimerBtn'),
+  toggleTimerIcon: document.getElementById('toggleTimerIcon'),
+  toggleTimerLabel: document.getElementById('toggleTimerLabel'),
+  closeLink: document.getElementById('closeLink')
+};
+
+el.closeLink.href = 'thema.html?id=' + encodeURIComponent(themaId);
+el.themeLabel.textContent = theme.title;
+document.title = theme.title + ' — Lebensfunken';
+
+function formatTime(s) {
+  const m = String(Math.floor(s / 60)).padStart(2, '0');
+  const sec = String(s % 60).padStart(2, '0');
+  return m + ':' + sec;
+}
+function setTimerText(t) {
+  el.timer.textContent = t;
+  el.timerMobile.textContent = t;
+}
+function renderProgress() {
+  el.progressBar.innerHTML = theme.stations.map((_, i) => {
+    const cls = i <= currentIdx ? 'bg-primary-container' : 'bg-surface-container-highest';
+    const w = i === currentIdx ? 'w-12' : 'w-6';
+    return `<div class="h-[2px] ${w} ${cls}"></div>`;
+  }).join('');
+}
+
+function renderItems(items) {
+  return items.map(it => `
+    <div class="bg-surface-container-low rounded-lg p-5 border border-outline-variant/20 hover:border-secondary/40 transition-colors">
+      <div class="flex items-baseline justify-between gap-3 mb-2">
+        <h3 class="font-headline text-xl text-primary-container">${it.label || ''}</h3>
+        ${it.accent ? `<span class="font-label text-[10px] uppercase tracking-widest text-secondary shrink-0">${it.accent}</span>` : ''}
+      </div>
+      <p class="text-sm text-on-surface-variant leading-relaxed">${it.text || ''}</p>
+    </div>
+  `).join('');
+}
+
+function render() {
+  const station = theme.stations[currentIdx];
+  timeLeft = station.duration;
+
+  el.phaseLabel.textContent = `Station ${currentIdx + 1} von ${theme.stations.length} · ${station.name}`;
+  el.phaseTitle.textContent = station.title;
+  el.phaseTitle.classList.remove('fadein');
+  // force reflow to restart animation
+  void el.phaseTitle.offsetWidth;
+  el.phaseTitle.classList.add('fadein');
+
+  if (station.hostNote) {
+    el.hostNote.textContent = station.hostNote;
+    el.hostNoteBox.classList.remove('hidden');
+  } else {
+    el.hostNoteBox.classList.add('hidden');
+  }
+
+  if (station.description) {
+    el.description.textContent = station.description;
+    el.descriptionBox.classList.remove('hidden');
+  } else {
+    el.descriptionBox.classList.add('hidden');
+  }
+
+  if (station.question) {
+    el.question.textContent = station.question;
+    el.questionBox.classList.remove('hidden');
+  } else {
+    el.questionBox.classList.add('hidden');
+  }
+
+  if (station.items && station.items.length) {
+    el.itemsGrid.innerHTML = renderItems(station.items);
+    el.itemsBox.classList.remove('hidden');
+  } else {
+    el.itemsBox.classList.add('hidden');
+  }
+
+  setTimerText(formatTime(timeLeft));
+  el.prevBtn.disabled = currentIdx === 0;
+  el.nextBtnLabel.textContent = currentIdx === theme.stations.length - 1 ? 'Abend beenden' : 'Weiter';
+  renderProgress();
+  startTimer();
+
+  // Scroll to top (useful if content is long)
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  paused = false;
+  el.toggleTimerIcon.textContent = 'pause';
+  el.toggleTimerLabel.textContent = 'Timer pausieren';
+  timerInterval = setInterval(() => {
+    if (paused) return;
+    if (timeLeft <= 0) { clearInterval(timerInterval); return; }
+    timeLeft--;
+    setTimerText(formatTime(timeLeft));
+  }, 1000);
+}
+
+el.prevBtn.addEventListener('click', () => {
+  if (currentIdx > 0) { currentIdx--; render(); }
+});
+el.nextBtn.addEventListener('click', () => {
+  if (currentIdx < theme.stations.length - 1) {
+    currentIdx++;
+    render();
+  } else {
+    window.location.href = 'thema.html?id=' + encodeURIComponent(themaId);
+  }
+});
+el.toggleTimerBtn.addEventListener('click', () => {
+  paused = !paused;
+  el.toggleTimerIcon.textContent = paused ? 'play_arrow' : 'pause';
+  el.toggleTimerLabel.textContent = paused ? 'Timer fortsetzen' : 'Timer pausieren';
+});
+
+render();
+</script>
+</body>
+</html>
