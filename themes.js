@@ -612,7 +612,7 @@ window.THEMES = {
     formats: {
       group: {
         label: 'Kleine Gruppe',
-        duration: '~1 Std. 40 Min.',
+        duration: '~2 Std. 15 Min.',
         people: '3-8 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie kommst du heute an?', duration: 10*60,
@@ -621,44 +621,63 @@ window.THEMES = {
           { name: 'Einstieg', title: 'Wie dieser Abend funktioniert', duration: 6*60,
             hostNote: 'Host liest kurz vor, dann legt ihr los.',
             quote: { text: 'Viele Dinge zu wissen bedeutet noch nicht, sie zu verstehen.', author: 'Heraklit' },
-            description: 'Wir haben heute kein Thema — nur Fragen. Der Host liest pro Runde eine Frage vor. Wer Lust hat, antwortet. Wenn du passen willst, sag „pass“ — kein Problem. Keine Rückfragen, kein „aber bei dir…“, einfach zuhören. Bei jeder Station gibt es 3–4 Fragen, du musst nicht auf alle antworten. Wichtig: Ehrlich sein ist besser als klug klingen.' },
-          { name: 'Leichtes', title: 'Zum Einsteigen', duration: 18*60,
+            description: 'Wir haben heute kein Thema — nur Fragen. Der Host liest pro Runde eine Frage vor. Wer Lust hat, antwortet. Wenn du passen willst, sag „pass“ — kein Problem. Keine Rückfragen, kein „aber bei dir…“, einfach zuhören. Bei jeder Station gibt es 3–5 Fragen, du musst nicht auf alle antworten. Wichtig: Ehrlich sein ist besser als klug klingen.' },
+          { name: 'Leichtes', title: 'Zum Einsteigen', duration: 15*60,
             hostNote: 'Eine Frage nach der anderen. Reihum oder wer zuerst Lust hat.',
             items: [
               { accent: 'Frage 1', text: 'Was ist eine kleine Sache im Alltag, die dich unverhältnismäßig glücklich macht?' },
               { accent: 'Frage 2', text: 'Was hast du zuletzt zum allerersten Mal in deinem Leben gemacht?' },
               { accent: 'Frage 3', text: 'Welche kleine Sache lässt dich sofort nostalgisch werden?' },
-              { accent: 'Frage 4', text: 'Gibt es etwas, das andere Leute oft an dir falsch einschätzen?' }
+              { accent: 'Frage 4', text: 'Gibt es etwas, das andere Leute oft an dir falsch einschätzen?' },
+              { accent: 'Frage 5', text: 'Was hat dich zuletzt zum Staunen gebracht?' }
             ] },
-          { name: 'Über dich', title: 'Ein bisschen näher', duration: 20*60,
+          { name: 'Über dich', title: 'Ein bisschen näher', duration: 18*60,
             hostNote: 'Jetzt etwas persönlicher. Wer passen will, passt.',
             items: [
-              { accent: 'Frage 5', text: 'Wenn dein Leben gerade ein Buch wäre — welchen Titel hätte es?' },
-              { accent: 'Frage 6', text: 'Welches „unsichtbare Tattoo“ trägst du — also welche Erfahrung prägt dich, obwohl man es dir nicht ansieht?' },
-              { accent: 'Frage 7', text: 'Angenommen, du könntest einen Tag mit deinem 15-jährigen Ich verbringen — was würdet ihr besprechen?' },
-              { accent: 'Frage 8', text: 'Welche Eigenschaft an dir möchtest du unbedingt behalten, selbst wenn du mal 100 Jahre alt bist?' }
+              { accent: 'Frage 6', text: 'Wenn dein Leben gerade ein Buch wäre — welchen Titel hätte es?' },
+              { accent: 'Frage 7', text: 'Welches „unsichtbare Tattoo“ trägst du — also welche Erfahrung prägt dich, obwohl man es dir nicht ansieht?' },
+              { accent: 'Frage 8', text: 'Angenommen, du könntest einen Tag mit deinem 15-jährigen Ich verbringen — was würdet ihr besprechen?' },
+              { accent: 'Frage 9', text: 'In welcher Version deiner selbst fühlst du dich am wohlsten — und wann warst du zuletzt dort?' },
+              { accent: 'Frage 10', text: 'Welche Eigenschaft an dir möchtest du unbedingt behalten, selbst wenn du mal 100 Jahre alt bist?' }
             ] },
-          { name: 'Werte & Haltung', title: 'Wofür du stehst', duration: 20*60,
+          { name: 'Menschen um dich', title: 'Die Menschen um dich', duration: 18*60,
+            hostNote: 'Wird persönlich. Namen können anonym bleiben — was zählt, ist das Bild.',
+            items: [
+              { accent: 'Frage 11', text: 'Wen in deinem Leben würdest du gerne wieder anrufen, hast es aber zu lange nicht getan?' },
+              { accent: 'Frage 12', text: 'Welche Eigenschaft deiner Eltern siehst du heute mit mehr Verständnis als früher?' },
+              { accent: 'Frage 13', text: 'Was hast du jemandem zuletzt gesagt, was du schon länger hättest sagen sollen?' },
+              { accent: 'Frage 14', text: 'Wem würdest du gerne noch einmal danken können — und wofür?' }
+            ] },
+          { name: 'Werte & Haltung', title: 'Wofür du stehst', duration: 18*60,
             hostNote: 'Tiefer. Zeit lassen zwischen den Antworten.',
             items: [
-              { accent: 'Frage 9', text: 'Wenn du eine Sache an der Gesellschaft sofort ändern könntest — welche wäre das und warum?' },
-              { accent: 'Frage 10', text: 'Welche Frage würdest du gerne mit „Ja“ beantworten können, kannst es aber (noch) nicht?' },
-              { accent: 'Frage 11', text: 'Gibt es eine Erfahrung, die sich erst wie ein Misserfolg angefühlt hat, sich aber als wertvolle Lektion entpuppte?' },
-              { accent: 'Frage 12', text: 'Welche kleine Entscheidung in deinem Leben hat überraschend große Auswirkungen gehabt?' }
+              { accent: 'Frage 15', text: 'Wenn du eine Sache an der Gesellschaft sofort ändern könntest — welche wäre das und warum?' },
+              { accent: 'Frage 16', text: 'Welche Frage würdest du gerne mit „Ja“ beantworten können, kannst es aber (noch) nicht?' },
+              { accent: 'Frage 17', text: 'Gibt es eine Erfahrung, die sich erst wie ein Misserfolg angefühlt hat, sich aber als wertvolle Lektion entpuppte?' },
+              { accent: 'Frage 18', text: 'Welche kleine Entscheidung in deinem Leben hat überraschend große Auswirkungen gehabt?' },
+              { accent: 'Frage 19', text: 'Welche Rolle spielst du unbewusst in Gruppen — und passt sie noch zu dir?' }
             ] },
-          { name: 'Träume', title: 'Abenteuer & Träume', duration: 15*60,
+          { name: 'Zeit & Spur', title: 'Zeit und was bleibt', duration: 15*60,
+            hostNote: 'Ruhiger Abschnitt. Nicht antworten müssen — auch schweigen ist okay.',
+            items: [
+              { accent: 'Frage 20', text: 'Was nimmst du dir jedes Jahr vor, machst es aber nicht — und warum wahrscheinlich?' },
+              { accent: 'Frage 21', text: 'Welcher Tag aus den letzten 12 Monaten war für dich besonders — und woran hast du das gemerkt?' },
+              { accent: 'Frage 22', text: 'Wenn du wüsstest, dass dir genau ein Jahr bleibt — was würde sich sofort ändern, und was nicht?' },
+              { accent: 'Frage 23', text: 'Was ist eine kleine tägliche Handlung, die dich stabil hält?' }
+            ] },
+          { name: 'Träume', title: 'Abenteuer & Träume', duration: 12*60,
             hostNote: 'Hier darf es groß werden.',
             items: [
-              { accent: 'Frage 13', text: 'Was würdest du gerne ausprobieren, hast dich aber bisher nie getraut?' },
-              { accent: 'Frage 14', text: 'Angenommen, du hättest ab morgen ein Jahr frei von allen Verpflichtungen und genug Geld — wie würdest du dieses Jahr verbringen?' },
-              { accent: 'Frage 15', text: 'Wenn du eine Fähigkeit von einem Tier übernehmen könntest — welche wäre das und warum?' }
+              { accent: 'Frage 24', text: 'Was würdest du gerne ausprobieren, hast dich aber bisher nie getraut?' },
+              { accent: 'Frage 25', text: 'Angenommen, du hättest ab morgen ein Jahr frei von allen Verpflichtungen und genug Geld — wie würdest du es verbringen?' },
+              { accent: 'Frage 26', text: 'Was ist deine „andere Karriere“ — das Leben, das du auch hättest führen können?' }
             ] },
-          { name: 'Zum Ausklingen', title: 'Leichte Abschluss-Runde', duration: 12*60,
+          { name: 'Zum Ausklingen', title: 'Leichte Abschluss-Runde', duration: 10*60,
             hostNote: 'Auflockerung vor dem Schluss.',
             items: [
-              { accent: 'Frage 16', text: 'Wenn dein Leben als Netflix-Serie erscheinen würde — welches Genre wäre es, und wie hieße die aktuelle Staffel?' },
-              { accent: 'Frage 17', text: 'Welcher Instagram-Filter beschreibt deine Persönlichkeit am besten — nicht dein Aussehen?' },
-              { accent: 'Frage 18', text: 'Welche kleine Geste von jemand anderem kann dich sofort für diese Person einnehmen?' }
+              { accent: 'Frage 27', text: 'Wenn dein Leben als Netflix-Serie erscheinen würde — welches Genre wäre es, und wie hieße die aktuelle Staffel?' },
+              { accent: 'Frage 28', text: 'Welcher Satz, den jemand mal zu dir gesagt hat, ist geblieben?' },
+              { accent: 'Frage 29', text: 'Welche kleine Geste von jemand anderem kann dich sofort für diese Person einnehmen?' }
             ] },
           { name: 'Abschluss', title: 'Deine Frage des Abends', duration: 10*60,
             hostNote: 'Reihum, ein Satz.',
@@ -667,7 +686,7 @@ window.THEMES = {
       },
       pair: {
         label: 'Zu zweit',
-        duration: '~1 Std. 10 Min.',
+        duration: '~1 Std. 30 Min.',
         people: '2 Personen (Date, Paar, Freundschaft)',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie ist der Tag gelaufen?', duration: 8*60,
@@ -677,27 +696,41 @@ window.THEMES = {
             hostNote: 'Eine:r liest vor.',
             quote: { text: 'Viele Dinge zu wissen bedeutet noch nicht, sie zu verstehen.', author: 'Heraklit' },
             description: 'Heute keine großen Themen. Nur Fragen. Abwechselnd: eine:r stellt, andere:r antwortet so lange wie es sich richtig anfühlt. Dann tauschen. „Pass“ geht immer — kein Druck, kein Drängen. Gut zuhören ist die eigentliche Kunst.' },
-          { name: 'Kennenlernen', title: 'Ein bisschen näher', duration: 20*60,
+          { name: 'Kennenlernen', title: 'Ein bisschen näher', duration: 18*60,
             hostNote: 'Je 5 Minuten pro Frage. Wer mag, fragt nach.',
             items: [
               { accent: 'Frage 1', text: 'Wenn dein Leben gerade ein Buch wäre — welchen Titel hätte es?' },
               { accent: 'Frage 2', text: 'Welches „unsichtbare Tattoo“ trägst du — was prägt dich, obwohl man es dir nicht ansieht?' },
               { accent: 'Frage 3', text: 'Was hast du zuletzt zum allerersten Mal in deinem Leben gemacht?' },
-              { accent: 'Frage 4', text: 'Gibt es etwas, das andere Leute an dir oft falsch einschätzen?' }
+              { accent: 'Frage 4', text: 'In welcher Version deiner selbst fühlst du dich am wohlsten — und wann warst du zuletzt dort?' }
             ] },
-          { name: 'Werte', title: 'Tiefer rein', duration: 18*60,
+          { name: 'Werte', title: 'Tiefer rein', duration: 15*60,
             hostNote: 'Etwas länger Zeit lassen. Nachfragen ist erwünscht.',
             items: [
               { accent: 'Frage 5', text: 'Welche Erfahrung hat sich erst wie ein Misserfolg angefühlt — und war später eine wertvolle Lektion?' },
               { accent: 'Frage 6', text: 'Welche Frage würdest du gerne mit „Ja“ beantworten können, kannst es aber (noch) nicht?' },
               { accent: 'Frage 7', text: 'Welche kleine Entscheidung in deinem Leben hat überraschend große Auswirkungen gehabt?' }
             ] },
-          { name: 'Träume', title: 'Und wenn alles möglich wäre?', duration: 15*60,
+          { name: 'Menschen um dich', title: 'Die Menschen um dich', duration: 15*60,
+            hostNote: 'Wird persönlich. Keine Namen nötig — das Bild zählt.',
+            items: [
+              { accent: 'Frage 8', text: 'Welche Person aus deinem Leben hat dich mehr geprägt, als sie selbst weiß?' },
+              { accent: 'Frage 9', text: 'Was hast du jemandem zuletzt gesagt, was du schon länger hättest sagen sollen?' },
+              { accent: 'Frage 10', text: 'In welcher Beziehung spürst du gerade, dass Aufmerksamkeit fehlt?' }
+            ] },
+          { name: 'Zeit & Spur', title: 'Zeit und was bleibt', duration: 12*60,
+            hostNote: 'Ruhig. Zwischen den Fragen dürfen Pausen sein.',
+            items: [
+              { accent: 'Frage 11', text: 'Was nimmst du dir jedes Jahr vor, machst es aber nicht — und warum wahrscheinlich?' },
+              { accent: 'Frage 12', text: 'Wenn du wüsstest, dass dir genau ein Jahr bleibt — was würde sich sofort ändern, was nicht?' },
+              { accent: 'Frage 13', text: 'Was ist eine kleine tägliche Handlung, die dich stabil hält?' }
+            ] },
+          { name: 'Träume', title: 'Und wenn alles möglich wäre?', duration: 12*60,
             hostNote: 'Lass die Antwort ungeformt stehen — nicht gleich erklären.',
             items: [
-              { accent: 'Frage 8', text: 'Was würdest du gerne ausprobieren, hast dich aber nie getraut?' },
-              { accent: 'Frage 9', text: 'Wenn du ein Jahr frei hättest und genug Geld — wie würdest du es verbringen?' },
-              { accent: 'Frage 10', text: 'Angenommen, dein zukünftiges Ich schreibt dir einen Brief — was würde darin stehen?' }
+              { accent: 'Frage 14', text: 'Was würdest du gerne ausprobieren, hast dich aber nie getraut?' },
+              { accent: 'Frage 15', text: 'Wenn du ein Jahr frei hättest und genug Geld — wie würdest du es verbringen?' },
+              { accent: 'Frage 16', text: 'Angenommen, dein zukünftiges Ich schreibt dir einen Brief — was würde darin stehen?' }
             ] },
           { name: 'Abschluss', title: 'Was heute bei dir hängen bleibt', duration: 8*60,
             hostNote: 'Ein Satz pro Person.',
