@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Abend-Flow — Lebensfunken</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -27,104 +27,124 @@ body { background-color: #FBF9F4; }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
 .fadein { animation: fadein .3s ease-out; }
 @keyframes fadein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.star-btn { transition: transform .15s; }
+.star-btn:hover { transform: scale(1.2); }
 </style>
 </head>
 <body class="font-body text-on-background selection:bg-on-tertiary-container/20">
 <div class="film-grain"></div>
 <main class="min-h-screen w-full flex flex-col p-6 md:p-12 relative">
-<!-- Header -->
-<header class="w-full max-w-screen-2xl mx-auto flex justify-between items-start opacity-70 mb-8">
-<div class="flex flex-col">
-<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-1" id="themeLabel">Abend-Flow</span>
-<a href="index.html" class="font-headline italic text-xl text-primary-container">Lebensfunken</a>
-</div>
-<div class="flex items-center gap-6">
-<div class="text-right hidden md:block">
-<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60 block">Timer</span>
-<span id="timer" class="font-headline text-3xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
-</div>
-<a id="closeLink" href="thema.html" class="p-2 hover:bg-surface-container transition-colors rounded-lg">
-<span class="material-symbols-outlined text-on-surface-variant">close</span>
-</a>
-</div>
-</header>
-
-<!-- Content Section -->
-<section class="flex-1 w-full max-w-4xl mx-auto flex flex-col items-center justify-center py-8">
-  <!-- Progress + phase label -->
-  <div class="mb-8 text-center">
-    <p id="phaseLabel" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-3">—</p>
-    <div id="progressBar" class="flex items-center gap-2 justify-center"></div>
-  </div>
-
-  <!-- Mobile timer (visible only on small screens) -->
-  <div class="md:hidden mb-6 text-center">
-    <span id="timerMobile" class="font-headline text-5xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
-  </div>
-
-  <!-- Phase title -->
-  <h1 id="phaseTitle" class="font-headline text-3xl md:text-5xl text-primary-container leading-tight tracking-tight mb-8 text-center fadein">
-    —
-  </h1>
-
-  <!-- Host note (small label with context) -->
-  <div id="hostNoteBox" class="mb-8 max-w-2xl w-full hidden">
-    <div class="flex items-start gap-3 bg-surface-container-low rounded-lg p-4 border-l-2 border-secondary/40">
-      <span class="material-symbols-outlined text-secondary/70 mt-0.5 text-lg">record_voice_over</span>
-      <p id="hostNote" class="text-sm text-on-surface-variant leading-relaxed italic"></p>
+  <header class="w-full max-w-screen-2xl mx-auto flex justify-between items-start opacity-70 mb-8">
+    <div class="flex flex-col">
+      <span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-1" id="themeLabel">Abend-Flow</span>
+      <a href="index.html" class="font-headline italic text-xl text-primary-container">Lebensfunken</a>
     </div>
-  </div>
+    <div class="flex items-center gap-6">
+      <div class="text-right hidden md:block">
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60 block">Timer</span>
+        <span id="timer" class="font-headline text-3xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
+      </div>
+      <a id="closeLink" href="thema.html" class="p-2 hover:bg-surface-container transition-colors rounded-lg">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </a>
+    </div>
+  </header>
 
-  <!-- Description (body text, optionally with paragraphs) -->
-  <div id="descriptionBox" class="mb-8 max-w-2xl w-full hidden">
-    <p id="description" class="text-lg md:text-xl font-light text-on-background/80 leading-relaxed whitespace-pre-line"></p>
-  </div>
+  <section class="flex-1 w-full max-w-4xl mx-auto flex flex-col items-center py-8">
+    <div class="mb-8 text-center">
+      <p id="phaseLabel" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container mb-3">—</p>
+      <div id="progressBar" class="flex items-center gap-2 justify-center"></div>
+    </div>
 
-  <!-- Question (highlighted italic) -->
-  <div id="questionBox" class="mb-10 max-w-2xl w-full hidden">
-    <p id="question" class="text-xl md:text-3xl font-headline italic text-primary-container text-center leading-snug"></p>
-  </div>
+    <div class="md:hidden mb-6 text-center">
+      <span id="timerMobile" class="font-headline text-5xl font-light tracking-tight text-primary-container tabular-nums">00:00</span>
+    </div>
 
-  <!-- Items grid (for typology / scenarios / lists) -->
-  <div id="itemsBox" class="mb-10 w-full max-w-5xl hidden">
-    <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-  </div>
-</section>
+    <h1 id="phaseTitle" class="font-headline text-3xl md:text-5xl text-primary-container leading-tight tracking-tight mb-8 text-center fadein">—</h1>
 
-<!-- Footer -->
-<footer class="w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-outline-variant/20">
-  <button id="prevBtn" class="flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors disabled:opacity-30 disabled:cursor-not-allowed order-2 md:order-1" disabled>
-    <span class="material-symbols-outlined text-base">arrow_back</span>
-    <span class="font-label text-xs uppercase tracking-widest">Zurück</span>
-  </button>
-  <div class="flex items-center gap-6 md:gap-8 order-1 md:order-2">
-    <button id="toggleTimerBtn" class="group flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors">
-      <span id="toggleTimerIcon" class="material-symbols-outlined text-lg">pause</span>
-      <span id="toggleTimerLabel" class="font-label text-xs uppercase tracking-widest hidden md:inline">Timer pausieren</span>
+    <div id="hostNoteBox" class="mb-6 max-w-2xl w-full hidden">
+      <div class="flex items-start gap-3 bg-surface-container-low rounded-lg p-4 border-l-2 border-secondary/40">
+        <span class="material-symbols-outlined text-secondary/70 mt-0.5 text-lg">record_voice_over</span>
+        <p id="hostNote" class="text-sm text-on-surface-variant leading-relaxed italic"></p>
+      </div>
+    </div>
+
+    <div id="descriptionBox" class="mb-8 max-w-2xl w-full hidden">
+      <p id="description" class="text-lg md:text-xl font-light text-on-background/80 leading-relaxed whitespace-pre-line"></p>
+    </div>
+
+    <div id="questionBox" class="mb-10 max-w-2xl w-full hidden">
+      <p id="question" class="text-xl md:text-3xl font-headline italic text-primary-container text-center leading-snug"></p>
+    </div>
+
+    <div id="itemsBox" class="mb-10 w-full max-w-5xl hidden">
+      <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+
+    <!-- Feedback form (rendered for feedback-type stations) -->
+    <form id="feedbackForm" class="hidden w-full max-w-2xl space-y-6 bg-surface-container-low rounded-xl p-6 md:p-8 fadein" onsubmit="submitFeedback(event)">
+      <div>
+        <label class="font-label text-xs uppercase tracking-widest text-on-tertiary-container block mb-3">Wie war der Abend?</label>
+        <div class="flex gap-2 justify-center md:justify-start" role="radiogroup">
+          <!-- Stars are injected via JS so they use Material Symbols -->
+        </div>
+      </div>
+      <div>
+        <label for="fbMoved" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container block mb-2">Was hat dich bewegt?</label>
+        <textarea id="fbMoved" rows="3" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-3 text-sm focus:outline-none focus:border-secondary transition-colors" placeholder="Ein Moment, eine Frage, ein Satz …"></textarea>
+      </div>
+      <div>
+        <label for="fbImprove" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container block mb-2">Was könnte besser sein?</label>
+        <textarea id="fbImprove" rows="3" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-3 text-sm focus:outline-none focus:border-secondary transition-colors" placeholder="Direkt, ehrlich, gern konkret."></textarea>
+      </div>
+      <div>
+        <label for="fbEmail" class="font-label text-xs uppercase tracking-widest text-on-tertiary-container block mb-2">Deine E-Mail (optional)</label>
+        <input id="fbEmail" type="email" placeholder="name@beispiel.de" class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-lg p-3 text-sm focus:outline-none focus:border-secondary transition-colors"/>
+        <p class="text-xs text-on-surface-variant/60 mt-1 italic">Nur, falls du zu neuen Themen informiert werden willst.</p>
+      </div>
+      <button type="submit" class="w-full md:w-auto bg-primary-container text-on-primary px-8 py-4 rounded-lg font-label text-sm uppercase tracking-[0.15em] hover:bg-primary transition-colors active:scale-[0.98]">
+        Feedback senden
+      </button>
+      <p class="text-xs text-on-surface-variant/60 italic">Dein Feedback wird per E-Mail geschickt — dein Mail-Programm öffnet sich mit einer vorbereiteten Nachricht.</p>
+    </form>
+  </section>
+
+  <footer id="mainFooter" class="w-full max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-outline-variant/20">
+    <button id="prevBtn" class="flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors disabled:opacity-30 disabled:cursor-not-allowed order-2 md:order-1" disabled>
+      <span class="material-symbols-outlined text-base">arrow_back</span>
+      <span class="font-label text-xs uppercase tracking-widest">Zurück</span>
     </button>
-    <button id="nextBtn" class="bg-primary-container text-on-primary px-8 md:px-10 py-4 md:py-5 rounded-lg font-label text-xs md:text-sm uppercase tracking-[0.15em] flex items-center gap-3 md:gap-4 hover:bg-primary transition-all active:scale-[0.98]">
-      <span id="nextBtnLabel">Weiter</span>
-      <span class="material-symbols-outlined text-base">arrow_forward</span>
-    </button>
-  </div>
-  <div class="hidden md:block order-3 w-24"></div>
-</footer>
+    <div class="flex items-center gap-6 md:gap-8 order-1 md:order-2">
+      <button id="toggleTimerBtn" class="group flex items-center gap-3 text-on-surface-variant hover:text-secondary transition-colors">
+        <span id="toggleTimerIcon" class="material-symbols-outlined text-lg">pause</span>
+        <span id="toggleTimerLabel" class="font-label text-xs uppercase tracking-widest hidden md:inline">Timer pausieren</span>
+      </button>
+      <button id="nextBtn" class="bg-primary-container text-on-primary px-8 md:px-10 py-4 md:py-5 rounded-lg font-label text-xs md:text-sm uppercase tracking-[0.15em] flex items-center gap-3 md:gap-4 hover:bg-primary transition-all active:scale-[0.98]">
+        <span id="nextBtnLabel">Weiter</span>
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </button>
+    </div>
+    <div class="hidden md:block order-3 w-24"></div>
+  </footer>
 
-<!-- Decorative corners -->
-<div class="absolute bottom-0 left-0 p-12 opacity-10 pointer-events-none hidden md:block">
-  <div class="w-64 h-64 border-l border-b border-primary-container rounded-bl-xl"></div>
-</div>
+  <div class="absolute bottom-0 left-0 p-12 opacity-10 pointer-events-none hidden md:block">
+    <div class="w-64 h-64 border-l border-b border-primary-container rounded-bl-xl"></div>
+  </div>
 </main>
 <script src="themes.js"></script>
 <script>
 const params = new URLSearchParams(location.search);
 const themaId = params.get('thema') || 'bindung';
+const formatKey = params.get('format') || 'group';
 const theme = window.THEMES[themaId] || window.THEMES.bindung;
+const format = theme.formats[formatKey] || theme.formats.group;
+const stations = format.stations;
 
 let currentIdx = 0;
-let timeLeft = theme.stations[0].duration;
+let timeLeft = stations[0].duration;
 let timerInterval = null;
 let paused = false;
+let rating = 0;
 
 const el = {
   themeLabel: document.getElementById('themeLabel'),
@@ -139,6 +159,7 @@ const el = {
   question: document.getElementById('question'),
   itemsBox: document.getElementById('itemsBox'),
   itemsGrid: document.getElementById('itemsGrid'),
+  feedbackForm: document.getElementById('feedbackForm'),
   timer: document.getElementById('timer'),
   timerMobile: document.getElementById('timerMobile'),
   prevBtn: document.getElementById('prevBtn'),
@@ -151,20 +172,64 @@ const el = {
 };
 
 el.closeLink.href = 'thema.html?id=' + encodeURIComponent(themaId);
-el.themeLabel.textContent = theme.title;
+el.themeLabel.textContent = theme.title + ' · ' + format.label;
 document.title = theme.title + ' — Lebensfunken';
+
+// Build star buttons once
+const starRow = el.feedbackForm.querySelector('[role="radiogroup"]');
+for (let i = 1; i <= 5; i++) {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.setAttribute('role', 'radio');
+  btn.setAttribute('aria-label', i + ' Sterne');
+  btn.className = 'star-btn text-3xl text-on-surface-variant/40 hover:text-secondary transition-colors';
+  btn.innerHTML = '<span class="material-symbols-outlined">star</span>';
+  btn.dataset.rating = i;
+  btn.addEventListener('click', () => {
+    rating = i;
+    [...starRow.children].forEach((s, idx) => {
+      s.querySelector('span').style.fontVariationSettings = (idx < i) ? "'FILL' 1" : "'FILL' 0";
+      s.classList.toggle('text-secondary', idx < i);
+      s.classList.toggle('text-on-surface-variant/40', idx >= i);
+    });
+  });
+  starRow.appendChild(btn);
+}
+
+function submitFeedback(ev) {
+  ev.preventDefault();
+  const moved = document.getElementById('fbMoved').value.trim();
+  const improve = document.getElementById('fbImprove').value.trim();
+  const email = document.getElementById('fbEmail').value.trim();
+  const subject = `Lebensfunken Feedback — ${theme.title} (${format.label})`;
+  const body = [
+    `Thema: ${theme.title}`,
+    `Format: ${format.label}`,
+    `Bewertung: ${rating ? rating + ' / 5 Sterne' : 'keine Angabe'}`,
+    '',
+    'Was bewegt hat:',
+    moved || '—',
+    '',
+    'Was besser sein könnte:',
+    improve || '—',
+    '',
+    email ? `Kontakt: ${email}` : 'Kontakt: anonym',
+  ].join('\n');
+  const mailto = `mailto:${encodeURIComponent(window.LEBENSFUNKEN_FEEDBACK_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+  // Nach 1 s zurück zur Start-Seite, damit der Abend sauber endet
+  setTimeout(() => { window.location.href = 'thema.html?id=' + encodeURIComponent(themaId); }, 1200);
+}
 
 function formatTime(s) {
   const m = String(Math.floor(s / 60)).padStart(2, '0');
   const sec = String(s % 60).padStart(2, '0');
   return m + ':' + sec;
 }
-function setTimerText(t) {
-  el.timer.textContent = t;
-  el.timerMobile.textContent = t;
-}
+function setTimerText(t) { el.timer.textContent = t; el.timerMobile.textContent = t; }
+
 function renderProgress() {
-  el.progressBar.innerHTML = theme.stations.map((_, i) => {
+  el.progressBar.innerHTML = stations.map((_, i) => {
     const cls = i <= currentIdx ? 'bg-primary-container' : 'bg-surface-container-highest';
     const w = i === currentIdx ? 'w-12' : 'w-6';
     return `<div class="h-[2px] ${w} ${cls}"></div>`;
@@ -183,52 +248,55 @@ function renderItems(items) {
   `).join('');
 }
 
-function render() {
-  const station = theme.stations[currentIdx];
-  timeLeft = station.duration;
+function hideAllContentBoxes() {
+  el.hostNoteBox.classList.add('hidden');
+  el.descriptionBox.classList.add('hidden');
+  el.questionBox.classList.add('hidden');
+  el.itemsBox.classList.add('hidden');
+  el.feedbackForm.classList.add('hidden');
+}
 
-  el.phaseLabel.textContent = `Station ${currentIdx + 1} von ${theme.stations.length} · ${station.name}`;
-  el.phaseTitle.textContent = station.title;
+function render() {
+  const s = stations[currentIdx];
+  timeLeft = s.duration;
+  hideAllContentBoxes();
+
+  el.phaseLabel.textContent = `Station ${currentIdx + 1} von ${stations.length} · ${s.name}`;
+  el.phaseTitle.textContent = s.title;
   el.phaseTitle.classList.remove('fadein');
-  // force reflow to restart animation
   void el.phaseTitle.offsetWidth;
   el.phaseTitle.classList.add('fadein');
 
-  if (station.hostNote) {
-    el.hostNote.textContent = station.hostNote;
-    el.hostNoteBox.classList.remove('hidden');
+  if (s.type === 'feedback') {
+    // Feedback-Station: nur Formular zeigen, kein Timer runterzählen
+    el.description.textContent = s.description || '';
+    el.descriptionBox.classList.toggle('hidden', !s.description);
+    el.feedbackForm.classList.remove('hidden');
   } else {
-    el.hostNoteBox.classList.add('hidden');
-  }
-
-  if (station.description) {
-    el.description.textContent = station.description;
-    el.descriptionBox.classList.remove('hidden');
-  } else {
-    el.descriptionBox.classList.add('hidden');
-  }
-
-  if (station.question) {
-    el.question.textContent = station.question;
-    el.questionBox.classList.remove('hidden');
-  } else {
-    el.questionBox.classList.add('hidden');
-  }
-
-  if (station.items && station.items.length) {
-    el.itemsGrid.innerHTML = renderItems(station.items);
-    el.itemsBox.classList.remove('hidden');
-  } else {
-    el.itemsBox.classList.add('hidden');
+    if (s.hostNote) { el.hostNote.textContent = s.hostNote; el.hostNoteBox.classList.remove('hidden'); }
+    if (s.description) { el.description.textContent = s.description; el.descriptionBox.classList.remove('hidden'); }
+    if (s.question) { el.question.textContent = s.question; el.questionBox.classList.remove('hidden'); }
+    if (s.items && s.items.length) {
+      el.itemsGrid.innerHTML = renderItems(s.items);
+      el.itemsBox.classList.remove('hidden');
+    }
   }
 
   setTimerText(formatTime(timeLeft));
   el.prevBtn.disabled = currentIdx === 0;
-  el.nextBtnLabel.textContent = currentIdx === theme.stations.length - 1 ? 'Abend beenden' : 'Weiter';
+
+  if (s.type === 'feedback') {
+    el.nextBtnLabel.textContent = 'Überspringen & beenden';
+  } else if (currentIdx === stations.length - 1) {
+    el.nextBtnLabel.textContent = 'Abend beenden';
+  } else if (currentIdx === stations.length - 2 && stations[stations.length - 1].type === 'feedback') {
+    el.nextBtnLabel.textContent = 'Zum Feedback';
+  } else {
+    el.nextBtnLabel.textContent = 'Weiter';
+  }
+
   renderProgress();
   startTimer();
-
-  // Scroll to top (useful if content is long)
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -249,7 +317,7 @@ el.prevBtn.addEventListener('click', () => {
   if (currentIdx > 0) { currentIdx--; render(); }
 });
 el.nextBtn.addEventListener('click', () => {
-  if (currentIdx < theme.stations.length - 1) {
+  if (currentIdx < stations.length - 1) {
     currentIdx++;
     render();
   } else {
