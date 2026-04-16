@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Über Wertenackt — Wertenackt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #FBF9F4; color: #1B1C19; }
+  .font-serif { font-family: 'Noto Serif', serif; }
+  .film-grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = { darkMode: "class", theme: { extend: {
+    colors: { "tertiary-fixed-dim": "#f0bd8b", "on-primary-fixed-variant": "#364c3c", "secondary-fixed": "#ffdcc4", "tertiary-fixed": "#ffdcbd", "tertiary": "#261200", "secondary": "#924c00", "on-tertiary-container": "#b7895b", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#623f18", "inverse-surface": "#30312e", "primary-fixed": "#d0e9d4", "secondary-fixed-dim": "#ffb781", "secondary-container": "#fda055", "primary": "#061b0e", "primary-container": "#1b3022", "surface-variant": "#e4e2dd", "on-secondary-fixed-variant": "#6f3800", "surface-dim": "#dbdad5", "on-primary": "#ffffff", "on-primary-fixed": "#0b2013", "inverse-on-surface": "#f2f1ec", "error": "#ba1a1a", "tertiary-container": "#422401", "inverse-primary": "#b4cdb8", "on-secondary-fixed": "#2f1400", "outline": "#737973", "surface-container-highest": "#e4e2dd", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-background": "#1b1c19", "on-primary-container": "#819986", "surface-bright": "#fbf9f4", "surface-tint": "#4d6453", "on-surface-variant": "#434843", "on-tertiary": "#ffffff", "surface-container-low": "#f5f3ee", "primary-fixed-dim": "#b4cdb8", "on-secondary": "#ffffff", "surface": "#fbf9f4", "on-secondary-container": "#703800", "background": "#fbf9f4", "surface-container-high": "#eae8e3", "surface-container": "#f0eee9", "on-error": "#ffffff", "outline-variant": "#c3c8c1", "on-surface": "#1b1c19", "on-tertiary-fixed": "#2c1600" },
+    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    fontFamily: { headline: ["Noto Serif"], body: ["Inter"], label: ["Inter"] }
+  } } }
+</script>
+</head>
+<body class="bg-surface text-on-background min-h-screen">
+<div class="film-grain"></div>
+
+<header class="bg-surface/80 backdrop-blur-md sticky top-0 z-40">
+  <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-serif italic text-2xl text-primary">Wertenackt</a>
+    <nav class="hidden md:flex space-x-10">
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="funken.html">Funken</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="gastgeber.html">Gastgeber</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-on-background font-bold border-b border-secondary" href="ueber.html">Über</a>
+    </nav>
+  </div>
+  <div class="bg-surface-container-low h-[1px] w-full block"></div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 md:px-12 py-16">
+
+  <!-- Hero -->
+  <section class="mb-20">
+    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Die Idee dahinter</p>
+    <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight mb-8">Warum wir uns selten wirklich begegnen.</h1>
+    <p class="text-xl md:text-2xl text-on-surface-variant font-light italic leading-relaxed">
+      Die meisten Abende bleiben an der Oberfläche. Small Talk, Nachrichten aus der Welt, was man nächstes Wochenende vorhat. Zwei Stunden später ist man nach Hause gefahren, ohne etwas über den anderen Menschen erfahren zu haben, das nicht auch auf seinem Instagram-Profil steht.
+    </p>
+  </section>
+
+  <!-- Die Idee -->
+  <section class="mb-20">
+    <h2 class="font-serif text-3xl md:text-4xl mb-8 leading-snug">Wertenackt ist aus einer einfachen Beobachtung entstanden.</h2>
+    <div class="space-y-6 text-lg text-on-background/80 leading-relaxed">
+      <p>
+        Meine besten Abende mit Menschen waren nie die, bei denen wir „mal was zusammen machen" wollten. Es waren die, bei denen jemand eine ehrliche Frage gestellt hat — und der Rest Mut bekommen hat, auch ehrlich zu antworten.
+      </p>
+      <p>
+        Das ist selten. Weil es Strukturen braucht. Weil jemand anfangen muss. Weil man nicht in einer Gruppe fremder Menschen plötzlich sagen kann „Okay, wir reden jetzt ehrlich über unsere Werte."
+      </p>
+      <p>
+        Wertenackt liefert die Struktur. Einen Abend lang führt die Plattform euch durch eine Reihe vorbereiteter Stationen — Ankommen, Impuls, Austausch, Reflexion, Abschluss. Niemand muss moderieren. Niemand muss „der Ernste" sein, der plötzlich tiefe Fragen stellt. Es ist einfach Teil des Formats.
+      </p>
+      <p class="font-serif italic text-xl md:text-2xl text-primary-container pt-4">
+        Das Versprechen: Zwei Stunden, in denen echte Begegnung nicht vom Zufall abhängt.
+      </p>
+    </div>
+  </section>
+
+  <!-- Was es nicht ist -->
+  <section class="mb-20 bg-surface-container-low rounded-xl p-8 md:p-12">
+    <h2 class="font-serif text-3xl md:text-4xl mb-8 leading-snug">Was Wertenackt bewusst <em>nicht</em> ist.</h2>
+    <ul class="space-y-5 text-lg text-on-background/80 leading-relaxed">
+      <li class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-secondary/70 mt-1 flex-shrink-0">block</span>
+        <div><strong class="font-semibold">Keine Selbstoptimierung.</strong> Niemand wird hier zu einer besseren Version von sich „gecoacht". Es geht nicht darum, mehr zu schaffen oder effizienter zu werden.</div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-secondary/70 mt-1 flex-shrink-0">block</span>
+        <div><strong class="font-semibold">Keine Therapie.</strong> Wir sind kein Ersatz für professionelle psychologische Unterstützung. Wer sie braucht, findet sie bei Therapeut:innen — nicht hier.</div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-secondary/70 mt-1 flex-shrink-0">block</span>
+        <div><strong class="font-semibold">Kein Wellness-Kitsch.</strong> Keine Räucherstäbchen, keine Affirmationen, keine Einladung, sich „die eigene beste Energie vorzustellen".</div>
+      </li>
+      <li class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-secondary/70 mt-1 flex-shrink-0">block</span>
+        <div><strong class="font-semibold">Keine Religion.</strong> Wir nehmen uns viel vom Prinzip des „Hauskreises" — aber ohne den religiösen Kontext. Das Format funktioniert unabhängig von dem, was ihr glaubt.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Der Name -->
+  <section class="mb-20">
+    <h2 class="font-serif text-3xl md:text-4xl mb-8 leading-snug">Woher der Name „Wertenackt"?</h2>
+    <div class="space-y-6 text-lg text-on-background/80 leading-relaxed">
+      <p>
+        Auf Postern stehen Werte wie „Ehrlichkeit, Familie, Gesundheit". Im Alltag leben wir oft ganz andere: Effizienz, Bequemlichkeit, Anerkennung. Das ist nicht schlimm — aber es lohnt sich, es zu sehen.
+      </p>
+      <p>
+        „Nackt" heißt hier: ohne die Kleidung aus klugen Sätzen, ohne den Schmuck sozialer Erwartung. Nicht, wie wir sein sollten — sondern, wie wir wirklich gerade leben.
+      </p>
+      <p>
+        Der Name ist bewusst kantig. Wer sich davon abgeschreckt fühlt, ist wahrscheinlich nicht die Zielgruppe. Wer aufhorcht: willkommen.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hinter der Seite -->
+  <section class="mb-20 border-t border-outline-variant/20 pt-12">
+    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Hinter der Seite</p>
+    <h2 class="font-serif text-3xl md:text-4xl mb-8 leading-snug">Wer das gebaut hat.</h2>
+    <div class="space-y-6 text-lg text-on-background/80 leading-relaxed">
+      <p>
+        <em>[Platzhalter, Florian — bitte anpassen]</em> Mein Name ist <strong>Florian S. Thiel</strong>. Ich lebe in Tübingen, arbeite als Solo-Entwickler an verschiedenen kleinen Projekten, von Audio-Stadttouren über Quiz-Karten bis hin zu dieser Plattform. Wertenackt ist aus dem Wunsch entstanden, die Art von Abenden, die ich mit Freund:innen am liebsten erlebe, auch anderen möglich zu machen.
+      </p>
+      <p>
+        Wenn du Feedback hast, Ideen für neue Themen, oder einfach mal erzählen möchtest, wie dein Abend gelaufen ist: ich freue mich.
+      </p>
+      <p>
+        <a href="mailto:florian.s.thiel+wertenackt@gmail.com" class="text-secondary hover:underline inline-flex items-center gap-2">
+          <span class="material-symbols-outlined text-base">mail</span>
+          florian.s.thiel+wertenackt@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary-container p-10 md:p-16 rounded-xl text-center">
+    <h2 class="font-headline italic text-3xl md:text-5xl text-on-primary mb-6">Bereit für einen echten Abend?</h2>
+    <p class="text-on-primary/70 text-lg mb-10 max-w-xl mx-auto">
+      Schau dir die Themen an, wähle eins aus — und probiere es beim nächsten Mal, wenn du sowieso Menschen triffst.
+    </p>
+    <a href="themen.html" class="inline-block bg-secondary text-on-primary px-10 py-4 text-sm uppercase tracking-widest font-bold rounded-lg hover:bg-on-tertiary-container transition-colors">
+      Zu den Themen
+    </a>
+  </section>
+
+</main>
+
+<footer class="bg-surface-container flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
+  <div class="mb-8 md:mb-0">
+    <span class="font-serif italic text-sm text-primary">Wertenackt</span>
+    <p class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 mt-2">© 2026 Wertenackt</p>
+  </div>
+  <div class="flex flex-wrap justify-center gap-8">
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="ueber.html">Über</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="gastgeber.html">Gastgeber</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="mailto:florian.s.thiel+wertenackt@gmail.com">Kontakt</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gastgeber:in werden — Wertenackt</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; background-color: #FBF9F4; color: #1B1C19; }
+  .font-serif { font-family: 'Noto Serif', serif; }
+  .film-grain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  details[open] summary .chev { transform: rotate(180deg); }
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = { darkMode: "class", theme: { extend: {
+    colors: { "tertiary-fixed-dim": "#f0bd8b", "on-primary-fixed-variant": "#364c3c", "secondary-fixed": "#ffdcc4", "tertiary-fixed": "#ffdcbd", "tertiary": "#261200", "secondary": "#924c00", "on-tertiary-container": "#b7895b", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#623f18", "inverse-surface": "#30312e", "primary-fixed": "#d0e9d4", "secondary-fixed-dim": "#ffb781", "secondary-container": "#fda055", "primary": "#061b0e", "primary-container": "#1b3022", "surface-variant": "#e4e2dd", "on-secondary-fixed-variant": "#6f3800", "surface-dim": "#dbdad5", "on-primary": "#ffffff", "on-primary-fixed": "#0b2013", "inverse-on-surface": "#f2f1ec", "error": "#ba1a1a", "tertiary-container": "#422401", "inverse-primary": "#b4cdb8", "on-secondary-fixed": "#2f1400", "outline": "#737973", "surface-container-highest": "#e4e2dd", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-background": "#1b1c19", "on-primary-container": "#819986", "surface-bright": "#fbf9f4", "surface-tint": "#4d6453", "on-surface-variant": "#434843", "on-tertiary": "#ffffff", "surface-container-low": "#f5f3ee", "primary-fixed-dim": "#b4cdb8", "on-secondary": "#ffffff", "surface": "#fbf9f4", "on-secondary-container": "#703800", "background": "#fbf9f4", "surface-container-high": "#eae8e3", "surface-container": "#f0eee9", "on-error": "#ffffff", "outline-variant": "#c3c8c1", "on-surface": "#1b1c19", "on-tertiary-fixed": "#2c1600" },
+    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+    fontFamily: { headline: ["Noto Serif"], body: ["Inter"], label: ["Inter"] }
+  } } }
+</script>
+</head>
+<body class="bg-surface text-on-background min-h-screen">
+<div class="film-grain"></div>
+
+<header class="bg-surface/80 backdrop-blur-md sticky top-0 z-40">
+  <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-serif italic text-2xl text-primary">Wertenackt</a>
+    <nav class="hidden md:flex space-x-10">
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="funken.html">Funken</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-on-background font-bold border-b border-secondary" href="gastgeber.html">Gastgeber</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="ueber.html">Über</a>
+    </nav>
+  </div>
+  <div class="bg-surface-container-low h-[1px] w-full block"></div>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 md:px-12 py-16">
+
+  <!-- Hero -->
+  <section class="mb-16">
+    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Dein erster Abend</p>
+    <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight mb-8">So wirst du Gastgeber:in.</h1>
+    <p class="text-xl md:text-2xl text-on-surface-variant font-light italic leading-relaxed max-w-2xl">
+      Der erste Abend ist der schwerste. Diese Seite nimmt dir die Unsicherheit — in fünf Schritten von der Idee zum echten Gespräch.
+    </p>
+  </section>
+
+  <!-- 5 Schritte -->
+  <section class="mb-24">
+    <div class="space-y-16">
+
+      <!-- Schritt 1 -->
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <div class="col-span-2 md:col-span-2">
+          <span class="font-serif italic text-5xl md:text-6xl text-secondary/40">01</span>
+        </div>
+        <div class="col-span-10 md:col-span-10">
+          <h2 class="font-serif text-2xl md:text-3xl mb-4">Ein Thema wählen, das dich selbst reizt.</h2>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Das Wichtigste vorweg: Such dir ein Thema aus, das <em>dich</em> beschäftigt. Nicht das, von dem du denkst, es könnte „die Gruppe interessieren". Wenn du beim Lesen des Ablaufs denkst „das wäre ein Gespräch, das ich selbst gern führen würde" — dann ist es das richtige.
+          </p>
+          <p class="text-sm text-on-surface-variant italic">
+            <strong>Tipp:</strong> Für die allererste Runde eignen sich „Was sind meine Werte?", der Frageabend oder „Ein idealer Tag" besonders gut. Sie sind zugänglich, brauchen keine große Vorkenntnis, niemand muss sich exponieren.
+          </p>
+          <a href="themen.html" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-secondary hover:text-on-tertiary-container mt-4 transition-colors">
+            Alle Themen ansehen <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Schritt 2 -->
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <div class="col-span-2 md:col-span-2">
+          <span class="font-serif italic text-5xl md:text-6xl text-secondary/40">02</span>
+        </div>
+        <div class="col-span-10 md:col-span-10">
+          <h2 class="font-serif text-2xl md:text-3xl mb-4">Die Gruppe zusammenstellen — klein und mutig.</h2>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Ideal sind <strong>4 bis 6 Personen</strong>. Mehr wird schnell unruhig, weniger kippt schwerer in echte Tiefe. Wichtiger als die Zahl ist die Mischung: Menschen, die einander mindestens oberflächlich kennen und die Offenheit mitbringen, für zwei Stunden Handys wegzulegen.
+          </p>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Bei der Einladung ehrlich sein, was auf sie zukommt: „Es ist kein normaler Abend. Wir werden durch ein strukturiertes Gespräch geführt, jede:r bekommt Raum zu erzählen, 'Pass' ist immer okay. Dauert etwa zwei Stunden."
+          </p>
+          <p class="text-sm text-on-surface-variant italic">
+            <strong>Tipp:</strong> Ein Satz in der Einladung macht den Unterschied: „Wenn du keine Lust hast, über persönliche Dinge zu reden, ist das auch völlig okay — dann ist dieser Abend aber nicht das richtige." So filtert sich die Gruppe selbst.
+          </p>
+        </div>
+      </div>
+
+      <!-- Schritt 3 -->
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <div class="col-span-2 md:col-span-2">
+          <span class="font-serif italic text-5xl md:text-6xl text-secondary/40">03</span>
+        </div>
+        <div class="col-span-10 md:col-span-10">
+          <h2 class="font-serif text-2xl md:text-3xl mb-4">Den Raum vorbereiten — für Wärme, nicht Perfektion.</h2>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Die Hürde ist niedriger, als du denkst. Was wirklich hilft:
+          </p>
+          <ul class="space-y-2 text-base md:text-lg text-on-background/80 leading-relaxed mb-4 ml-2">
+            <li class="flex items-start gap-3"><span class="text-secondary mt-1">•</span><span>Gedämpftes Licht — Kerzen, eine Stehlampe, keine Decke­nleuchte.</span></li>
+            <li class="flex items-start gap-3"><span class="text-secondary mt-1">•</span><span>Ein Getränk pro Person (Tee, Wein, was ihr mögt) und ein paar Snacks — aber nichts, was während des Gesprächs laut knistert.</span></li>
+            <li class="flex items-start gap-3"><span class="text-secondary mt-1">•</span><span>Alle Handys in einer Schale oder einem anderen Raum. Nicht stumm — weg.</span></li>
+            <li class="flex items-start gap-3"><span class="text-secondary mt-1">•</span><span>Ein Gerät (Handy oder Laptop) für dich als Gastgeber:in, um durch den Wertenackt-Flow zu navigieren.</span></li>
+            <li class="flex items-start gap-3"><span class="text-secondary mt-1">•</span><span>Optional: Stift und Zettel pro Person, falls jemand etwas notieren möchte.</span></li>
+          </ul>
+          <p class="text-sm text-on-surface-variant italic">
+            <strong>Tipp:</strong> Zehn Minuten bevor die Leute kommen, setz dich einmal still hin. Nicht aufräumen, nicht checken ob alles perfekt ist. Nur atmen. Das macht mehr Unterschied als die dritte Dekoration.
+          </p>
+        </div>
+      </div>
+
+      <!-- Schritt 4 -->
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <div class="col-span-2 md:col-span-2">
+          <span class="font-serif italic text-5xl md:text-6xl text-secondary/40">04</span>
+        </div>
+        <div class="col-span-10 md:col-span-10">
+          <h2 class="font-serif text-2xl md:text-3xl mb-4">Den Abend starten — Wertenackt übernimmt.</h2>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Wenn alle da sind: einmal kurz erklären, wie der Ablauf funktioniert (ist auch in der ersten Station zu lesen). Dann startest du das Thema auf deinem Gerät, liest die Host-Anweisungen vor, stellst die Fragen. Das war's. Die Plattform führt euch Station für Station durch — Timer, Fragen, alles.
+          </p>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Deine einzige Aufgabe als Gastgeber:in: <strong>freundlich moderieren</strong>. Wenn jemand nicht zu Wort kommt, sanft einbeziehen („Und du?"). Wenn jemand ausschweift, freundlich bremsen („Danke — lass uns bei der nächsten reinhören"). Sonst zurücklehnen.
+          </p>
+          <p class="text-sm text-on-surface-variant italic">
+            <strong>Tipp:</strong> Du bist nicht die Therapeutin und nicht der Moderator eines Podcasts. Du bist jemand, der Raum hält. Das heißt vor allem: selbst mit ehrlich antworten. Deine Offenheit ist die Erlaubnis für alle anderen.
+          </p>
+        </div>
+      </div>
+
+      <!-- Schritt 5 -->
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <div class="col-span-2 md:col-span-2">
+          <span class="font-serif italic text-5xl md:text-6xl text-secondary/40">05</span>
+        </div>
+        <div class="col-span-10 md:col-span-10">
+          <h2 class="font-serif text-2xl md:text-3xl mb-4">Den Abschluss würdigen — und dann loslassen.</h2>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Die letzte Station ist bewusst kurz: ein Wort, ein Satz, eine Mitnahme pro Person. Kein großer Rückblick, kein „Und, wie fandet ihr's?"-Small-Talk. Wenn die Runde endet, endet sie. Was gesagt wurde, bleibt im Raum.
+          </p>
+          <p class="text-base md:text-lg text-on-background/80 leading-relaxed mb-4">
+            Nach dem offiziellen Ende wird meistens noch gesessen und geredet — das ist das eigentliche Geschenk dieser Abende. Die Leute gehen selten pünktlich. Bereite einen Plan B für ein gemeinsames Getränk danach vor.
+          </p>
+          <p class="text-sm text-on-surface-variant italic">
+            <strong>Tipp:</strong> Das Feedback-Formular am Ende ist freiwillig — aber nützlich. Es hilft mir, Wertenackt besser zu machen. Wenn es passt, lade die Gruppe ein, es gemeinsam auszufüllen.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mb-20 border-t border-outline-variant/20 pt-12">
+    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Häufige Fragen</p>
+    <h2 class="font-serif text-3xl md:text-5xl mb-12 leading-snug">Was, wenn …</h2>
+
+    <div class="space-y-4">
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… jemand nicht antworten will?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          „Pass" ist jederzeit okay — das sollte vom ersten Moment an klar sein. Niemand muss auf jede Frage antworten. Oft ist das Schweigen einer Person sogar informativ — es bedeutet nicht, dass sie nichts zu sagen hat, sondern dass die Frage gerade etwas in ihr berührt. Respektiere das, ohne nachzuhaken.
+        </p>
+      </details>
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… die Gruppe oberflächlich bleibt?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          Du kannst Tiefe nicht erzwingen — aber du kannst sie einladen. Wenn alle nur oberflächlich antworten, gib du den Ton vor: antworte selbst mit einem ehrlichen, leicht verletzlichen Satz. Meistens reicht das, damit sich die Gruppe traut. Wenn nicht: heute war halt nicht die Gruppe, nicht das Thema, nicht der Abend. Das ist auch okay.
+        </p>
+      </details>
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… jemand emotional wird?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          Tränen sind nicht das Problem — sie sind oft das Zeichen, dass der Abend funktioniert. Halte den Raum: warte, reich Taschentücher, lächle freundlich, frage ob die Person weitermachen möchte. Kein „Oh Gott, alles okay?"-Drama, kein Ablenken, kein Ratgeben. Die anderen folgen deinem Beispiel.
+        </p>
+      </details>
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… jemand zu viel Raum nimmt?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          Als Gastgeber:in darfst du freundlich regulieren: „Danke, das war stark — lass uns kurz zu [Name] rüber." Beim nächsten Thema zuerst die ruhigeren Stimmen ansprechen. Wichtig: nicht abwertend, sondern strukturierend.
+        </p>
+      </details>
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… der Timer zu knapp oder zu großzügig ist?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          Der Timer ist eine Orientierung, kein Gesetz. Wenn ein Gespräch fließt und ihr noch Zeit braucht: Timer pausieren. Wenn eine Station schnell erledigt ist: „Phase überspringen"-Button. Der Wertenackt-Flow ist ein Gerüst — ihr füllt es.
+        </p>
+      </details>
+
+      <details class="group bg-surface-container-low rounded-lg p-6">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <h3 class="font-serif text-xl">… es mein erstes Mal ist und ich nervös bin?</h3>
+          <span class="material-symbols-outlined chev transition-transform">expand_more</span>
+        </summary>
+        <p class="mt-4 text-base text-on-background/80 leading-relaxed">
+          Völlig normal. Drei Dinge, die helfen: <strong>Erstens</strong>, du machst nichts falsch, solange du ehrlich bist. <strong>Zweitens</strong>, starte mit dem Frageabend — das ist am niedrigschwelligsten. <strong>Drittens</strong>, lad Menschen ein, bei denen du dir zutraust, selbst ehrlich zu sein. Die Gruppe ist der größere Hebel als deine Moderationskunst.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary-container p-10 md:p-16 rounded-xl text-center">
+    <h2 class="font-headline italic text-3xl md:text-5xl text-on-primary mb-6">Du bist so weit.</h2>
+    <p class="text-on-primary/70 text-lg mb-10 max-w-xl mx-auto">
+      Das Schönste kommt nach dem ersten Abend: zu merken, dass es einfacher war als gedacht — und dass die Leute es mochten.
+    </p>
+    <a href="themen.html" class="inline-block bg-secondary text-on-primary px-10 py-4 text-sm uppercase tracking-widest font-bold rounded-lg hover:bg-on-tertiary-container transition-colors">
+      Dein erstes Thema wählen
+    </a>
+  </section>
+
+</main>
+
+<footer class="bg-surface-container flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
+  <div class="mb-8 md:mb-0">
+    <span class="font-serif italic text-sm text-primary">Wertenackt</span>
+    <p class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 mt-2">© 2026 Wertenackt</p>
+  </div>
+  <div class="flex flex-wrap justify-center gap-8">
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="ueber.html">Über</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="gastgeber.html">Gastgeber</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="mailto:florian.s.thiel+wertenackt@gmail.com">Kontakt</a>
+  </div>
+</footer>
+
+</body>
+</html>
