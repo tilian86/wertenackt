@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Abend-Flow — Lebensfunken</title>
+<title>Abend-Flow — Wertenackt</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -37,7 +37,7 @@ body { background-color: #FBF9F4; }
   <header class="w-full max-w-screen-2xl mx-auto flex justify-between items-start opacity-70 mb-8">
     <div class="flex flex-col">
       <span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary mb-1" id="themeLabel">Abend-Flow</span>
-      <a href="index.html" class="font-headline italic text-xl text-primary-container">Lebensfunken</a>
+      <a href="index.html" class="font-headline italic text-xl text-primary-container">Wertenackt</a>
     </div>
     <div class="flex items-center gap-6">
       <div class="text-right hidden md:block">
@@ -184,7 +184,7 @@ const el = {
 
 el.closeLink.href = 'thema.html?id=' + encodeURIComponent(themaId);
 el.themeLabel.textContent = theme.title + ' · ' + format.label;
-document.title = theme.title + ' — Lebensfunken';
+document.title = theme.title + ' — Wertenackt';
 
 // Build star buttons once
 const starRow = el.feedbackForm.querySelector('[role="radiogroup"]');
@@ -212,7 +212,7 @@ function submitFeedback(ev) {
   const moved = document.getElementById('fbMoved').value.trim();
   const improve = document.getElementById('fbImprove').value.trim();
   const email = document.getElementById('fbEmail').value.trim();
-  const subject = `Lebensfunken Feedback — ${theme.title} (${format.label})`;
+  const subject = `Wertenackt Feedback — ${theme.title} (${format.label})`;
   const body = [
     `Thema: ${theme.title}`,
     `Format: ${format.label}`,
@@ -226,7 +226,7 @@ function submitFeedback(ev) {
     '',
     email ? `Kontakt: ${email}` : 'Kontakt: anonym',
   ].join('\n');
-  const mailto = `mailto:${encodeURIComponent(window.LEBENSFUNKEN_FEEDBACK_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailto = `mailto:${encodeURIComponent(window.WERTENACKT_FEEDBACK_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = mailto;
   // Nach 1 s zurück zur Start-Seite, damit der Abend sauber endet
   setTimeout(() => { window.location.href = 'thema.html?id=' + encodeURIComponent(themaId); }, 1200);

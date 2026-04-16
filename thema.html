@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Themenabend — Lebensfunken</title>
+<title>Themenabend — Wertenackt</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -30,7 +30,7 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
 <body class="font-body selection:bg-on-tertiary-container selection:text-white">
 <header class="w-full top-0 border-none bg-[#FBF9F4] sticky z-50">
 <nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto text-[#1B3022] font-['Noto_Serif'] tracking-tight leading-relaxed">
-<a href="index.html" class="text-2xl font-serif italic text-[#1B3022]">Lebensfunken</a>
+<a href="index.html" class="text-2xl font-serif italic text-[#1B3022]">Wertenackt</a>
 <div class="hidden md:flex space-x-12 items-center">
 <a class="text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
 <a class="text-[#1B1C19] font-bold border-b border-[#924C00] hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
@@ -124,13 +124,13 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
   </section>
 </main>
 <footer class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24 bg-[#F0EEE9] text-[#1B3022] font-['Inter'] text-xs tracking-wider uppercase">
-  <div class="font-serif italic text-sm mb-8 md:mb-0 normal-case tracking-normal">Lebensfunken</div>
+  <div class="font-serif italic text-sm mb-8 md:mb-0 normal-case tracking-normal">Wertenackt</div>
   <div class="flex flex-col md:flex-row items-center gap-8">
     <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Philosophie</a>
     <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Kontakt</a>
     <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Impressum</a>
   </div>
-  <div class="mt-8 md:mt-0 text-[#1B1C19]/40">© 2026 Lebensfunken</div>
+  <div class="mt-8 md:mt-0 text-[#1B1C19]/40">© 2026 Wertenackt</div>
 </footer>
 <script src="themes.js"></script>
 <script>
@@ -140,7 +140,7 @@ const theme = window.THEMES[id] || window.THEMES.bindung;
 let currentFormat = params.get('format') || 'group';
 if (!theme.formats[currentFormat]) currentFormat = Object.keys(theme.formats)[0];
 
-document.title = theme.title + ' — Lebensfunken';
+document.title = theme.title + ' — Wertenackt';
 
 // Static fields
 document.querySelectorAll('[data-field]').forEach(el => {
