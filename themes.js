@@ -14,7 +14,7 @@
 //   quote?  {text, author}  — rendered as styled blockquote (usually in Einstieg-Station)
 //   type?   'feedback'  — renders a feedback form instead of normal content
 
-window.KLARKREIS_FEEDBACK_EMAIL = 'florian.s.thiel+klarkreis@gmail.com';
+window.KLARKREIS_FEEDBACK_EMAIL = 'kontakt@klarkreis.de';
 
 const FEEDBACK_STATION = {
   name: 'Feedback',
@@ -37,7 +37,7 @@ window.THEMES = {
     title: 'Welches Bindungsmuster prägt mich?',
     category: 'Beziehungen',
     lead: 'Ein Abend über das, was in uns mitläuft, wenn wir lieben: die unsichtbare Software unserer Bindung. Keine Couch, keine Diagnose — ein ehrliches Gespräch.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBor9suvn-xFQGUPG_UbB1MaifycThZmUPJRX2-WNWOZhly_8jdzzkA0MXabSI3-CEd2HO7gldmaQ4-kX4hYZWBIyyCZFgv9DLNYB5DZ2WY0Ss7C_8QnhAZN_eYWD9F3AoqgOh5n9K9Wv4Y-UIUqZyG-VZhlWBPWYaTNP70rpZLQCoOBq-9VsaXRJ62v8xo7SYTLEnELzwn6bO3TdDlXs2FUoJlD0aD0IkcIU5xUMq9M1cQ_VP1yDJSW_aevQpAwCZKrfWF0ds0EHbX',
+    image: 'images/wein.jpg',
     philosophy1: 'Wir kommen mit einer Art Beziehungs-Software auf die Welt. Die ersten Bezugspersonen prägen, wie wir Nähe später erleben: ob sie sich sicher anfühlt oder bedrohlich, ob wir auf uns allein gestellt sind oder getragen.',
     philosophy2: 'Die klassische Bindungsforschung unterscheidet vier Muster. Die meisten erkennen sich in Mischungen wieder. Heute schaut ihr, wo eure Muster liegen — ohne Diagnose, ohne Therapie, einfach ehrlich.',
     featured: true,
@@ -135,7 +135,7 @@ window.THEMES = {
     title: 'Was sind meine Werte?',
     category: 'Werte',
     lead: 'Werte zeigen sich nicht in dem, was wir sagen, sondern in dem, wofür wir Zeit opfern, worüber wir uns ärgern und was uns spät in der Nacht beschäftigt.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAndtAhizmGZhn3gzaSL1DCAJ7zPOpBj1D06e4TxBChuV7EoVcg18GrQd_4xjFemvRe-DGQo1B_THcAc1orj-qpBD7zHw8rLvym3huLddoBlsxl4Tj0gT8gH9k7tqINEnDzoUSto8a9SldKQbSDADNKZl2OYQuOWYEyHcHT7GEjbr_o3OEIfDDMDuguc29p7b3OCypmWKTRCwXm4ot5oCXJyKsA0QF8Rd4S0nOUgI6eeTb9vYtM7MzYmXhlBgkQ7gdQFKIsdGZ2hJ7I',
+    image: 'images/bindung.jpg',
     philosophy1: 'Jeder kennt das: Auf dem Poster stehen „Familie, Ehrlichkeit, Gesundheit“ — und im Alltag treffen wir Entscheidungen, die genau dem widersprechen. Werte sind nicht das, was wir sagen. Sie sind das, was sich in unseren kleinen täglichen Entscheidungen durchsetzt.',
     philosophy2: 'An diesem Abend sucht ihr nicht nach den „richtigen“ Werten — ihr sucht nach den euren. So, wie sie sich wirklich im Alltag zeigen, nicht wie sie klingen sollten.',
     formats: {
@@ -234,7 +234,7 @@ window.THEMES = {
     title: 'Was ist mir wirklich wichtig?',
     category: 'Werte',
     lead: 'Ein Fokus-Abend über das stille Ja zum Wesentlichen — und das Nein zum Möglichen. Mit dem Vier-Öfen-Modell: welche Öfen brennen heiß bei dir, welche sind aus?',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBx3zc_372HZ2FnhMqRihODyYdH0O6QMhHorRxsi1pNG5H6yo27lR3uFj5kEpa_bZr6NyMTZMkNLzxhVFFrWOAWg62u4rwi9mqyFdCHrVY3-O-ZOBWT-4kuNVD5hHIfeuAHO8OfvTaFZmYMfj-kYak3WqVQZF6RIYra-FyBU_I2AjVbDZVt0JjNJj2RSBpOn2Us3TyGl-oc_Da2fdvd3_WYWlkDPaFgXfDXm_5WLY5Q9p-ssyPjMUjYVmwfk1RS19Dq2edt7wPpu1R2',
+    image: 'images/kerze.jpg',
     philosophy1: 'Vieles schreit nach Aufmerksamkeit. Wenig verdient sie wirklich. Prioritäten werden erst sichtbar, wenn wir aufhören, alles gleichzeitig zu wollen.',
     philosophy2: 'Das Vier-Öfen-Modell (nach David McCullough / Harvard Business Review) ist simpel und unbequem: vor dir stehen vier Öfen — Arbeit, Familie, Freunde, Gesundheit. Um wirklich erfolgreich zu sein, musst du mindestens einen komplett ausmachen. Um außergewöhnlich zu sein, zwei. Heute schaut ihr, welche eure gerade brennen.',
     formats: {
@@ -331,7 +331,7 @@ window.THEMES = {
     title: 'Wofür stehe ich?',
     category: 'Werte',
     lead: 'Eine Standortbestimmung. Nicht die laute Version — die stille. Wo ziehe ich Linien, wo ducke ich mich, wo wachse ich?',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxbjqrLpObJ-WD47GvSPuVQIAi2NVN5ZnoVNgvrsdtCZLaj4qrsZF2HrzHhwsJxLgvnVJILKatnzlr-owOjC4Vwjsj8zZLzjxILS_tEIw2mEMKfb-zeXJMntnWcVcuPa9PYApGzgjcOkjrCAXO4pfQeKu2mkuLgmuZAib-diXx3G3-UD0YnoBhDw7Ce18lglGHQsmkYnYtlXA3uXQy7ubFaeStRwPaH_tvjawicIlIFmIJNz1hbpyZCZKx3FSF1NFKo_bj2ggPwLZZ',
+    image: 'images/kaffee.jpg',
     philosophy1: 'Nicht jede Überzeugung muss laut sein. Aber sie muss deine sein. Heute geht es um die Grundsätze, an denen du dich wiedererkennst — und um die Momente, in denen du dich verleugnest.',
     philosophy2: 'Wir schauen auf drei Ebenen: Wofür stehst du bei dir selbst ein? Für andere? Für eine Sache, die größer ist als du? Manche Menschen stehen auf Ebene 1 stark und auf Ebene 3 schwach. Andere umgekehrt. Beides ist okay — sichtbar wird das Muster erst, wenn man ehrlich draufschaut.',
     formats: {
@@ -422,7 +422,7 @@ window.THEMES = {
     title: 'Mein idealer Tag',
     category: 'Zukunft',
     lead: 'Keine Traumreise, kein Fünf-Jahres-Plan. Ein ehrlicher Tag zwischen Aufstehen und Einschlafen — und was er über dich verrät.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAGJu-_hBQUfMgGqaCQAYs1H6AFjL5dK4gVKhHP7NsoVNFIbSk-TQyo0-fEJqwcpbO9GCCSDlhI3HMYtGoY4EQ7NHiBklOiV0LQ-CNBeklSYmw0yNL3mphU1Ocav-12_PYQKRjuxpj6DPJLEhIWa4iumFZihxaG20tE0r3Ox3AeL_Phj3b3XJy3cUtKvCKFYcOfc7HUj1kqmdYtWMqD8-i_IAyHfDHsEffMyYqANt4NMTHQLEHn1fcI3Hn-g7kqXJF3g1X8khkw0odF',
+    image: 'images/landschaft.jpg',
     philosophy1: 'Die Frage nach dem idealen Tag klingt harmlos. In Wirklichkeit legt sie offen, was wir wirklich brauchen: Ruhe, Begegnung, Bewegung, Tiefe, Leichtigkeit — in welcher Mischung?',
     philosophy2: 'Drei Säulen tragen die meisten guten Tage: Flow (etwas schaffen, in dem man aufgeht), Connection (jemanden wirklich sehen), Stille (Zeit mit sich selbst). Kein Tag ist perfekt, aber die Mischung entscheidet. Heute sucht ihr eure eigene.',
     formats: {
@@ -509,7 +509,7 @@ window.THEMES = {
     title: 'In 10 Jahren',
     category: 'Zukunft',
     lead: 'Eine Zeitreise nach vorn. Nicht: was willst du erreicht haben. Sondern: wer willst du geworden sein — und was fängt heute damit an?',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuASxrTq6qbyjcPIszUistGKA093J37XGuKEfXb7-hB0RKkT2HvXmspPfpdXuWkgqmBwjOialAQhLeV7nZvf_8ywA6kv8uYw_yqrgYfJZYUn5_x7sPkbUMe-WmqC8VlDNAhfply8WJlUZxo0ovwfs0z7nWfJzGGjckVrDJg4W-q5KFtH6OxwdK56mFymrmK3aO1nDuY1lhm6brUvLXgXgkhnDEyN_X6NpKBcEpNCuAZLTtT1XXxPR6ichv8AudBs5fTwVEpz-JqXpuf-',
+    image: 'images/nachthimmel.jpg',
     philosophy1: 'Zehn Jahre sind weit genug, um fast alles zu verändern — und nah genug, dass das, was wir heute tun, entscheidet, was dann da sein wird.',
     philosophy2: 'Wir schauen auf vier Säulen einer Zukunft: Ort (wo), Menschen (mit wem), Arbeit (woran) und Selbst (wer bist du geworden). Die Übung lebt von Konkretheit — keine Poesie, sondern ein Mittwoch im April 2036.',
     formats: {
@@ -606,7 +606,7 @@ window.THEMES = {
     title: 'Ein Abend mit guten Fragen',
     category: 'Begegnung',
     lead: 'Kein Thema, keine Landkarte — nur Fragen, die sich nicht jeden Tag stellen lassen. Ideal für neue Gruppen, Dates oder Freund:innen, die sich nochmal neu kennenlernen wollen.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxbjqrLpObJ-WD47GvSPuVQIAi2NVN5ZnoVNgvrsdtCZLaj4qrsZF2HrzHhwsJxLgvnVJILKatnzlr-owOjC4Vwjsj8zZLzjxILS_tEIw2mEMKfb-zeXJMntnWcVcuPa9PYApGzgjcOkjrCAXO4pfQeKu2mkuLgmuZAib-diXx3G3-UD0YnoBhDw7Ce18lglGHQsmkYnYtlXA3uXQy7ubFaeStRwPaH_tvjawicIlIFmIJNz1hbpyZCZKx3FSF1NFKo_bj2ggPwLZZ',
+    image: 'images/kaffee.jpg',
     philosophy1: 'Gute Fragen tun etwas, was Aussagen nicht können: sie öffnen. Sie laden eine Person ein, von sich zu erzählen — ohne dass es sich wie Verhör anfühlt.',
     philosophy2: 'Dieser Abend hat keine Landkarte, kein Modell, keinen therapeutischen Bogen. Nur eine kuratierte Auswahl an Fragen, sortiert von leicht zu tief. Ihr entscheidet spontan, wer antwortet, wie lange, ob eine Frage übersprungen wird.',
     formats: {
@@ -747,7 +747,7 @@ window.THEMES = {
     title: 'Frageabend: Arbeit & Berufung',
     category: 'Frageabend',
     lead: 'Ein Abend über das, was wir 40 Stunden pro Woche tun — und ob es uns noch gehört. Für Menschen, die sich fragen, ob ihr Job sie noch beheimatet.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAxbjqrLpObJ-WD47GvSPuVQIAi2NVN5ZnoVNgvrsdtCZLaj4qrsZF2HrzHhwsJxLgvnVJILKatnzlr-owOjC4Vwjsj8zZLzjxILS_tEIw2mEMKfb-zeXJMntnWcVcuPa9PYApGzgjcOkjrCAXO4pfQeKu2mkuLgmuZAib-diXx3G3-UD0YnoBhDw7Ce18lglGHQsmkYnYtlXA3uXQy7ubFaeStRwPaH_tvjawicIlIFmIJNz1hbpyZCZKx3FSF1NFKo_bj2ggPwLZZ',
+    image: 'images/kaffee.jpg',
     philosophy1: 'Arbeit ist nicht nur Lohnerwerb. Sie strukturiert unsere Wochen, prägt unsere Identität, beantwortet die Frage „Was machst du eigentlich?“. Und doch sprechen wir selten ehrlich darüber.',
     philosophy2: 'An diesem Abend geht es nicht um Karriere-Coaching. Es geht um Reibung und Resonanz: wo gehört dir deine Arbeit noch, wo nicht? Wo hast du sie mal geliebt, wo nicht mehr?',
     formats: {
@@ -841,7 +841,7 @@ window.THEMES = {
     title: 'Frageabend: Stille Bereiche',
     category: 'Frageabend',
     lead: 'Für Gruppen, die sich kennen. Fragen, die im normalen Gespräch nie gestellt werden — und manchmal das Wichtigste sind. Bitte nur, wenn ihr einander vertraut.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBx3zc_372HZ2FnhMqRihODyYdH0O6QMhHorRxsi1pNG5H6yo27lR3uFj5kEpa_bZr6NyMTZMkNLzxhVFFrWOAWg62u4rwi9mqyFdCHrVY3-O-ZOBWT-4kuNVD5hHIfeuAHO8OfvTaFZmYMfj-kYak3WqVQZF6RIYra-FyBU_I2AjVbDZVt0JjNJj2RSBpOn2Us3TyGl-oc_Da2fdvd3_WYWlkDPaFgXfDXm_5WLY5Q9p-ssyPjMUjYVmwfk1RS19Dq2edt7wPpu1R2',
+    image: 'images/kerze.jpg',
     philosophy1: 'Es gibt einen Bereich in jedem Menschen, der selten Worte bekommt: die leise Sorge, das ungesagte „eigentlich“, die Frage, die wir uns nicht selbst stellen wollen.',
     philosophy2: 'Dieser Abend ist nicht für jede Gruppe. Er funktioniert nur, wenn ihr einander vertraut — keine erste Begegnung, keine Networking-Runde. Was hier gesagt wird, bleibt im Raum. „Pass“ ist immer okay, oft sogar das Richtige.',
     formats: {
@@ -935,7 +935,7 @@ window.THEMES = {
     title: 'Frageabend: Humor & Absurdes',
     category: 'Frageabend',
     lead: 'Wenn der ernste Abend einfach nicht passt. Fragen, die Quatsch erlauben — und durch Quatsch oft mehr verraten als ehrliche Antworten.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBKT8rovh0Bg2sBiYCzihK4d2xg68wZRDcA5CVOfjhFK8Lq_xMt-JauAkJiVQjLFp9UUeQl2Ol7emWI9MuGnPjDSas-kTya6GMXgxEvJUGMj0J94FU8-qWfiIZyzhrGNrYE2JlcZ7JbTcpgJHPQhr9GPUr46yrXhA6QwreP3M-rC0bxglm3EuO1vjc5S56wa1T3L8l1YaGCa7CqeH1qG__3IKcDU-TDTwFQsxP4NuXcMihsY_JcQdKl7XoCvvO-E0LcQjjz6s-UdEHn',
+    image: 'images/notizbuch.jpg',
     philosophy1: 'Manchmal ist der gerade Weg in einen Menschen die völlig schräge Frage. „Welcher Instagram-Filter beschreibt deine Persönlichkeit?“ verrät oft mehr als „Was machst du beruflich?“.',
     philosophy2: 'Heute kein psychologisches Tiefbohren — sondern hypothetische Szenarien, paradoxe Wahlen und Alltagsphilosophie. Lacht viel. Aber hört auch auf das, was hinter dem Lachen liegt.',
     formats: {

@@ -4,6 +4,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Themenabend — KlarKreis</title>
+<meta name="description" content="Detailansicht eines KlarKreis-Themenabends mit Stationen, Material und Vorbereitung."/>
+<meta name="theme-color" content="#FBF9F4"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -124,14 +127,18 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="relatedThemes"></div>
   </section>
 </main>
-<footer class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24 bg-[#F0EEE9] text-[#1B3022] font-['Inter'] text-xs tracking-wider uppercase">
-  <div class="font-serif italic text-sm mb-8 md:mb-0 normal-case tracking-normal">KlarKreis</div>
-  <div class="flex flex-col md:flex-row items-center gap-8">
-    <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Philosophie</a>
-    <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Kontakt</a>
-    <a class="text-[#1B1C19]/50 hover:text-[#B7895B] transition-colors" href="#">Impressum</a>
+<footer class="bg-surface-container flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
+  <div class="mb-8 md:mb-0">
+    <span class="font-serif italic text-sm text-primary">KlarKreis</span>
+    <p class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 mt-2">© 2026 KlarKreis</p>
   </div>
-  <div class="mt-8 md:mt-0 text-[#1B1C19]/40">© 2026 KlarKreis</div>
+  <div class="flex flex-wrap justify-center gap-8">
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="ueber.html">Über</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="gastgeber.html">Gastgeber</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="mailto:kontakt@klarkreis.de">Kontakt</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="impressum.html">Impressum</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="datenschutz.html">Datenschutz</a>
+  </div>
 </footer>
 <script src="themes.js"></script>
 <script>
