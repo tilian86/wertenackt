@@ -135,7 +135,7 @@ window.THEMES = {
     title: 'Was sind meine Werte?',
     category: 'Werte',
     lead: 'Werte zeigen sich nicht in dem, was wir sagen, sondern in dem, wofür wir Zeit opfern, worüber wir uns ärgern und was uns spät in der Nacht beschäftigt.',
-    image: 'images/bindung.jpg',
+    image: 'images/notizbuch.jpg',
     philosophy1: 'Jeder kennt das: Auf dem Poster stehen „Familie, Ehrlichkeit, Gesundheit“ — und im Alltag treffen wir Entscheidungen, die genau dem widersprechen. Werte sind nicht das, was wir sagen. Sie sind das, was sich in unseren kleinen täglichen Entscheidungen durchsetzt.',
     philosophy2: 'An diesem Abend sucht ihr nicht nach den „richtigen“ Werten — ihr sucht nach den euren. So, wie sie sich wirklich im Alltag zeigen, nicht wie sie klingen sollten.',
     formats: {
@@ -606,7 +606,7 @@ window.THEMES = {
     title: 'Ein Abend mit guten Fragen',
     category: 'Begegnung',
     lead: 'Kein Thema, keine Landkarte — nur Fragen, die sich nicht jeden Tag stellen lassen. Ideal für neue Gruppen, Dates oder Freund:innen, die sich nochmal neu kennenlernen wollen.',
-    image: 'images/kaffee.jpg',
+    image: 'images/stilleben.jpg',
     philosophy1: 'Gute Fragen tun etwas, was Aussagen nicht können: sie öffnen. Sie laden eine Person ein, von sich zu erzählen — ohne dass es sich wie Verhör anfühlt.',
     philosophy2: 'Dieser Abend hat keine Landkarte, kein Modell, keinen therapeutischen Bogen. Nur eine kuratierte Auswahl an Fragen, sortiert von leicht zu tief. Ihr entscheidet spontan, wer antwortet, wie lange, ob eine Frage übersprungen wird.',
     formats: {
@@ -747,7 +747,7 @@ window.THEMES = {
     title: 'Frageabend: Arbeit & Berufung',
     category: 'Frageabend',
     lead: 'Ein Abend über das, was wir 40 Stunden pro Woche tun — und ob es uns noch gehört. Für Menschen, die sich fragen, ob ihr Job sie noch beheimatet.',
-    image: 'images/kaffee.jpg',
+    image: 'images/bindung.jpg',
     philosophy1: 'Arbeit ist nicht nur Lohnerwerb. Sie strukturiert unsere Wochen, prägt unsere Identität, beantwortet die Frage „Was machst du eigentlich?“. Und doch sprechen wir selten ehrlich darüber.',
     philosophy2: 'An diesem Abend geht es nicht um Karriere-Coaching. Es geht um Reibung und Resonanz: wo gehört dir deine Arbeit noch, wo nicht? Wo hast du sie mal geliebt, wo nicht mehr?',
     formats: {
@@ -935,7 +935,7 @@ window.THEMES = {
     title: 'Frageabend: Humor & Absurdes',
     category: 'Frageabend',
     lead: 'Wenn der ernste Abend einfach nicht passt. Fragen, die Quatsch erlauben — und durch Quatsch oft mehr verraten als ehrliche Antworten.',
-    image: 'images/notizbuch.jpg',
+    image: 'images/wein.jpg',
     philosophy1: 'Manchmal ist der gerade Weg in einen Menschen die völlig schräge Frage. „Welcher Instagram-Filter beschreibt deine Persönlichkeit?“ verrät oft mehr als „Was machst du beruflich?“.',
     philosophy2: 'Heute kein psychologisches Tiefbohren — sondern hypothetische Szenarien, paradoxe Wahlen und Alltagsphilosophie. Lacht viel. Aber hört auch auf das, was hinter dem Lachen liegt.',
     formats: {
@@ -1023,6 +1023,201 @@ window.THEMES = {
           { name: 'Abschluss', title: 'Und was war wirklich?', duration: 5*60,
             hostNote: 'Tonwechsel: kurz ehrlich.',
             question: 'Welche absurde Antwort von mir heute hat dir am meisten über mich verraten?' }
+        ])
+      }
+    }
+  },
+
+  // =====================================================================
+  // ACHTZIG  — Was würde mein 80-jähriges Ich sagen?
+  // =====================================================================
+  achtzig: {
+    title: 'Was würde mein 80-jähriges Ich sagen?',
+    category: 'Lebensperspektive',
+    lead: 'Eine einzige Perspektive lässt vieles klein wirken, was sonst groß tut: die der eigenen Zukunft. Heute borgt ihr euch die Augen einer 80-jährigen Version von euch selbst — nicht morbide, sondern wachrüttelnd.',
+    image: 'images/achtzig.svg',
+    philosophy1: 'Wir treffen unsere wichtigsten Entscheidungen aus einer extrem schmalen Perspektive: aus dem Moment heraus, mit dem Druck der nächsten zwei Wochen im Nacken. Was uns fast immer fehlt, ist die zweite Stimme: die Person, die wir in 40 oder 50 Jahren sein werden.',
+    philosophy2: 'Diese Person ist nicht weiser als ihr. Sie hat nur weiter gesehen. Sie weiß, welche Sorgen sich aufgelöst haben, welche Beziehungen gehalten haben, welcher Mut sich ausgezahlt hat. Heute lasst ihr sie sprechen — und schaut, was sie heute zu euch sagen würde.',
+    formats: {
+      group: {
+        label: 'Kleine Gruppe',
+        duration: '~1 Std. 45 Min.',
+        people: '4-6 Personen',
+        stations: withFeedback([
+          { name: 'Ankommen', title: 'Wie geht es dir, hier und jetzt?', duration: 8*60,
+            hostNote: 'Reihum, 1–2 Sätze. Keine Rückfragen.',
+            question: 'Wie geht es dir gerade — und was beschäftigt dich diese Woche am meisten?' },
+          { name: 'Einstieg', title: 'Die Stimme, die fehlt', duration: 7*60,
+            hostNote: 'Eine Person liest langsam vor. Danach 1 Minute Stille.',
+            quote: { text: 'Niemand wird je auf seinem Sterbebett wünschen, mehr Zeit im Büro verbracht zu haben.', author: 'Paul Tsongas' },
+            description: 'Wir treffen unsere wichtigsten Entscheidungen meistens aus einer ungeduldigen Mitte heraus: dringend, eng, getrieben von dem, was diese Woche zählt.\n\nWas dabei fehlt, ist eine Stimme, die wir alle in uns tragen, aber selten zu Wort kommen lassen: die der Person, die wir in 40 oder 50 Jahren sein werden. Heute borgen wir uns ihre Augen.' },
+          { name: 'Ankunft', title: 'Stell dir dein 80-jähriges Ich vor', duration: 10*60,
+            hostNote: 'Vorlesen — langsam. Augen können geschlossen werden. Danach 2 Minuten Stille bevor die nächste Station startet.',
+            description: 'Stell dir vor: Es ist Morgen. Du bist 80 Jahre alt. Du sitzt irgendwo, wo du dich wohlfühlst — am Fenster, auf einer Bank, in deiner Küche. Was siehst du? Wie sitzt du? Was riechst du? Was hast du vor dir auf dem Tisch?\n\nNimm dir einen Moment, dieses Bild wirklich zu sehen. Nicht das ideale Bild — sondern das, das auftaucht, wenn du nicht steuerst.\n\nDieses ältere Ich weiß, was aus dir geworden ist. Es hat alles erlebt, was zwischen heute und damals lag. Es hat keine Eile mehr. Es schaut dich, dein heutiges Du, freundlich an.\n\nUnd jetzt fängt es an zu sprechen.' },
+          { name: 'Stolz', title: 'Wofür würde es dich beneiden?', duration: 12*60,
+            hostNote: 'Reihum. Nicht: „Was läuft gut.“ Sondern: was an deinem heutigen Leben würde diese ältere Version vermissen?',
+            description: 'Manches, was wir heute selbstverständlich finden — dass wir laufen können, dass wir uns spontan verlieben können, dass es noch Jahrzehnte zu gestalten gibt — wird mit 80 nicht mehr selbstverständlich sein. Was davon sieht dein älteres Ich besonders deutlich?',
+            question: 'Wofür würde dich dein 80-jähriges Ich heute beneiden — und merkst du das gerade selbst?' },
+          { name: 'Sorge', title: 'Worüber würde es weinen?', duration: 12*60,
+            hostNote: 'Reihum. Nicht der dramatische Lebensfehler — der leise, der sich gerade einschleicht.',
+            description: 'Manchmal sieht das ältere Ich etwas, das das heutige Ich noch ignorieren kann: eine Beziehung, die langsam einschläft. Eine Gewohnheit, die mehr nimmt als gibt. Eine Sehnsucht, die jedes Jahr kleiner wird, weil sie nie gelebt wird.',
+            question: 'Was tut dein 80-jähriges Ich weh, wenn es auf dein heutiges Leben schaut — auch wenn dein heutiges Du es noch wegerklären kann?' },
+          { name: 'Mut', title: 'Wozu würde es dich drängen?', duration: 12*60,
+            hostNote: 'Reihum. Nicht „mehr Sport treiben“ — eine konkrete Sache, die du seit Jahren aufschiebst.',
+            description: 'Mit 80 sieht man klarer, welcher Mut sich gelohnt hat — und welcher Aufschub sich gerächt hat. Welche Mutprobe würde dein älteres Ich dir heute aufdrücken, wenn es dich am Ärmel ziehen könnte?',
+            question: 'Was würde dein 80-jähriges Ich dich drängen, in den nächsten zwölf Monaten anzufangen — auch wenn dein heutiges Du Gründe findet, warum es dieses Jahr nicht passt?' },
+          { name: 'Versöhnung', title: 'Mit wem hat es Frieden gemacht?', duration: 10*60,
+            hostNote: 'Reihum. „Pass“ ist hier besonders explizit okay.',
+            description: 'Mit 80 sind viele Wunden, die wir heute noch pflegen, leiser geworden. Manche, weil sie geheilt sind. Manche, weil die Person nicht mehr da ist. Welche heutige Verletzung schaut dein älteres Ich anders an?',
+            question: 'Mit wem oder was hat dein 80-jähriges Ich Frieden gemacht — was du heute noch nicht kannst?' },
+          { name: 'Brief', title: 'Ein Brief von 80 an heute', duration: 12*60,
+            hostNote: 'Stille Phase. Stift und Zettel. Jede Person schreibt für sich, leise.',
+            description: 'Schreibt jetzt einen kurzen Brief — von eurem 80-jährigen Ich an euer heutiges Ich. Eine halbe Seite reicht. Was würde diese ältere Version sagen, jetzt, wo sie gehört wurde?\n\nKein Ratgeber-Ton. Kein Lebenskonzept. Nur das, was sie wirklich loswerden möchte. Vielleicht ein einziger Satz. Vielleicht ein paar konkrete Dinge.' },
+          { name: 'Vorlesen', title: 'Was möchtest du teilen?', duration: 12*60,
+            hostNote: 'Reihum. Wer mag, liest den Brief vor — oder einen Satz daraus, oder fasst kurz zusammen. „Pass“ ist okay.',
+            question: 'Wenn du magst: Lies einen Satz oder Auszug aus deinem Brief vor — oder erzähle, was beim Schreiben in dir hochkam.' },
+          { name: 'Mitnahme', title: 'Eine konkrete Sache für die nächste Woche', duration: 8*60,
+            hostNote: 'Reihum, ein Satz. Konkret, klein, machbar — nicht „mehr leben“, sondern „diese Woche meine Schwester anrufen“.',
+            description: 'Nicht das große Lebensprojekt. Eine kleine, konkrete Geste in den nächsten sieben Tagen, die dein 80-jähriges Ich dir nicken würde. Plus ein Wort, mit dem du nach Hause gehst.',
+            question: 'Was machst du in den nächsten sieben Tagen anders — und mit welchem Wort gehst du heute nach Hause?' }
+        ])
+      },
+      pair: {
+        label: 'Zu zweit',
+        duration: '~1 Std. 20 Min.',
+        people: '2 Personen (Paar oder enge Freundschaft)',
+        stations: withFeedback([
+          { name: 'Ankommen', title: 'Wie geht es dir, ehrlich?', duration: 8*60,
+            hostNote: 'Beide nacheinander, je 2 Minuten. Andere:r hört zu, ohne zu reagieren.',
+            question: 'Wie geht es dir gerade wirklich — was läuft, was zerrt?' },
+          { name: 'Einstieg', title: 'Die Stimme, die fehlt', duration: 6*60,
+            hostNote: 'Eine:r liest laut vor.',
+            quote: { text: 'Niemand wird je auf seinem Sterbebett wünschen, mehr Zeit im Büro verbracht zu haben.', author: 'Paul Tsongas' },
+            description: 'Wir treffen unsere wichtigsten Entscheidungen aus einer engen Mitte heraus: getrieben vom Druck dieser Wochen.\n\nHeute borgen wir uns die Augen einer 80-jährigen Version von uns selbst — und schauen, was sie zu uns sagen würde.' },
+          { name: 'Ankunft', title: 'Stell dir dein 80-jähriges Ich vor', duration: 8*60,
+            hostNote: 'Eine:r liest vor — langsam, mit Pausen. Augen schließen ist okay.',
+            description: 'Es ist Morgen. Du bist 80. Du sitzt irgendwo, wo du dich wohlfühlst. Was siehst du? Wie sitzt du? Was hast du vor dir?\n\nDieses ältere Ich weiß, was aus dir geworden ist. Es schaut dich freundlich an. Und jetzt fängt es an zu sprechen.' },
+          { name: 'Stolz & Sorge', title: 'Was sieht es bei dir?', duration: 14*60,
+            hostNote: 'Eine:r erzählt 5 min, die andere Person hört zu (keine Rückfragen). Dann tauschen.',
+            description: 'Zwei Fragen, die du dir abwechselnd stellst — eine direkt nach der anderen.',
+            items: [
+              { accent: '1.', label: 'Stolz', text: 'Wofür würde dein 80-jähriges Ich dich heute beneiden?' },
+              { accent: '2.', label: 'Sorge', text: 'Worüber würde es weinen, wenn es auf dein heutiges Leben schaut?' }
+            ] },
+          { name: 'Mut', title: 'Wozu würde es dich drängen?', duration: 14*60,
+            hostNote: 'Eine:r erzählt 5 min, andere Person hört zu. Dann tauschen.',
+            description: 'Konkrete Sache, die du seit Jahren aufschiebst. Nicht „mehr leben“ — eine echte Schwelle.',
+            question: 'Was würde dein älteres Ich dich drängen, in den nächsten zwölf Monaten anzufangen?' },
+          { name: 'Brief', title: 'Ein Brief von 80 an heute', duration: 12*60,
+            hostNote: 'Stille. Stift und Zettel. Jeder schreibt leise für sich.',
+            description: 'Eine halbe Seite. Brief von eurem 80-jährigen Ich an euer heutiges Du. Keine Ratschläge — was möchte es loswerden, jetzt, wo es gehört wurde?' },
+          { name: 'Vorlesen', title: 'Lies vor — wenn du magst', duration: 10*60,
+            hostNote: 'Eine:r liest, andere hört. Dann tauschen. Keine Kommentare. Nur danke.',
+            question: 'Lies deinen Brief vor — oder einen Satz, oder fasse zusammen.' },
+          { name: 'Mitnahme', title: 'Eine Sache für die nächste Woche', duration: 6*60,
+            hostNote: 'Beide nacheinander, ein Satz.',
+            question: 'Was machst du in den nächsten sieben Tagen anders — und mit welchem Wort gehst du heute nach Hause?' }
+        ])
+      }
+    }
+  },
+
+  // =====================================================================
+  // HEIMAT  — Was trägt mich?
+  // =====================================================================
+  heimat: {
+    title: 'Heimat — was trägt mich?',
+    category: 'Identität',
+    lead: 'Heimat ist nicht der Ort, wo der Pass ausgestellt wurde. Heimat ist die Mischung aus Räumen, Menschen, Gerüchen und Tätigkeiten, die uns das Gefühl geben: hier muss ich nicht weiter. Heute sucht jede:r seine eigene.',
+    image: 'images/heimat.svg',
+    philosophy1: 'Heimat ist ein abgenutztes Wort, das von einer politischen Seite besetzt und von der anderen verschmäht wurde. Beides ist schade. Denn was es bezeichnet, ist eines der wenigen wirklich tragenden Gefühle, die wir haben: die Empfindung, irgendwo nicht weitermüssen.',
+    philosophy2: 'Heimat ist selten ein Ort. Meistens ist sie eine Komposition: ein bestimmtes Licht in der Küche, der Klang einer Stimme, die Tätigkeit, in der man sich vergisst, der Geruch eines bestimmten Brotes. Heute sucht jede:r seine eigene Heimat-Komposition zusammen — und schaut, wo sie heute schon trägt und wo nicht mehr.',
+    formats: {
+      group: {
+        label: 'Kleine Gruppe',
+        duration: '~1 Std. 45 Min.',
+        people: '4-6 Personen',
+        stations: withFeedback([
+          { name: 'Ankommen', title: 'Wo bist du heute aufgewacht?', duration: 8*60,
+            hostNote: 'Reihum, 1–2 Sätze. „Innerlich“ ist genauso valide wie „äußerlich“.',
+            question: 'Wo bist du heute Morgen aufgewacht — innerlich und äußerlich?' },
+          { name: 'Einstieg', title: 'Heimat ist mehr als ein Ort', duration: 7*60,
+            hostNote: 'Vorlesen — langsam. Danach 1 Minute Stille.',
+            quote: { text: 'Heimat ist da, wo ich nicht erklären muss, was ich meine.', author: 'unbekannt' },
+            description: 'Wir sind eine Generation, die mehr umzieht, mehr reist, mehr wechselt als jede Generation davor. Das Wort „Heimat“ klingt für viele von uns zu groß, zu pathetisch, zu politisch besetzt.\n\nUnd doch: jede:r kennt das Gefühl. Diesen einen Ort, diesen einen Menschen, diese eine Tätigkeit, in der man nicht weitermuss. Heute geben wir diesem Gefühl Platz — und schauen, woraus deine Heimat heute eigentlich besteht.' },
+          { name: 'Drei Bedeutungen', title: 'Heimat hat drei Türen', duration: 8*60,
+            hostNote: 'Vorlesen. Drei Definitionen, alle gleichzeitig wahr.',
+            description: 'Heimat ist selten nur eine Sache. Meistens ist sie aus mehreren Quellen zusammengesetzt. Dieser Abend unterscheidet drei Türen, durch die Heimat in uns eintreten kann:',
+            items: [
+              { accent: 'Ort', label: 'Heimat als Raum', text: 'Eine Wohnung, eine Stadt, ein Land, eine Landschaft. Der physische Ort, an dem dein Körper zur Ruhe kommt.' },
+              { accent: 'Mensch', label: 'Heimat als Beziehung', text: 'Eine Person, in deren Anwesenheit du nicht mehr darstellen musst. Heimat als „bei dir bin ich angekommen“.' },
+              { accent: 'Tun', label: 'Heimat als Tätigkeit', text: 'Eine Sache, in der du dich vergisst — Kochen, Klettern, Schreiben, Singen, Reparieren. Heimat als „hier bin ich ich“.' }
+            ] },
+          { name: 'Ort', title: 'Welcher Raum trägt dich?', duration: 12*60,
+            hostNote: 'Reihum. Konkret werden — nicht „Berlin“, sondern „die Bank am Maybachufer“.',
+            description: 'Welcher physische Ort fühlt sich für dich heute am ehesten wie Heimat an? Vielleicht ist es nicht da, wo du gerade lebst. Vielleicht ist es ein Ort aus deiner Kindheit. Vielleicht ein Ort, den du dir gerade erst aufbaust.',
+            question: 'Welcher Ort in deinem Leben trägt dich gerade — und was genau macht ihn aus?' },
+          { name: 'Mensch', title: 'Welcher Mensch ist dir Heimat?', duration: 12*60,
+            hostNote: 'Reihum. „Pass“ ist explizit okay — diese Frage berührt manchmal.',
+            description: 'Bei welcher Person musst du nicht mehr darstellen, nicht erklären, nicht den richtigen Eindruck machen? Es muss nicht romantisch sein. Es kann jemand sein, den du selten siehst.',
+            question: 'Welcher Mensch ist dir Heimat — und woran merkst du es?' },
+          { name: 'Sinne', title: 'Heimat geht durch die Nase und Ohren', duration: 10*60,
+            hostNote: 'Reihum. Ein konkretes Sinneserlebnis — Geruch, Klang, Geschmack, Berührung.',
+            description: 'Heimat sitzt oft tiefer als unsere Worte. In einem Geruch von Brot, in dem Klang einer bestimmten Stimme, in der Wärme von Holz unter den Füßen. Was ist dein „Heimat-Sinneserlebnis“?',
+            question: 'Welcher Geruch, Klang oder Geschmack zieht dich sofort dorthin, wo du dich zuhause fühlst?' },
+          { name: 'Verlust', title: 'Wo hast du Heimat verloren?', duration: 12*60,
+            hostNote: 'Reihum. Mit Feingefühl — manche Heimat-Verluste sind frisch.',
+            description: 'Manche Heimaten verlieren wir, weil wir umziehen. Manche, weil Menschen sterben oder gehen. Manche, weil wir uns selbst verändert haben und der alte Ort nicht mehr passt.',
+            question: 'Welche Heimat hast du verloren — und wie gehst du heute damit um?' },
+          { name: 'Neu', title: 'Wo entsteht gerade neue Heimat?', duration: 10*60,
+            hostNote: 'Reihum. Klein anfangen — neue Heimaten beginnen oft kaum sichtbar.',
+            description: 'Neue Heimat entsteht meistens nicht durch große Pläne, sondern durch kleine Wiederholungen: derselbe Bäcker am Samstag, dasselbe Café am Mittwoch, derselbe Mensch am Freitagabend.',
+            question: 'Wo siehst du gerade neue Heimat entstehen — vielleicht so klein, dass du fast drüber hinwegschaust?' },
+          { name: 'Karte', title: 'Deine Heimat-Karte', duration: 8*60,
+            hostNote: 'Stille. Stift und Zettel. Jede:r für sich.',
+            description: 'Zeichne kurz für dich selbst eine kleine „Heimat-Karte“. Keine Geographie. Drei bis fünf Punkte: Orte, Menschen, Tätigkeiten, Gerüche, Klänge. Verbinde sie wenn du magst. Niemand sieht das außer dir.' },
+          { name: 'Mitnahme', title: 'Was möchtest du Heimat werden lassen?', duration: 8*60,
+            hostNote: 'Reihum, ein Satz. Konkret. Plus ein Wort, mit dem du nach Hause gehst.',
+            description: 'Heimat passiert nicht von selbst. Sie wächst, wo wir sie pflegen — durch Wiederholung, durch Anwesenheit, durch kleine Gesten.',
+            question: 'Was möchtest du in den nächsten Wochen pflegen, damit es Heimat wird oder bleibt? Und mit welchem Wort gehst du heute nach Hause?' }
+        ])
+      },
+      pair: {
+        label: 'Zu zweit',
+        duration: '~1 Std. 15 Min.',
+        people: '2 Personen (Paar, Familie, enge Freundschaft)',
+        stations: withFeedback([
+          { name: 'Ankommen', title: 'Wo bist du heute aufgewacht?', duration: 8*60,
+            hostNote: 'Beide nacheinander, je 2 Minuten. Andere:r hört zu, ohne zu reagieren.',
+            question: 'Wo bist du heute Morgen aufgewacht — innerlich und äußerlich?' },
+          { name: 'Einstieg', title: 'Heimat ist mehr als ein Ort', duration: 5*60,
+            hostNote: 'Eine:r liest laut vor.',
+            quote: { text: 'Heimat ist da, wo ich nicht erklären muss, was ich meine.', author: 'unbekannt' },
+            description: 'Heimat ist selten ein Ort allein. Meistens ist sie eine Komposition: ein bestimmtes Licht, ein Mensch, eine Tätigkeit, ein Geruch.\n\nHeute sucht ihr eure jeweilige Heimat-Komposition zusammen — und ihr werdet überrascht sein, wie unterschiedlich sie selbst bei nahen Menschen ist.' },
+          { name: 'Drei Türen', title: 'Heimat hat drei Türen', duration: 5*60,
+            hostNote: 'Vorlesen. Diese drei Definitionen begleiten den Abend.',
+            items: [
+              { accent: 'Ort', label: 'als Raum', text: 'Wo dein Körper zur Ruhe kommt.' },
+              { accent: 'Mensch', label: 'als Beziehung', text: 'Wo du nicht mehr darstellen musst.' },
+              { accent: 'Tun', label: 'als Tätigkeit', text: 'Wo du dich vergisst.' }
+            ] },
+          { name: 'Erzählen', title: 'Drei Erzählungen', duration: 18*60,
+            hostNote: 'Eine:r erzählt 8 Minuten — alle drei Türen. Andere Person hört zu, keine Rückfragen. Dann tauschen.',
+            description: 'Erzähle deinem Gegenüber von deiner Heimat — durch alle drei Türen. Welcher Ort, welcher Mensch, welche Tätigkeit?',
+            question: 'Erzähle: dein Heimat-Ort. Dein Heimat-Mensch. Deine Heimat-Tätigkeit.' },
+          { name: 'Sinne', title: 'Heimat durch Geruch und Klang', duration: 8*60,
+            hostNote: 'Beide abwechselnd — ein Sinneserlebnis pro Person, dann das nächste.',
+            question: 'Welcher Geruch, Klang oder Geschmack zieht dich sofort an deinen Heimat-Ort?' },
+          { name: 'Verlust', title: 'Welche Heimat hast du verloren?', duration: 12*60,
+            hostNote: 'Eine:r erzählt 4 min, andere hört zu. Dann tauschen.',
+            question: 'Welche Heimat hast du verloren — und wie gehst du heute damit um?' },
+          { name: 'Schnittmenge', title: 'Was ist eure gemeinsame Heimat?', duration: 10*60,
+            hostNote: 'Gemeinsames Gespräch. Keine Vorgabe — schaut, was sich zeigt.',
+            description: 'Bei nahen Menschen gibt es oft eine Schnittmenge — Orte, Menschen, Rituale, die für euch beide Heimat sind. Manchmal ist die kleiner als gedacht. Manchmal größer.',
+            question: 'Was teilt ihr beide als Heimat — und was ist euch ganz allein?' },
+          { name: 'Mitnahme', title: 'Was möchten wir pflegen?', duration: 6*60,
+            hostNote: 'Beide nacheinander — gerne auch eine gemeinsame Sache.',
+            question: 'Was möchtest du (oder ihr beide) in den nächsten Wochen pflegen, damit es Heimat bleibt oder wird?' }
         ])
       }
     }

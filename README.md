@@ -1,51 +1,66 @@
 # KlarKreis
 
-Strukturierte Themenabende für kleine Gruppen. Kein Moderator nötig — nur ihr und ein gutes Gespräch.
+Strukturierte Themenabende für kleine Gruppen oder zu zweit. Kein Moderator nötig — nur ehrliche Gespräche.
+
+**Live:** https://klarkreis.de
 
 ## Struktur
 
 ```
 .
-├── index.html       Landing
-├── themen.html      Themen-Übersicht
-├── thema.html       Themenabend-Detailseite (dynamisch via ?id=)
-├── abend.html       Geführter Abend-Flow (dynamisch via ?thema=)
-├── login.html       (deaktiviert, steht als Platzhalter)
-└── themes.js        Zentrale Theme-Daten (alle Themen hier anpassen)
+├── index.html          Landing
+├── themen.html         Themen-Übersicht (dynamisch aus themes.js)
+├── thema.html          Themenabend-Detailseite (?id=…)
+├── abend.html          Geführter Abend-Flow (?thema=…)
+├── funken.html         Zitat-Sammlung
+├── gastgeber.html      Gastgeber:innen-Anleitung
+├── ueber.html          Über KlarKreis
+├── impressum.html      Pflichtangaben
+├── datenschutz.html    DSGVO-Hinweise
+├── login.html          (deaktiviert, Platzhalter)
+├── themes.js           Zentrale Theme-Daten
+├── quotes.js           Zitate für Funken-Seite
+├── logo.svg            Vollständiges Logo (Symbol + Wortmarke)
+├── logo-mark.svg       Symbol allein (für Social/OG)
+├── favicon.svg         Favicon
+└── images/             Bilder (siehe image-prompts.md)
 ```
 
 ## Ein neues Thema anlegen
 
 1. `themes.js` öffnen
 2. Neues Objekt im `window.THEMES` hinzufügen — siehe bestehende Einträge als Vorlage
-3. Optional: Eigene `stations[]` definieren für volle Kontrolle (siehe `bindung`), sonst generische 5-Stationen-Struktur
-4. Karte in `index.html` und `themen.html` ergänzen
-5. `git push` → Cloudflare Pages deployt automatisch
+3. `formats.group` und/oder `formats.pair` mit Stationen befüllen
+4. Karte in `index.html` ergänzen + neuen Eintrag in `TITLE_TO_ID` (script am Ende)
+5. Bild in `images/` ablegen (4:5 vertikal, ≤500 KB) — Prompts siehe [image-prompts.md](image-prompts.md)
+6. `git push` → GitHub Pages deployt automatisch
 
 ## Deployment
 
-GitHub Pages ist auf `main` aktiviert. Jeder Push auf `main` löst einen automatischen Build aus.
+GitHub Pages auf `main`. Jeder Push → automatischer Build.
 
-- **Live:** https://klarkreis.de (sobald DNS konfiguriert)
-- **GitHub-URL:** https://tilian86.github.io/klarkreis/
+- **Live:** https://klarkreis.de
+- **GitHub URL (Fallback):** https://tilian86.github.io/klarkreis/
 - **Build-Status:** `gh api repos/tilian86/klarkreis/pages --jq .status`
-- **Deploy-Workflow:** `git add . && git commit -m "…" && git push`
+- **Deploy:** `git add . && git commit -m "…" && git push`
 
-## Custom Domain klarkreis.de
+## DNS / Domain
 
-Die `CNAME`-Datei im Repo legt die gewünschte Domain fest. DNS muss beim Registrar (INWX) gesetzt werden:
+Domain bei **INWX**, DNS bei **Cloudflare** (NS: `junade.ns.cloudflare.com`, `meilani.ns.cloudflare.com`).
 
-**A-Records für `@` (klarkreis.de):**
+Cloudflare-Records (importiert):
 ```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
+@   A   185.199.108.153  (+ 109/110/111)
+www CNAME tilian86.github.io
 ```
 
-**CNAME für `www`:**
+E-Mail `kontakt@klarkreis.de` läuft über **Cloudflare Email Routing** → `florian.s.thiel@gmail.com`.
+
+## Lokal anschauen
+
 ```
-tilian86.github.io
+cd ~/Projects/websites/klarkreis && python3 -m http.server 8000
+# → http://localhost:8000
 ```
 
-Nach DNS-Propagation (5 Min – 24 h): in GitHub-Repo-Settings unter Pages auf „Enforce HTTPS" klicken.
+Tailwind kommt per CDN, kein Build nötig.

@@ -218,7 +218,7 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
 </a>
 <a href="thema.html" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer md:-mt-12">
 <div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
-<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Wine glasses" src="images/wein.jpg"/>
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Verbundenheit" src="images/bindung.jpg"/>
 <div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
 </div>
 <h4 class="font-headline text-xl font-bold text-primary-container mb-2">Beziehungen, die mich prägen</h4>
@@ -231,6 +231,24 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
 </div>
 <h4 class="font-headline text-xl font-bold text-primary-container mb-2">In 10 Jahren</h4>
 <p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Future Pathing</p>
+</a>
+<a href="thema.html?id=achtzig" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Stille Perspektive" src="images/achtzig.svg"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute top-4 left-4 bg-secondary text-on-primary px-3 py-1 text-[10px] uppercase tracking-widest font-semibold rounded">Neu</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Was würde mein 80-jähriges Ich sagen?</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Lebensperspektive</p>
+</a>
+<a href="thema.html?id=heimat" class="md:col-span-3 lg:col-span-4 bg-surface-container-highest p-4 rounded-lg group cursor-pointer md:mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-lg mb-6 relative">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="Warmes Licht" src="images/heimat.svg"/>
+<div class="absolute inset-0 bg-primary-container/10 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute top-4 left-4 bg-secondary text-on-primary px-3 py-1 text-[10px] uppercase tracking-widest font-semibold rounded">Neu</span>
+</div>
+<h4 class="font-headline text-xl font-bold text-primary-container mb-2">Heimat — was trägt mich?</h4>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant/60">Identität</p>
 </a>
 </div>
 </section>
@@ -285,7 +303,9 @@ const TITLE_TO_ID = {
   'Wofür stehe ich?': 'stehe',
   'Mein idealer Tag': 'tag',
   'Beziehungen, die mich prägen': 'beziehungen',
-  'In 10 Jahren': 'zehnjahre'
+  'In 10 Jahren': 'zehnjahre',
+  'Was würde mein 80-jähriges Ich sagen?': 'achtzig',
+  'Heimat — was trägt mich?': 'heimat'
 };
 document.querySelectorAll('a[href="thema.html"]').forEach(a => {
   const titleEl = a.querySelector('h3, h4') || a.closest('article')?.querySelector('h3, h4');
