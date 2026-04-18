@@ -80,6 +80,8 @@ body { background-color: #FBF9F4; }
       </blockquote>
     </div>
 
+    <div id="audioMount" class="mb-6 max-w-2xl w-full"></div>
+
     <div id="descriptionBox" class="mb-8 max-w-2xl w-full hidden">
       <p id="description" class="text-lg md:text-xl font-light text-on-background/80 leading-relaxed whitespace-pre-line"></p>
     </div>
@@ -143,6 +145,7 @@ body { background-color: #FBF9F4; }
   </div>
 </main>
 <script src="themes.js"></script>
+<script src="player.js"></script>
 <script>
 const params = new URLSearchParams(location.search);
 const themaId = params.get('thema') || 'bindung';
@@ -269,6 +272,16 @@ function hideAllContentBoxes() {
   el.questionBox.classList.add('hidden');
   el.itemsBox.classList.add('hidden');
   el.feedbackForm.classList.add('hidden');
+  document.getElementById('audioMount').innerHTML = '';
+}
+
+function mountStationAudio(station, idx) {
+  if (station.type === 'feedback') return;
+  const src = KlarKreisPlayer.audioPath(themaId, formatKey, idx, station.name);
+  KlarKreisPlayer.mountIfExists('#audioMount', src, {
+    title: 'Vorlesen lassen',
+    compact: true
+  });
 }
 
 function render() {
@@ -301,6 +314,7 @@ function render() {
       el.itemsGrid.innerHTML = renderItems(s.items);
       el.itemsBox.classList.remove('hidden');
     }
+    mountStationAudio(s, currentIdx);
   }
 
   setTimerText(formatTime(timeLeft));

@@ -76,6 +76,7 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
     <div class="lg:col-span-5">
       <section class="mb-10">
         <h2 class="font-label uppercase tracking-widest text-xs text-on-tertiary-container mb-6 italic">Worum es geht</h2>
+        <div id="audioIntroMount" class="mb-6"></div>
         <p class="font-body text-on-surface-variant leading-relaxed mb-6" data-field="philosophy1">—</p>
         <p class="font-body text-on-surface-variant leading-relaxed" data-field="philosophy2">—</p>
       </section>
@@ -141,6 +142,7 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
   </div>
 </footer>
 <script src="themes.js"></script>
+<script src="player.js"></script>
 <script>
 const params = new URLSearchParams(location.search);
 const id = params.get('id') || 'bindung';
@@ -149,6 +151,12 @@ let currentFormat = params.get('format') || 'group';
 if (!theme.formats[currentFormat]) currentFormat = Object.keys(theme.formats)[0];
 
 document.title = theme.title + ' — KlarKreis';
+
+// Audio-Intro (falls vorhanden) — silent fail wenn kein File
+KlarKreisPlayer.mountIfExists('#audioIntroMount', KlarKreisPlayer.introPath(id), {
+  title: 'Hör dir die Idee an',
+  compact: true
+});
 
 // Static fields
 document.querySelectorAll('[data-field]').forEach(el => {
