@@ -169,6 +169,31 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
 </div>
 </div>
 </section>
+
+<!-- Funke des Tages -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto bg-primary-container rounded-xl p-10 md:p-16 relative overflow-hidden">
+    <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative">
+      <p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-6" id="funkeLabel">Funke des Tages</p>
+      <blockquote class="min-h-[140px]">
+        <p class="font-headline italic text-2xl md:text-4xl text-on-primary leading-snug transition-opacity duration-300" id="funkeText">—</p>
+        <footer class="font-label text-[11px] uppercase tracking-widest text-secondary-fixed-dim mt-8" id="funkeAuthor">—</footer>
+      </blockquote>
+      <div class="flex flex-wrap items-center gap-4 mt-10 pt-8 border-t border-on-primary/10">
+        <button id="funkeZiehen" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[16px]">casino</span>
+          Neuen Funken ziehen
+        </button>
+        <a href="funken.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-secondary-fixed-dim hover:text-on-primary transition-colors">
+          Alle Funken ansehen
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="py-24">
 <div class="mb-16">
 <p class="font-label text-xs uppercase tracking-widest text-secondary mb-4">Themensets</p>
@@ -298,7 +323,49 @@ Themenkatalog ansehen
     </div>
   </div>
 </footer>
+<script src="quotes.js"></script>
 <script>
+// Funke des Tages + Zufallszug
+(function () {
+  const el = { text: document.getElementById('funkeText'), author: document.getElementById('funkeAuthor'), label: document.getElementById('funkeLabel'), btn: document.getElementById('funkeZiehen') };
+  if (!el.text || !window.QUOTES || !window.QUOTES.length) return;
+  const QUOTES = window.QUOTES;
+
+  // Deterministischer Index aus dem Datum — heute zeigen alle Besucher dasselbe Zitat.
+  function dayIndex() {
+    const d = new Date();
+    const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
+    return seed % QUOTES.length;
+  }
+
+  let currentIdx = dayIndex();
+  let mode = 'tag'; // 'tag' oder 'random'
+
+  function showQuote(idx) {
+    const q = QUOTES[idx];
+    el.text.style.opacity = '0';
+    setTimeout(() => {
+      el.text.textContent = '„' + q.text + '"';
+      el.author.textContent = q.author ? '— ' + q.author + ' · ' + q.category : '— ' + q.category;
+      el.text.style.opacity = '1';
+    }, 180);
+  }
+
+  function zieheZufall() {
+    let next;
+    do { next = Math.floor(Math.random() * QUOTES.length); }
+    while (QUOTES.length > 1 && next === currentIdx);
+    currentIdx = next;
+    mode = 'random';
+    el.label.textContent = 'Dein Funke';
+    showQuote(currentIdx);
+  }
+
+  // Initial: Funke des Tages
+  showQuote(currentIdx);
+  el.btn.addEventListener('click', zieheZufall);
+})();
+
 // Map theme titles to URL-safe IDs used by thema.html
 const TITLE_TO_ID = {
   'Was sind meine Werte?': 'werte',
