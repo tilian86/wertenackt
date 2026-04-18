@@ -33,7 +33,7 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
 <body class="font-body selection:bg-on-tertiary-container selection:text-white">
 <header class="w-full top-0 border-none bg-[#FBF9F4] sticky z-50">
 <nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto text-[#1B3022] font-['Noto_Serif'] tracking-tight leading-relaxed">
-<a href="index.html" class="text-2xl font-serif italic text-[#1B3022]">KlarKreis</a>
+<a href="index.html" class="flex items-center gap-2 text-2xl font-serif italic text-[#1B3022]"><svg width="26" height="26" viewBox="0 0 64 64" class="shrink-0"><circle cx="32" cy="32" r="28" fill="none" stroke="#1B3022" stroke-width="3"/><circle cx="32" cy="32" r="18" fill="none" stroke="#1B3022" stroke-width="2" opacity="0.5"/><circle cx="32" cy="32" r="3.2" fill="#924C00"/></svg> KlarKreis</a>
 <div class="hidden md:flex space-x-12 items-center">
 <a class="text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
 <a class="text-[#1B1C19] font-bold border-b border-[#924C00] hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
@@ -247,5 +247,6 @@ document.getElementById('relatedThemes').innerHTML = relatedIds.map(rid => {
     </a>`;
 }).join('');
 </script>
+<script src="mobile-nav.js"></script>
 </body>
 </html>
