@@ -1,0 +1,145 @@
+// Fragen-Sammlung für die Fragen-Seite.
+// Jeder Eintrag: { text, category }
+// Kategorien werden automatisch zu Filter-Chips auf /fragen.
+
+window.QUESTIONS = [
+
+  // ---------- Über dich ----------
+  { text: 'Würdest du deine schönste Erinnerung hergeben, damit du deine schlimmste auslöschen kannst?', category: 'Über dich' },
+  { text: 'Was würdest du an deinem Körper gerne verändern?', category: 'Über dich' },
+  { text: 'Was versuchst du vor anderen Menschen zu verbergen?', category: 'Über dich' },
+  { text: 'Was möchtest du gewesen sein?', category: 'Über dich' },
+  { text: 'Wovor hast du am meisten Angst?', category: 'Über dich' },
+  { text: 'Für welche Eigenschaften an dir hast du am öftesten Komplimente bekommen?', category: 'Über dich' },
+  { text: 'Was denken andere über dich, das überhaupt nicht stimmt?', category: 'Über dich' },
+
+  // ---------- Werte & Richtung ----------
+  { text: 'Glaubst du an Schicksal?', category: 'Werte & Richtung' },
+  { text: 'Welche war die größte und bedeutendste Entscheidung, die du mal treffen musstest?', category: 'Werte & Richtung' },
+  { text: 'Würdest du gerne wissen wollen wann du stirbst?', category: 'Werte & Richtung' },
+  { text: 'Wenn du einem kleinen Kind einen Rat mitgeben könntest für den Rest seines Lebens — welcher wäre das?', category: 'Werte & Richtung' },
+  { text: 'Gibst du dein Geld lieber für materielle Dinge oder für Erlebnisse aus?', category: 'Werte & Richtung' },
+  { text: 'Was ist dein Lieblingszitat?', category: 'Werte & Richtung' },
+  { text: 'Wärst du lieber weniger attraktiv und steinreich oder extrem gutaussehend, aber dafür arm?', category: 'Werte & Richtung' },
+
+  // ---------- Träume & Zukunft ----------
+  { text: 'Welchen Beruf würdest du ausüben, wenn Geld keine Rolle spielen würde?', category: 'Träume & Zukunft' },
+  { text: 'Welchen Traum wirst du dir, deiner Meinung nach, nie erfüllen können?', category: 'Träume & Zukunft' },
+  { text: 'Was ist deine größte Fantasie?', category: 'Träume & Zukunft' },
+  { text: 'Wie denkst du, sieht dein Leben in zehn Jahren aus?', category: 'Träume & Zukunft' },
+  { text: 'Gibt es etwas, wovon du schon lange träumst, dich aber noch nicht getraut hast, es zu tun?', category: 'Träume & Zukunft' },
+
+  // ---------- Kindheit & Wurzeln ----------
+  { text: 'Hattest du eine schöne Kindheit?', category: 'Kindheit & Wurzeln' },
+  { text: 'Für welche Dinge hast du dich schon als Kind begeistert und hast dir diese Begeisterung bis heute beibehalten?', category: 'Kindheit & Wurzeln' },
+  { text: 'Was war der größte Mist, den du als Jugendlicher gebaut hast?', category: 'Kindheit & Wurzeln' },
+  { text: 'Welche Geschichte aus deiner Jugend wirst du deinen Kindern und Enkeln am häufigsten erzählen?', category: 'Kindheit & Wurzeln' },
+
+  // ---------- Herzensmenschen ----------
+  { text: 'Wer war für dich die einflussreichste Person in deinem Leben?', category: 'Herzensmenschen' },
+  { text: 'Wann und mit welcher Person hattest du deinen größten Streit? Wie ist es ausgegangen?', category: 'Herzensmenschen' },
+  { text: 'Welche aktuell lebende Person würdest du am liebsten treffen — und warum?', category: 'Herzensmenschen' },
+  { text: 'Wenn du eine berühmte Persönlichkeit — egal ob lebendig oder tot — treffen dürftest: wer wäre es und warum?', category: 'Herzensmenschen' },
+  { text: 'Was glaubst du haben wir gemeinsam?', category: 'Herzensmenschen' },
+
+  // ---------- Arbeit & Berufung ----------
+  { text: 'Wann warst du zuletzt in deiner Arbeit so vertieft, dass du die Zeit vergessen hast — was hast du da gemacht?', category: 'Arbeit & Berufung' },
+  { text: 'Welche Tätigkeit würdest du machen, auch wenn niemand dich dafür bezahlen würde?', category: 'Arbeit & Berufung' },
+  { text: 'Wann hast du in deinem Job zuletzt einen echten Moment von Sinn gespürt — und wann das letzte Mal von Leere?', category: 'Arbeit & Berufung' },
+  { text: 'Was frisst Energie in deiner Woche, ohne dass es einen klaren Output hat?', category: 'Arbeit & Berufung' },
+  { text: 'Wenn dein heutiges Ich mit 22 wäre — würde es deinen jetzigen Job wählen?', category: 'Arbeit & Berufung' },
+  { text: 'Welcher Beruf von Freund:innen oder Bekannten fasziniert dich heimlich?', category: 'Arbeit & Berufung' },
+  { text: 'Was ist die ehrlichste Antwort auf die Frage „Warum machst du diesen Job?“ — jenseits von Geld?', category: 'Arbeit & Berufung' },
+  { text: 'Wenn du in 20 Jahren auf dein Berufsleben zurückblickst — woran wirst du es messen?', category: 'Arbeit & Berufung' },
+  { text: 'Was machst du heute, was dich in 10 Jahren wahrscheinlich nicht mehr ausfüllt?', category: 'Arbeit & Berufung' },
+  { text: 'Wann warst du zuletzt in deiner Arbeit so vertieft, dass du die Zeit vergessen hast?', category: 'Arbeit & Berufung' },
+  { text: 'Was würdest du tun, wenn Geld keine Rolle spielte — und was, wenn Status keine Rolle spielte?', category: 'Arbeit & Berufung' },
+  { text: 'Was ist die ehrlichste Antwort auf die Frage „Warum machst du diesen Job?“?', category: 'Arbeit & Berufung' },
+  { text: 'Wenn du in 20 Jahren zurückblickst — woran wirst du dein Berufsleben messen?', category: 'Arbeit & Berufung' },
+
+  // ---------- Tiefgang ----------
+  { text: 'Worüber denkst du abends manchmal nach, was du tagsüber verdrängst?', category: 'Tiefgang' },
+  { text: 'Was würdest du sagen, wenn niemand zuhörte — und du wüsstest, dass es keine Folgen hat?', category: 'Tiefgang' },
+  { text: 'Welche Frage hast du Angst, dir selbst zu stellen?', category: 'Tiefgang' },
+  { text: 'Was ist eine Sorge, die du mit anderen nicht teilst — und warum nicht?', category: 'Tiefgang' },
+  { text: 'Wovor hast du heimlich Angst, was die meisten Menschen wahrscheinlich nicht ahnen?', category: 'Tiefgang' },
+  { text: 'Was wäre, wenn deine größte Angst tatsächlich einträte — wie würde dein Leben aussehen?', category: 'Tiefgang' },
+  { text: 'Was hast du noch nie jemandem erzählt, was eigentlich Erzählens wert wäre?', category: 'Tiefgang' },
+  { text: 'Welches Gefühl trägst du oft mit dir, ohne es zu benennen?', category: 'Tiefgang' },
+  { text: 'Welche Beziehung in deinem Leben fühlt sich gerade nicht gut an, und du sprichst nicht darüber?', category: 'Tiefgang' },
+  { text: 'Welcher Satz, den jemand mal zu dir gesagt hat, trägt dich noch heute?', category: 'Tiefgang' },
+  { text: 'Welche Person würde es merken, wenn du plötzlich nicht mehr da wärst — und merkst du es bei ihr?', category: 'Tiefgang' },
+  { text: 'Worüber denkst du abends nach, was du tagsüber verdrängst?', category: 'Tiefgang' },
+  { text: 'Welche kleine tägliche Handlung hält dich stabil?', category: 'Tiefgang' },
+  { text: 'Für welches Ereignis deines Lebens bist du am dankbarsten?', category: 'Tiefgang' },
+  { text: 'Für welche drei Dinge in deinem Leben bist du am dankbarsten?', category: 'Tiefgang' },
+  { text: 'Gibt es eine Erfahrung, die dein Leben nachhaltig verändert hat?', category: 'Tiefgang' },
+  { text: 'Welches ist das beste Buch, das du gelesen hast?', category: 'Tiefgang' },
+  { text: 'Wenn du ein Video haben könntest von einer Situation deiner Wahl aus deinem Leben — welche Situation wäre das?', category: 'Tiefgang' },
+
+  // ---------- Leicht & Humor ----------
+  { text: 'Welche historische Figur würde im Gruppenchat ständig auf „Nachricht gelesen“ machen — und warum gerade die?', category: 'Leicht & Humor' },
+  { text: 'Bei einer Zombie-Apokalypse: Welches völlig unnütze Hobby würde dich überleben lassen?', category: 'Leicht & Humor' },
+  { text: 'Welche zwei Promis würdest du zu einer Dinner-Party einladen, damit sie sich streiten?', category: 'Leicht & Humor' },
+  { text: 'Würdest du lieber ein Jahr lang nur durch GIFs kommunizieren — oder jeden Satz mit einer Lüge beginnen?', category: 'Leicht & Humor' },
+  { text: 'Dein Kühlschrank reproduziert mysteriös eine Zutat unbegrenzt — welche soll es sein und warum?', category: 'Leicht & Humor' },
+  { text: 'Würdest du lieber wissen, wann du stirbst — oder wie?', category: 'Leicht & Humor' },
+  { text: 'Welcher Film müsste neu verfilmt werden — aber als TikTok-Tanzchallenge?', category: 'Leicht & Humor' },
+  { text: 'Welche Sportart sollte mit völlig falschen Regeln olympisch werden?', category: 'Leicht & Humor' },
+  { text: 'Welcher Instagram-Filter beschreibt deine Persönlichkeit am besten — nicht dein Aussehen?', category: 'Leicht & Humor' },
+  { text: 'Welche App sollte dringend eine „Das war Sarkasmus!“-Autokorrektur einführen?', category: 'Leicht & Humor' },
+  { text: 'Welche völlig sinnlose Fähigkeit hast du in den letzten Jahren perfektioniert?', category: 'Leicht & Humor' },
+  { text: 'Welcher Wikipedia-Artikel sollte gelöscht werden, um maximales Chaos zu verursachen?', category: 'Leicht & Humor' },
+  { text: 'Welche historische Figur würde im Gruppenchat ständig auf „Nachricht gelesen“ machen?', category: 'Leicht & Humor' },
+  { text: 'Du erbst ein Schloss — was machst du damit?', category: 'Leicht & Humor' },
+  { text: 'Dein Kühlschrank reproduziert eine Zutat unbegrenzt — welche?', category: 'Leicht & Humor' },
+  { text: 'Welcher Instagram-Filter beschreibt deine Persönlichkeit am besten?', category: 'Leicht & Humor' },
+  { text: 'Welcher Film müsste als TikTok-Tanzchallenge neu verfilmt werden?', category: 'Leicht & Humor' },
+
+  // ---------- Absurd & Erlebt ----------
+  { text: 'Was war das schlimmste Date, das du je hattest?', category: 'Absurd & Erlebt' },
+  { text: 'Was ist das Peinlichste, das dir je beim Feiern passiert ist?', category: 'Absurd & Erlebt' },
+  { text: 'Was ist das Lustigste, das du beim Feiern erlebt hast?', category: 'Absurd & Erlebt' },
+
+  // ---------- Bunt gemischt ----------
+  { text: 'Was ist eine kleine Sache im Alltag, die dich unverhältnismäßig glücklich macht?', category: 'Bunt gemischt' },
+  { text: 'Was hast du zuletzt zum allerersten Mal in deinem Leben gemacht?', category: 'Bunt gemischt' },
+  { text: 'Welche kleine Sache lässt dich sofort nostalgisch werden?', category: 'Bunt gemischt' },
+  { text: 'Gibt es etwas, das andere Leute oft an dir falsch einschätzen?', category: 'Bunt gemischt' },
+  { text: 'Was hat dich zuletzt zum Staunen gebracht?', category: 'Bunt gemischt' },
+  { text: 'Wenn dein Leben gerade ein Buch wäre — welchen Titel hätte es?', category: 'Bunt gemischt' },
+  { text: 'Welches „unsichtbare Tattoo“ trägst du — also welche Erfahrung prägt dich, obwohl man es dir nicht ansieht?', category: 'Bunt gemischt' },
+  { text: 'Angenommen, du könntest einen Tag mit deinem 15-jährigen Ich verbringen — was würdet ihr besprechen?', category: 'Bunt gemischt' },
+  { text: 'In welcher Version deiner selbst fühlst du dich am wohlsten — und wann warst du zuletzt dort?', category: 'Bunt gemischt' },
+  { text: 'Welche Eigenschaft an dir möchtest du unbedingt behalten, selbst wenn du mal 100 Jahre alt bist?', category: 'Bunt gemischt' },
+  { text: 'Wen in deinem Leben würdest du gerne wieder anrufen, hast es aber zu lange nicht getan?', category: 'Bunt gemischt' },
+  { text: 'Welche Eigenschaft deiner Eltern siehst du heute mit mehr Verständnis als früher?', category: 'Bunt gemischt' },
+  { text: 'Was hast du jemandem zuletzt gesagt, was du schon länger hättest sagen sollen?', category: 'Bunt gemischt' },
+  { text: 'Wem würdest du gerne noch einmal danken können — und wofür?', category: 'Bunt gemischt' },
+  { text: 'Wenn du eine Sache an der Gesellschaft sofort ändern könntest — welche wäre das und warum?', category: 'Bunt gemischt' },
+  { text: 'Welche Frage würdest du gerne mit „Ja“ beantworten können, kannst es aber (noch) nicht?', category: 'Bunt gemischt' },
+  { text: 'Gibt es eine Erfahrung, die sich erst wie ein Misserfolg angefühlt hat, sich aber als wertvolle Lektion entpuppte?', category: 'Bunt gemischt' },
+  { text: 'Welche kleine Entscheidung in deinem Leben hat überraschend große Auswirkungen gehabt?', category: 'Bunt gemischt' },
+  { text: 'Welche Rolle spielst du unbewusst in Gruppen — und passt sie noch zu dir?', category: 'Bunt gemischt' },
+  { text: 'Was nimmst du dir jedes Jahr vor, machst es aber nicht — und warum wahrscheinlich?', category: 'Bunt gemischt' },
+  { text: 'Welcher Tag aus den letzten 12 Monaten war für dich besonders — und woran hast du das gemerkt?', category: 'Bunt gemischt' },
+  { text: 'Wenn du wüsstest, dass dir genau ein Jahr bleibt — was würde sich sofort ändern, und was nicht?', category: 'Bunt gemischt' },
+  { text: 'Was ist eine kleine tägliche Handlung, die dich stabil hält?', category: 'Bunt gemischt' },
+  { text: 'Was würdest du gerne ausprobieren, hast dich aber bisher nie getraut?', category: 'Bunt gemischt' },
+  { text: 'Angenommen, du hättest ab morgen ein Jahr frei von allen Verpflichtungen und genug Geld — wie würdest du es verbringen?', category: 'Bunt gemischt' },
+  { text: 'Was ist deine „andere Karriere“ — das Leben, das du auch hättest führen können?', category: 'Bunt gemischt' },
+  { text: 'Wenn dein Leben als Netflix-Serie erscheinen würde — welches Genre wäre es, und wie hieße die aktuelle Staffel?', category: 'Bunt gemischt' },
+  { text: 'Welcher Satz, den jemand mal zu dir gesagt hat, ist geblieben?', category: 'Bunt gemischt' },
+  { text: 'Welche kleine Geste von jemand anderem kann dich sofort für diese Person einnehmen?', category: 'Bunt gemischt' },
+  { text: 'Welches „unsichtbare Tattoo“ trägst du — was prägt dich, obwohl man es dir nicht ansieht?', category: 'Bunt gemischt' },
+  { text: 'Welche Erfahrung hat sich erst wie ein Misserfolg angefühlt — und war später eine wertvolle Lektion?', category: 'Bunt gemischt' },
+  { text: 'Welche Person aus deinem Leben hat dich mehr geprägt, als sie selbst weiß?', category: 'Bunt gemischt' },
+  { text: 'In welcher Beziehung spürst du gerade, dass Aufmerksamkeit fehlt?', category: 'Bunt gemischt' },
+  { text: 'Wenn du wüsstest, dass dir genau ein Jahr bleibt — was würde sich sofort ändern, was nicht?', category: 'Bunt gemischt' },
+  { text: 'Was würdest du gerne ausprobieren, hast dich aber nie getraut?', category: 'Bunt gemischt' },
+  { text: 'Wenn du ein Jahr frei hättest und genug Geld — wie würdest du es verbringen?', category: 'Bunt gemischt' },
+  { text: 'Angenommen, dein zukünftiges Ich schreibt dir einen Brief — was würde darin stehen?', category: 'Bunt gemischt' },
+  { text: 'Was ist eine Sache, von der alle Leute begeistert scheinen und du kannst einfach nicht nachvollziehen wieso?', category: 'Bunt gemischt' },
+
+];
+window.QUESTION_CATEGORIES = [...new Set(window.QUESTIONS.map(q => q.category))];
