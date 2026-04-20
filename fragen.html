@@ -123,10 +123,10 @@
     </div>
   </section>
 
-  <!-- Listen-Ansicht: alle Fragen als Grid -->
+  <!-- Listen-Ansicht: alle Fragen thematisch gruppiert -->
   <div id="listView" class="hidden">
-    <div id="countInfo" class="mb-6 font-label text-[11px] uppercase tracking-widest text-on-surface-variant/60"></div>
-    <div id="questionGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="countInfo" class="mb-10 font-label text-[11px] uppercase tracking-widest text-on-surface-variant/60"></div>
+    <div id="questionGroups" class="space-y-16"></div>
   </div>
 </main>
 
@@ -298,26 +298,53 @@ function updateResetBtn() {
 
 function questionCardHtml(q) {
   const isLong = q.text.length > 180;
+  const wasSeen = seen.has(q.text);
+  const seenBadge = wasSeen
+    ? '<span class="inline-flex items-center gap-1 font-label text-[10px] uppercase tracking-widest text-secondary"><span class="material-symbols-outlined text-[14px]">check_circle</span>Gesehen</span>'
+    : '';
+  const cardOpacity = wasSeen ? 'opacity-70 hover:opacity-100' : '';
   return `
-    <article class="question-card bg-surface-container-low rounded-lg p-6 md:p-8 border border-outline-variant/20 hover:border-secondary/40 transition-colors">
-      <span class="material-symbols-outlined text-secondary/50 text-3xl block mb-2">help</span>
-      <p class="font-headline ${isLong ? 'text-base md:text-lg' : 'text-lg md:text-xl'} text-primary-container leading-relaxed mb-4">${q.text}</p>
-      <footer class="flex items-center justify-end">
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/50 whitespace-nowrap">${q.category}</span>
-      </footer>
+    <article class="question-card bg-surface-container-low rounded-lg p-6 md:p-8 border border-outline-variant/20 hover:border-secondary/40 transition-all ${cardOpacity}">
+      <div class="flex items-center justify-between mb-2">
+        <span class="material-symbols-outlined text-secondary/50 text-3xl">help</span>
+        ${seenBadge}
+      </div>
+      <p class="font-headline ${isLong ? 'text-base md:text-lg' : 'text-lg md:text-xl'} text-primary-container leading-relaxed">${q.text}</p>
     </article>`;
 }
 
 function renderList() {
-  const grid = document.getElementById('questionGrid');
+  const groups = document.getElementById('questionGroups');
   const info = document.getElementById('countInfo');
   const filtered = getFiltered();
-  info.textContent = `${filtered.length} Frage${filtered.length === 1 ? '' : 'n'}${currentCat === 'alle' ? '' : ' in „' + currentCat + '"'}`;
+  const totalSeen = seenCountInPool(filtered);
+  info.innerHTML = `${filtered.length} Frage${filtered.length === 1 ? '' : 'n'}${currentCat === 'alle' ? '' : ' in „' + currentCat + '"'}` +
+    (totalSeen > 0 ? ` · <span class="text-secondary">${totalSeen} gesehen</span>` : '');
   if (!filtered.length) {
-    grid.innerHTML = `<p class="col-span-full text-center text-on-surface-variant italic py-12">Hier fehlt noch was.</p>`;
+    groups.innerHTML = `<p class="text-center text-on-surface-variant italic py-12">Hier fehlt noch was.</p>`;
     return;
   }
-  grid.innerHTML = filtered.map(questionCardHtml).join('');
+  // Group by category, preserving QUESTION_CATEGORIES order
+  const byCat = {};
+  for (const q of filtered) {
+    if (!byCat[q.category]) byCat[q.category] = [];
+    byCat[q.category].push(q);
+  }
+  const order = window.QUESTION_CATEGORIES.filter(c => byCat[c]);
+  groups.innerHTML = order.map(cat => {
+    const isSpicy = cat.startsWith('Ü18');
+    const catSeen = byCat[cat].filter(q => seen.has(q.text)).length;
+    return `
+      <section>
+        <div class="flex items-end justify-between flex-wrap gap-2 mb-6 pb-4 border-b border-outline-variant/20">
+          <h2 class="font-serif text-3xl md:text-4xl ${isSpicy ? 'text-secondary' : 'text-primary-container'} tracking-tight">${cat}</h2>
+          <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60">${byCat[cat].length} Frage${byCat[cat].length === 1 ? '' : 'n'}${catSeen > 0 ? ' · ' + catSeen + ' gesehen' : ''}</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          ${byCat[cat].map(questionCardHtml).join('')}
+        </div>
+      </section>`;
+  }).join('');
 }
 
 function render() {
