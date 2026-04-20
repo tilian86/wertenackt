@@ -69,36 +69,61 @@
     </p>
   </header>
 
-  <!-- Zieh eine Frage -->
-  <section class="mb-16 bg-primary-container rounded-xl p-10 md:p-14 relative overflow-hidden">
-    <div class="absolute -top-12 -left-12 w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="relative">
-      <p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-4">Zieh eine Frage</p>
-      <blockquote class="min-h-[140px]">
-        <p class="font-headline italic text-2xl md:text-4xl text-on-primary leading-snug transition-opacity duration-300" id="drawText">Klick unten — und lass dich überraschen.</p>
-        <footer class="font-label text-[11px] uppercase tracking-widest text-secondary-fixed-dim mt-6 opacity-0 transition-opacity duration-300" id="drawCat"></footer>
-      </blockquote>
-      <div class="flex flex-wrap items-center gap-4 mt-8 pt-8 border-t border-on-primary/10">
-        <button id="drawBtn" class="inline-flex items-center gap-2 bg-secondary hover:bg-on-tertiary-container text-on-primary px-6 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[18px]">casino</span>
-          Eine Frage ziehen
-        </button>
-        <span class="font-label text-[10px] uppercase tracking-widest text-secondary-fixed-dim/70 italic">· Aus der aktuellen Auswahl.</span>
-      </div>
+  <!-- Modus-Toggle -->
+  <section class="mb-8 flex items-center gap-2">
+    <span class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mr-2">Ansicht:</span>
+    <div class="inline-flex rounded-lg border border-outline-variant/40 overflow-hidden">
+      <button id="modeSingleBtn" data-mode="single" class="mode-btn px-5 py-2 text-[11px] uppercase tracking-widest font-semibold transition-colors bg-primary-container text-on-primary">Einzeln</button>
+      <button id="modeListBtn" data-mode="list" class="mode-btn px-5 py-2 text-[11px] uppercase tracking-widest font-semibold transition-colors bg-surface-container-low text-on-background hover:bg-surface-container">Alle</button>
     </div>
   </section>
 
-  <section class="mb-12 flex flex-wrap gap-2 items-center">
+  <!-- Filter -->
+  <section class="mb-10 flex flex-wrap gap-2 items-center">
     <span class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mr-2">Thema:</span>
     <div id="catChips" class="flex flex-wrap gap-2"></div>
   </section>
 
-  <div id="countInfo" class="mb-6 font-label text-[11px] uppercase tracking-widest text-on-surface-variant/60"></div>
   <div id="spicyNote" class="mb-8 p-5 bg-tertiary-container/40 border border-secondary/30 rounded-lg hidden">
     <p class="font-label text-[11px] uppercase tracking-widest text-secondary mb-2">Ü18 · Intime Runde</p>
     <p class="text-sm text-on-surface-variant italic">Diese Fragen brauchen Vertrauen und den passenden Kreis. Nur aufschlagen, wenn alle im Raum das wollen.</p>
   </div>
-  <div id="questionGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+  <!-- Einzel-Ansicht: eine Frage, mit Navigation -->
+  <section id="singleView" class="mb-16 bg-primary-container rounded-xl p-10 md:p-16 relative overflow-hidden min-h-[420px]">
+    <div class="absolute -top-12 -left-12 w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="relative flex flex-col justify-between min-h-[360px]">
+      <div>
+        <div class="flex items-center justify-between mb-6">
+          <p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary-fixed-dim" id="singleCat">—</p>
+          <p class="font-label text-[10px] uppercase tracking-widest text-secondary-fixed-dim/70" id="singleCounter">— / —</p>
+        </div>
+        <blockquote class="mb-8">
+          <p class="font-headline italic text-2xl md:text-4xl lg:text-5xl text-on-primary leading-snug transition-opacity duration-300" id="singleText">—</p>
+        </blockquote>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 mt-10 pt-8 border-t border-on-primary/10">
+        <button id="singlePrev" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+          Zurück
+        </button>
+        <button id="singleRandom" class="inline-flex items-center gap-2 bg-secondary hover:bg-on-tertiary-container text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[16px]">casino</span>
+          Zufällig
+        </button>
+        <button id="singleNext" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors ml-auto">
+          Weiter
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listen-Ansicht: alle Fragen als Grid -->
+  <div id="listView" class="hidden">
+    <div id="countInfo" class="mb-6 font-label text-[11px] uppercase tracking-widest text-on-surface-variant/60"></div>
+    <div id="questionGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
 </main>
 
 <footer class="bg-surface-container flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full mt-24">
@@ -118,35 +143,12 @@
 <script src="questions.js"></script>
 <script>
 let currentCat = 'alle';
+let mode = 'single';
+let singleIdx = 0;
 
 function getFiltered() {
   return currentCat === 'alle' ? window.QUESTIONS : window.QUESTIONS.filter(q => q.category === currentCat);
 }
-
-// Zieh eine Frage
-(function () {
-  const text = document.getElementById('drawText');
-  const cat = document.getElementById('drawCat');
-  const btn = document.getElementById('drawBtn');
-  if (!btn || !window.QUESTIONS) return;
-  let last = -1;
-  btn.addEventListener('click', () => {
-    const pool = getFiltered();
-    if (!pool.length) return;
-    let idx;
-    do { idx = Math.floor(Math.random() * pool.length); } while (pool.length > 1 && idx === last);
-    last = idx;
-    const q = pool[idx];
-    text.style.opacity = '0';
-    cat.style.opacity = '0';
-    setTimeout(() => {
-      text.textContent = q.text;
-      cat.textContent = '— ' + q.category;
-      text.style.opacity = '1';
-      cat.style.opacity = '1';
-    }, 200);
-  });
-})();
 
 function renderChips() {
   const chips = document.getElementById('catChips');
@@ -167,8 +169,43 @@ function renderChips() {
     return `<button data-cat="${c}" class="cat-chip px-4 py-2 rounded-full border text-[11px] uppercase tracking-widest transition-colors ${cls}">${label}</button>`;
   }).join('');
   chips.querySelectorAll('.cat-chip').forEach(btn => {
-    btn.addEventListener('click', () => { currentCat = btn.dataset.cat; render(); });
+    btn.addEventListener('click', () => { currentCat = btn.dataset.cat; singleIdx = 0; render(); });
   });
+}
+
+function renderModeButtons() {
+  document.querySelectorAll('.mode-btn').forEach(b => {
+    const active = b.dataset.mode === mode;
+    b.classList.toggle('bg-primary-container', active);
+    b.classList.toggle('text-on-primary', active);
+    b.classList.toggle('bg-surface-container-low', !active);
+    b.classList.toggle('text-on-background', !active);
+    b.classList.toggle('hover:bg-surface-container', !active);
+  });
+}
+
+function renderSingle() {
+  const pool = getFiltered();
+  const text = document.getElementById('singleText');
+  const cat = document.getElementById('singleCat');
+  const counter = document.getElementById('singleCounter');
+  if (!pool.length) {
+    text.textContent = 'In dieser Kategorie ist noch nichts.';
+    cat.textContent = '—';
+    counter.textContent = '0 / 0';
+    return;
+  }
+  singleIdx = ((singleIdx % pool.length) + pool.length) % pool.length;
+  const q = pool[singleIdx];
+  text.style.opacity = '0';
+  cat.style.opacity = '0';
+  setTimeout(() => {
+    text.textContent = q.text;
+    cat.textContent = q.category;
+    counter.textContent = `${singleIdx + 1} / ${pool.length}`;
+    text.style.opacity = '1';
+    cat.style.opacity = '1';
+  }, 150);
 }
 
 function questionCardHtml(q) {
@@ -183,20 +220,62 @@ function questionCardHtml(q) {
     </article>`;
 }
 
-function render() {
-  renderChips();
+function renderList() {
   const grid = document.getElementById('questionGrid');
   const info = document.getElementById('countInfo');
-  const note = document.getElementById('spicyNote');
   const filtered = getFiltered();
   info.textContent = `${filtered.length} Frage${filtered.length === 1 ? '' : 'n'}${currentCat === 'alle' ? '' : ' in „' + currentCat + '"'}`;
-  note.classList.toggle('hidden', !currentCat.startsWith('Ü18'));
   if (!filtered.length) {
     grid.innerHTML = `<p class="col-span-full text-center text-on-surface-variant italic py-12">Hier fehlt noch was.</p>`;
     return;
   }
   grid.innerHTML = filtered.map(questionCardHtml).join('');
 }
+
+function render() {
+  renderChips();
+  renderModeButtons();
+  const single = document.getElementById('singleView');
+  const list = document.getElementById('listView');
+  const note = document.getElementById('spicyNote');
+  note.classList.toggle('hidden', !currentCat.startsWith('Ü18'));
+  single.classList.toggle('hidden', mode !== 'single');
+  list.classList.toggle('hidden', mode !== 'list');
+  if (mode === 'single') renderSingle();
+  else renderList();
+}
+
+// Mode toggle
+document.querySelectorAll('.mode-btn').forEach(b => {
+  b.addEventListener('click', () => { mode = b.dataset.mode; render(); });
+});
+
+// Single navigation
+document.getElementById('singlePrev').addEventListener('click', () => {
+  const pool = getFiltered(); if (!pool.length) return;
+  singleIdx = (singleIdx - 1 + pool.length) % pool.length;
+  renderSingle();
+});
+document.getElementById('singleNext').addEventListener('click', () => {
+  const pool = getFiltered(); if (!pool.length) return;
+  singleIdx = (singleIdx + 1) % pool.length;
+  renderSingle();
+});
+document.getElementById('singleRandom').addEventListener('click', () => {
+  const pool = getFiltered(); if (!pool.length) return;
+  let next;
+  do { next = Math.floor(Math.random() * pool.length); } while (pool.length > 1 && next === singleIdx);
+  singleIdx = next;
+  renderSingle();
+});
+
+// Keyboard shortcuts in single mode
+document.addEventListener('keydown', (e) => {
+  if (mode !== 'single') return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'ArrowLeft') { document.getElementById('singlePrev').click(); }
+  else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); document.getElementById('singleNext').click(); }
+});
 
 render();
 </script>
