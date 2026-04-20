@@ -7,5 +7,5 @@
 
 window.KLARKREIS_CONFIG = {
   SUPABASE_URL: 'https://liqnavdghqhhavgkhgpx.supabase.co',
-  SUPABASE_ANON_KEY: '',
+  SUPABASE_ANON_KEY: 'sb_publishable_5lEVXLCtoG6yvY1w-Q5Xcw_Y9V46rjy',
 };
