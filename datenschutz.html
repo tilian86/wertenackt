@@ -55,7 +55,7 @@
   <section class="space-y-8 text-base md:text-lg leading-relaxed text-on-background/80">
 
     <p class="font-serif italic text-lg md:text-xl text-on-background">
-      Kurz gesagt: KlarKreis erhebt selbst keine personenbezogenen Daten. Es gibt kein Tracking, keine Analytics, keine Cookies, kein Login.
+      Kurz gesagt: KlarKreis erhebt selbst keine personenbezogenen Daten. Es gibt kein Tracking, keine Analytics, keine Cookies. Ein Login ist optional möglich (für Geräte-Sync), aber nicht Voraussetzung.
     </p>
 
     <div>
@@ -121,6 +121,22 @@
     </div>
 
     <div>
+      <h2 class="font-serif text-xl md:text-2xl text-on-background mb-3">Optionaler Login via Supabase</h2>
+      <p>
+        KlarKreis bietet einen optionalen Login an, damit du deine Fragerunde-Historie (gesehene Fragen, Favoriten, gemachte Themenabende) geräteübergreifend synchronisieren kannst. Der Dienst ist rein freiwillig — die Seite funktioniert vollständig ohne Account.
+      </p>
+      <p class="mt-3">
+        Technisch betreibt diese Funktion <strong>Supabase Inc.</strong> (970 Toa Payoh North #07-04, Singapur) bzw. deren EU-Standort mit Servern in Frankfurt. Verarbeitet werden: E-Mail-Adresse (für Magic-Link-Login), eine anonyme User-ID, die vom Nutzer erzeugten Inhalte (gesehene Fragen, Favoriten, Notizen zu Abenden). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung für den Login-Dienst) und Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktive Login-Aktion).
+      </p>
+      <p class="mt-3">
+        Ohne Login werden keine Daten an Supabase übertragen. Beim Logout bleiben die Daten auf dem Supabase-Server erhalten — Löschung auf Anfrage per Mail an kontakt@klarkreis.de.
+      </p>
+      <p class="mt-3 text-sm">
+        Datenschutzerklärung von Supabase: <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="text-secondary hover:underline">supabase.com/privacy</a>
+      </p>
+    </div>
+
+    <div>
       <h2 class="font-serif text-xl md:text-2xl text-on-background mb-3">Freiwillige Unterstützung via PayPal</h2>
       <p>
         An einzelnen Stellen (z.B. Gastgeber-Seite, Footer) findest du einen Link mit der Möglichkeit, einen kleinen freiwilligen Beitrag über <strong>PayPal</strong> (PayPal (Europe) S.à r.l. et Cie, S.C.A., 22–24 Boulevard Royal, L-2449 Luxembourg) zu leisten. Der Link führt auf paypal.me/FlorianThiel. Es besteht keine Verpflichtung, keine Gegenleistung und kein Kaufvertrag — es ist eine reine Danke-Geste.
@@ -171,6 +187,9 @@
   </div>
 </footer>
 
+<script src="config.js"></script>
+<script src="auth.js"></script>
+<script src="login-ui.js"></script>
 <script src="mobile-nav.js"></script>
 </body>
 </html>

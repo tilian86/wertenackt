@@ -424,7 +424,68 @@ seekFirstUnseenFrom(0);
   }
 })();
 render();
+
+// --- Supabase sync (wenn eingeloggt) ---
+(async function () {
+  const auth = window.KLARKREIS_AUTH;
+  if (!auth || !auth.enabled) return;
+  await auth.ready;
+
+  // Auf Login/Logout reagieren: bei Login merge, bei Logout kein delete lokal
+  async function mergeRemoteAndLocal() {
+    if (!auth.user()) return;
+    const { merged } = await auth.syncSeen(seen);
+    seen = new Set(merged);
+    saveSeen();
+    // Re-render to reflect merged state
+    allSeenState = false;
+    seekFirstUnseenFrom(singleIdx);
+    render();
+  }
+
+  if (auth.user()) await mergeRemoteAndLocal();
+  auth.onChange(async (user) => {
+    if (user) await mergeRemoteAndLocal();
+  });
+
+  // Markieren bei jedem neuen seen (monkey-patch saveSeen)
+  const origSaveSeen = saveSeen;
+  window._lastPushed = new Set();
+  saveSeen = function () {
+    origSaveSeen();
+    if (!auth.user()) return;
+    // Push any new seen items to DB (delta since last push)
+    for (const text of seen) {
+      if (!window._lastPushed.has(text)) {
+        const q = window.QUESTIONS.find(x => x.text === text);
+        auth.markSeen(text, q?.category).catch(e => console.warn('sync fail', e));
+        window._lastPushed.add(text);
+      }
+    }
+  };
+
+  // Reset-Button ersetzen um auch DB zu wipen
+  const resetBtn = document.getElementById('resetBtn');
+  if (resetBtn) {
+    // Clone to strip old listener
+    const newBtn = resetBtn.cloneNode(true);
+    resetBtn.replaceWith(newBtn);
+    newBtn.addEventListener('click', async () => {
+      if (!confirm('Alle ' + seen.size + ' gesehenen Fragen vergessen und neu starten?')) return;
+      seen = new Set();
+      saveSeen();
+      window._lastPushed = new Set();
+      if (auth.user()) await auth.clearSeen();
+      allSeenState = false;
+      singleIdx = 0;
+      render();
+    });
+  }
+})();
 </script>
+<script src="config.js"></script>
+<script src="auth.js"></script>
+<script src="login-ui.js"></script>
 <script src="mobile-nav.js"></script>
 </body>
 </html>
