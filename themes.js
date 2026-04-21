@@ -535,12 +535,20 @@ window.THEMES = {
               { accent: '1.', label: 'Freundeskreis', text: 'Jemand, den ihr beide mögt, wird abwesend lächerlich gemacht. Wer von euch sagt etwas?' },
               { accent: '2.', label: 'Öffentlich', text: 'In einem Café wird jemand diskriminiert. Erwartet ihr einander zu handeln — oder seid ihr unsicher?' }
             ] },
-          { name: 'Wurzeln', title: 'Wer hat euch Rückgrat vorgelebt?', duration: 10*60,
-            hostNote: 'Je 5 Minuten erzählen.',
-            question: 'Wer hat dir im echten Leben gezeigt, wie „einstehen“ aussieht?' },
-          { name: 'Schritt', title: 'Diese Woche einmal einstehen', duration: 8*60,
-            hostNote: 'Ein Satz pro Person. Konkret, sichtbar.',
-            question: 'Wo stehe ich diese Woche einmal ein — und wo wünsche ich mir von dir, dass du es tust?' }
+          { name: 'Wurzeln', title: 'Wer hat euch Rückgrat vorgelebt?', duration: 12*60,
+            hostNote: 'Je 5 Minuten erzählen, der andere nur zuhören — keine Rückfrage in der Erzählzeit.',
+            description: 'Rückgrat lernt man selten von Helden. Meistens von unspektakulären Menschen, die in einem kleinen Moment nicht geschwiegen haben.',
+            question: 'Wer hat dir im echten Leben gezeigt, wie „einstehen" aussieht? Und was genau hat diese Person gemacht?' },
+          { name: 'Anerkennung', title: 'Wofür ich dich bewundere', duration: 10*60,
+            hostNote: 'Je ein Satz: „Ich bewundere, wie du auf Ebene X einstehst — auch wenn es dich was kostet." Der andere antwortet nur mit „Danke". Keine Relativierung.',
+            question: 'Welche Haltung der anderen Person bewunderst du — und hast es ihr so konkret noch nie gesagt?' },
+          { name: 'Stille', title: 'Zwei Minuten, ohne Worte', duration: 2*60,
+            hostNote: 'Schaut in die Kerze. Spürt, was gerade nachklingt.',
+            description: 'Manche Sätze brauchen Zeit, um anzukommen. Diese zwei Minuten sind der Ort, an dem das passiert.' },
+          { name: 'Satz', title: 'Der Satz, den ich diese Woche sage', duration: 10*60,
+            hostNote: 'Jede:r formuliert einen konkreten Satz — aufgeschrieben, dann laut ausgesprochen. Der andere hört nur zu. Kein Kommentar.',
+            description: 'Statt „ich will einstehen" — welcher konkrete Satz wird diese Woche gesagt, wo du ihn sonst geschluckt hättest?',
+            question: 'Welchen einen Satz sage ich diese Woche laut, den ich sonst geschluckt hätte — und zu wem?' }
         ])
       }
     }
@@ -625,12 +633,21 @@ window.THEMES = {
           { name: 'Gemeinsamer Mix', title: 'Gemeinsam oder getrennt?', duration: 12*60,
             hostNote: 'Der überraschende Teil: Viele Paare leben gemeinsam und doch unterschiedliche ideale Tage.',
             question: 'Welche Teile unseres idealen Tages sind gemeinsam — welche dürfen getrennt sein?' },
-          { name: 'Was fehlt', title: 'Der Vergleich mit heute', duration: 10*60,
-            hostNote: 'Beide nacheinander. Was merkt ihr jetzt?',
+          { name: 'Was fehlt', title: 'Der Vergleich mit heute', duration: 12*60,
+            hostNote: 'Beide nacheinander, je 4 Minuten. Was merkt ihr jetzt, wo ihr eure idealen Tage neben die aktuellen Wochen legt?',
+            description: 'Nicht Schuld, nicht Scham — nur Beobachtung. Was fehlt oft? Was ist zu viel?',
             question: 'Welches Element fehlt euch gerade am meisten — und merkt ihr das aneinander?' },
-          { name: 'Schritt', title: 'Dieser eine Dienstag', duration: 8*60,
-            hostNote: 'Ein Element pro Person, mit Uhrzeit.',
-            question: 'Welches Element baust du Dienstag ein — und wie kann ich dir dabei den Rücken freihalten?' }
+          { name: 'Geschenk', title: 'Was du heute schon gut machst', duration: 8*60,
+            hostNote: 'Je ein Satz: „An deinem idealen Tag erkenne ich Folgendes schon heute — du lebst das…" Der andere antwortet nur mit „Danke".',
+            description: 'Bevor wir planen, was fehlt — benennen wir, was schon da ist. Das verändert den Ton.',
+            question: 'Was von deinem idealen Tag lebst du heute schon — und weißt es vielleicht gar nicht?' },
+          { name: 'Stille', title: 'Zwei Minuten, inneres Bild', duration: 2*60,
+            hostNote: 'Augen zu, wenn ihr mögt. Denkt an einen Moment aus eurem idealen Tag — versucht, ihn zu riechen, zu hören, zu spüren.',
+            description: 'Aus Bildern wird Leben, nicht aus Listen.' },
+          { name: 'Drehbuch', title: 'Der Dienstag, konkret', duration: 12*60,
+            hostNote: 'Jede:r schreibt einen konkreten Tagesablauf für kommenden Dienstag — Stunde für Stunde, in Gegenwartsform. Danach zeigt ihr euch die Drehbücher.',
+            description: 'Kein Traumtag ohne Verpflichtungen. Ein echter Dienstag, innerhalb dessen, was ihr habt — aber mit einem Flow-, einem Connection- und einem Stille-Moment eingebaut.',
+            question: 'Wie sieht mein idealer Dienstag diese Woche aus — Stunde für Stunde? Und an welcher Stelle brauche ich deine Rückendeckung?' }
         ])
       }
     }
@@ -724,9 +741,17 @@ window.THEMES = {
             question: 'Welcher Teil unserer 10-Jahres-Bilder ist gemeinsam — und welcher darf getrennt bleiben?' },
           { name: 'Rückwärts', title: 'Was muss nächstes Jahr passieren?', duration: 10*60,
             hostNote: 'Je eine Antwort pro Person.',
+            description: 'Ein 10-Jahres-Bild ist schön. Aber wahr wird es in 12-Monats-Schritten.',
             question: 'Welche Weiche muss in den nächsten 12 Monaten umgelegt sein, damit dein Bild realistisch wird?' },
+          { name: 'Stille', title: 'Zwei Minuten, die Zukunft spüren', duration: 2*60,
+            hostNote: 'Augen zu. Stellt euch einen konkreten Moment aus eurem Mittwoch in 10 Jahren vor. Den Geruch, das Licht, die Temperatur.',
+            description: 'Der Unterschied zwischen Plan und Wirklichkeit: Wirklichkeit hat Geruch.' },
+          { name: 'Foto', title: 'Ein Foto aus der Zukunft', duration: 12*60,
+            hostNote: 'Jede:r beschreibt ein einziges Foto aus der Zukunft — wie aus einem Album. 3 Minuten schreiben, 2 Minuten einander vorlesen. Der andere hört nur zu.',
+            description: 'Keine Vision, kein Plan. Ein konkretes Foto: wer ist drauf, wo wurde es aufgenommen, was ist gerade eben passiert? Je konkreter, desto echter.',
+            question: 'Beschreibe ein Foto aus deinem Mittwoch in 10 Jahren — in 5 Sätzen. Wer? Wo? Was passiert gerade?' },
           { name: 'Schritt', title: 'Der erste Move diese Woche', duration: 8*60,
-            hostNote: 'Konkret, sichtbar.',
+            hostNote: 'Konkret, sichtbar. Aufschreiben auf Zettel, austauschen.',
             question: 'Was ist dein erster kleiner Schritt diese Woche — und wie kann ich dich dabei unterstützen?' }
         ])
       }
@@ -1249,18 +1274,22 @@ window.THEMES = {
               { accent: '2.', label: 'Sorge', text: 'Worüber würde es weinen, wenn es auf dein heutiges Leben schaut?' }
             ] },
           { name: 'Mut', title: 'Wozu würde es dich drängen?', duration: 14*60,
-            hostNote: 'Eine:r erzählt 5 min, andere Person hört zu. Dann tauschen.',
-            description: 'Konkrete Sache, die du seit Jahren aufschiebst. Nicht „mehr leben“ — eine echte Schwelle.',
+            hostNote: 'Eine:r erzählt 5 min, andere Person hört zu. Dann tauschen. Keine Rückfragen in der Erzählzeit.',
+            description: 'Konkrete Sache, die du seit Jahren aufschiebst. Nicht „mehr leben" — eine echte Schwelle.',
             question: 'Was würde dein älteres Ich dich drängen, in den nächsten zwölf Monaten anzufangen?' },
+          { name: 'Stille', title: 'Drei Minuten, in der Zeit', duration: 3*60,
+            hostNote: 'Nichts sagen. Schaut in die Kerze. Spürt, wie sich gerade anfühlt, was zwischen euch besprochen wurde.',
+            description: 'Das älteste Ich und das heutige treffen sich jetzt auf halbem Weg. Gebt ihnen Raum.' },
           { name: 'Brief', title: 'Ein Brief von 80 an heute', duration: 12*60,
             hostNote: 'Stille. Stift und Zettel. Jeder schreibt leise für sich.',
             description: 'Eine halbe Seite. Brief von eurem 80-jährigen Ich an euer heutiges Du. Keine Ratschläge — was möchte es loswerden, jetzt, wo es gehört wurde?' },
           { name: 'Vorlesen', title: 'Lies vor — wenn du magst', duration: 10*60,
             hostNote: 'Eine:r liest, andere hört. Dann tauschen. Keine Kommentare. Nur danke.',
-            question: 'Lies deinen Brief vor — oder einen Satz, oder fasse zusammen.' },
-          { name: 'Mitnahme', title: 'Eine Sache für die nächste Woche', duration: 6*60,
-            hostNote: 'Beide nacheinander, ein Satz.',
-            question: 'Was machst du in den nächsten sieben Tagen anders — und mit welchem Wort gehst du heute nach Hause?' }
+            question: 'Lies deinen Brief vor — oder einen Satz daraus, oder fasse in zwei Sätzen zusammen.' },
+          { name: 'Ein Wort', title: 'Ein Wort als Kompass', duration: 8*60,
+            hostNote: 'Jede:r wählt ein einziges Wort, das die nächsten sieben Tage tragen soll. Auf einen Zettel, austauschen, mit nach Hause nehmen.',
+            description: 'Kein Vorsatz, kein Plan. Ein Wort — als Anker, wenn die Woche wieder eng wird. Wenn du zwischen Tür und Angel an dieses Wort denkst, kehrt etwas zurück, das du heute Abend gespürt hast.',
+            question: 'Welches Wort nimmst du mit — und warum gerade dieses?' }
         ])
       },
       solo: {
