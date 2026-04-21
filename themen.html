@@ -174,7 +174,12 @@ function renderFeatured() {
 }
 
 function renderGrid() {
-  const themes = Object.values(window.THEMES).filter(t => !t.featured);
+  // Filter: Frageabend-Varianten (frageabend_arbeit/tief/humor) werden hier nicht einzeln gelistet —
+  // sie sind via thema.html?id=frageabend_X erreichbar, aber die Übersicht zeigt nur Haupt-Themen
+  // (Parität mit der Landingpage).
+  const themes = Object.entries(window.THEMES)
+    .filter(([id, t]) => !t.featured && !id.includes('_'))
+    .map(([_, t]) => t);
   const filtered = currentFilter === 'all'
     ? themes
     : themes.filter(t => !!t.formats[currentFilter]);
