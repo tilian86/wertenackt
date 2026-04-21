@@ -57,6 +57,7 @@
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="impulse.html">Impulse</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="musik.html">Musik</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-on-background font-bold border-b border-secondary" href="gastgeber.html">Gastgeber</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="rezepte.html">Rezepte</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="ueber.html">Über</a>
       <a class="inline-flex items-center gap-1 text-[#1B1C19]/40 hover:text-secondary transition-colors duration-300 text-[11px] uppercase tracking-widest font-semibold" href="unterstuetzen.html" title="Projekt unterstützen"><span class="material-symbols-outlined text-[16px]">favorite</span></a>
     </nav>
@@ -187,97 +188,21 @@
     </div>
   </section>
 
-  <!-- Snacks & Getränke -->
-  <section class="mb-20">
-    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Was auf den Tisch kommt</p>
-    <h2 class="font-serif text-3xl md:text-5xl mb-8 leading-snug">Kleine Dinge, die große Abende tragen.</h2>
-    <p class="text-base md:text-lg text-on-background/75 leading-relaxed mb-12 max-w-2xl">
-      Du musst nicht kochen. Aber ein Hauch Mühe — etwas, das nach Wärme riecht, ein Bissen in der Hand — macht den Unterschied zwischen „Meeting" und „Abend". Sechs Ideen, die du in 15 Minuten schaffst.
-    </p>
-
-    <!-- Bild-Slot für späteres Foto -->
-    <div class="mb-10 aspect-[16/10] overflow-hidden relative rounded-lg bg-surface-container-low" style="-webkit-mask-image: radial-gradient(ellipse 100% 100% at center, black 50%, transparent 100%); mask-image: radial-gradient(ellipse 100% 100% at center, black 50%, transparent 100%);">
-      <img src="images/snacks-hero.jpg" alt="Ein Tisch mit Snacks und Kerzen" class="w-full h-full object-cover" loading="lazy" onerror="this.parentElement.style.display='none'"/>
+  <!-- Snacks Teaser -->
+  <section class="mb-20 grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-surface-container-low rounded-xl overflow-hidden">
+    <div class="md:col-span-2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden">
+      <img src="images/snacks-hero.jpg" alt="Snacks-Teller mit Kerzen" class="w-full h-full object-cover" loading="lazy"/>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Warme Mandeln mit Rosmarin & Meersalz</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">5 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Eine Handvoll Mandeln in der Pfanne mit Olivenöl, einem Zweig Rosmarin, grobem Meersalz. Dreht man einmal um, fertig. Der Duft zieht durch die ganze Wohnung — das erste Signal, dass gleich etwas anderes passiert als sonst.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Auch: zum Ankommen reichen, bevor ihr in der Runde sitzt.</p>
-      </div>
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Datteln mit Ziegenkäse & Thymianhonig</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">8 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Datteln halbieren, Kern raus, mit einem Klecks Ziegenfrischkäse füllen, einen Tropfen Honig drauf, ein Fetzen Thymian. Auf einem Holzbrett anrichten. Süß trifft salzig — die Art Bissen, die ein Gespräch pausieren lässt.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Vegan-Alternative: Cashew-Creme statt Ziegenkäse.</p>
-      </div>
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Rosmarin-Focaccia aus der Tiefkühle</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">15 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Eine gekaufte Focaccia (oder auch nur ein halber Ciabatta) im Ofen bei 180° für 10 Minuten warm machen, mit Olivenöl beträufeln, grobes Salz und Rosmarin drauf. In Stücke reißen — nicht schneiden. Das „Reißen" entspannt die Runde.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Dazu: ein kleiner Teller mit gutem Olivenöl + Balsamico zum Tunken.</p>
-      </div>
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Orangenscheiben mit dunkler Schokolade</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">5 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Bio-Orange in feine Scheiben, auf einen flachen Teller gelegt, mit grober Meersalzflocke und zerbrochener dunkler Schokolade (mindestens 70%) bestreut. Kommt puristisch daher, schmeckt aber wie ein Ritual.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Perfekt für den späten Teil des Abends — nach der Reflexion.</p>
-      </div>
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Gebackene Feigen mit Blauschimmelkäse</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">12 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Frische Feigen vierteln, ein kleines Stück Blauschimmelkäse (Gorgonzola, Bleu d'Auvergne) hineinsetzen, mit einem Tropfen Honig und Walnusshälfte krönen, 8 Minuten bei 180° backen. Wirkt wie Restaurant, geht mit zwei Handgriffen.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Saisonal: statt Feigen Birnenhälften, wenn Herbst.</p>
-      </div>
-
-      <div class="bg-surface-container-low rounded-lg p-6">
-        <div class="flex items-baseline justify-between mb-3">
-          <h3 class="font-serif text-xl md:text-2xl text-primary-container">Heißer Apfelsaft mit Ingwer & Zimt</h3>
-          <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">10 Min</span>
-        </div>
-        <p class="text-base text-on-background/75 leading-relaxed mb-2">
-          Trüber Apfelsaft in einen Topf, frischer Ingwer (daumennagelgroßes Stück, dünn geschnitten), eine Zimtstange, ein Sternanis, auf kleinster Flamme 10 Min ziehen lassen. In Teetassen servieren.
-        </p>
-        <p class="text-sm text-on-surface-variant italic">Alkoholfrei — und macht das Gespräch nicht schwerer. Für den Rest: ein Glas Wein pro Person reicht, glaub mir.</p>
-      </div>
-
-    </div>
-
-    <div class="mt-10 bg-primary-container/5 border border-primary-container/10 rounded-lg p-6 max-w-3xl">
-      <p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary mb-3">Daran denken</p>
-      <ul class="space-y-2 text-sm md:text-base text-on-background/80 leading-relaxed">
-        <li>· <strong>Nicht zu viel</strong> — zwei bis drei Kleinigkeiten reichen. Der Abend soll nicht um Essen kreisen.</li>
-        <li>· <strong>Nichts Großes vorher servieren</strong> — Ankommen passiert leichter auf halbvollem Magen.</li>
-        <li>· <strong>Wasser in Karaffen</strong> — nicht nur Flaschen auf den Tisch. Kleine Geste, große Wirkung.</li>
-        <li>· <strong>Eine Frage beim Kochen</strong> — wenn jemand früher kommt: Lass die Person mithelfen. Schneiden entspannt.</li>
-      </ul>
+    <div class="md:col-span-3 p-8 md:p-10">
+      <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-3">Was auf den Tisch kommt</p>
+      <h2 class="font-serif text-2xl md:text-3xl mb-4 leading-snug">Kleine Dinge, die große Abende tragen.</h2>
+      <p class="text-base md:text-lg text-on-background/75 leading-relaxed mb-6">
+        Du musst nicht kochen. Ein Hauch Mühe reicht — sechs Ideen, je unter 15 Minuten, die den Unterschied machen zwischen „Meeting" und „Abend".
+      </p>
+      <a href="rezepte.html" class="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold text-secondary hover:text-primary-container transition-colors">
+        Zu den Rezepten
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
     </div>
   </section>
 
@@ -404,6 +329,7 @@
   <div class="flex flex-wrap justify-center gap-8">
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="ueber.html">Über</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="gastgeber.html">Gastgeber</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="rezepte.html">Rezepte</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="mailto:kontakt@klarkreis.de">Kontakt</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="musik.html">Musik</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="unterstuetzen.html">Unterstützen</a>

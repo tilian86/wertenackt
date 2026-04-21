@@ -48,13 +48,14 @@
 <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-40">
   <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
     <a href="index.html" class="flex items-center gap-2 font-serif italic text-2xl text-primary"><svg width="26" height="26" viewBox="0 0 64 64" class="shrink-0"><circle cx="32" cy="32" r="28" fill="none" stroke="#1B3022" stroke-width="3"/><circle cx="32" cy="32" r="18" fill="none" stroke="#1B3022" stroke-width="2" opacity="0.5"/><circle cx="32" cy="32" r="3.2" fill="#924C00"/></svg> KlarKreis</a>
-    <nav class="hidden md:flex space-x-12">
+    <nav class="hidden md:flex space-x-10">
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="index.html">Start</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="themen.html">Themen</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="fragen.html">Fragerunde</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-on-background font-bold border-b border-secondary" href="impulse.html">Impulse</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="musik.html">Musik</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="gastgeber.html">Gastgeber</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="rezepte.html">Rezepte</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="ueber.html">Über</a>
       <a class="inline-flex items-center gap-1 text-[#1B1C19]/40 hover:text-secondary transition-colors duration-300 text-[11px] uppercase tracking-widest font-semibold" href="unterstuetzen.html" title="Projekt unterstützen"><span class="material-symbols-outlined text-[16px]">favorite</span></a>
     </nav>
@@ -112,6 +113,7 @@
   <div class="flex flex-wrap justify-center gap-8">
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="ueber.html">Über</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="gastgeber.html">Gastgeber</a>
+    <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="rezepte.html">Rezepte</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="mailto:kontakt@klarkreis.de">Kontakt</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="musik.html">Musik</a>
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="unterstuetzen.html">Unterstützen</a>
@@ -152,7 +154,8 @@ function renderChips() {
   const cats = ['alle', ...window.QUOTE_CATEGORIES];
   chips.innerHTML = cats.map(c => {
     const active = c === currentCat;
-    const label = c === 'alle' ? 'Alle' : c;
+    const count = c === 'alle' ? window.QUOTES.length : window.QUOTES.filter(q => q.category === c).length;
+    const label = c === 'alle' ? `Alle · ${count}` : `${c} · ${count}`;
     return `<button data-cat="${c}" class="cat-chip px-4 py-2 rounded-full border text-[11px] uppercase tracking-widest transition-colors ${active
       ? 'bg-primary-container text-on-primary border-primary-container'
       : 'bg-surface-container-low text-on-background border-outline-variant/30 hover:border-secondary/50'}">${label}</button>`;

@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Musik — KlarKreis</title>
-<meta name="description" content="Kuratierte Spotify-Playlists für KlarKreis-Abende — rein instrumental, nicht ablenkend, als Hintergrund für tiefere Gespräche."/>
+<title>Rezepte — KlarKreis</title>
+<meta name="description" content="Kleine Snacks und Getränke, die große Abende tragen. Sechs kuratierte Ideen in unter 15 Minuten — passend zu KlarKreis-Themenabenden."/>
 <meta name="theme-color" content="#FBF9F4"/>
-<link rel="canonical" href="https://klarkreis.de/musik.html"/>
+<link rel="canonical" href="https://klarkreis.de/rezepte.html"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-<meta property="og:title" content="Musik — KlarKreis"/>
-<meta property="og:description" content="Spotify-Playlists als Hintergrund für Themenabende — sorgfältig ausgewählt, ohne Gesang, der ablenkt."/>
+<meta property="og:title" content="Rezepte — KlarKreis"/>
+<meta property="og:description" content="Kleine Snacks und Getränke für Themenabende — nicht kochen müssen, aber ein Hauch Mühe macht den Unterschied."/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://klarkreis.de/musik.html"/>
-<meta property="og:image" content="https://klarkreis.de/images/hero-og.jpg"/>
+<meta property="og:url" content="https://klarkreis.de/rezepte.html"/>
+<meta property="og:image" content="https://klarkreis.de/images/snacks-hero.jpg"/>
 <meta property="og:locale" content="de_DE"/>
 <meta property="og:site_name" content="KlarKreis"/>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -54,7 +54,7 @@
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="impulse.html">Impulse</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="musik.html">Musik</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="gastgeber.html">Gastgeber</a>
-      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="rezepte.html">Rezepte</a>
+      <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-on-background font-bold border-b border-secondary" href="rezepte.html">Rezepte</a>
       <a class="font-['Noto_Serif'] tracking-tight leading-relaxed text-[#1B1C19]/60 hover:text-[#B7895B] transition-colors duration-300" href="ueber.html">Über</a>
       <a class="inline-flex items-center gap-1 text-[#1B1C19]/40 hover:text-secondary transition-colors duration-300 text-[11px] uppercase tracking-widest font-semibold" href="unterstuetzen.html" title="Projekt unterstützen"><span class="material-symbols-outlined text-[16px]">favorite</span></a>
     </nav>
@@ -64,41 +64,112 @@
 
 <div class="max-w-5xl mx-auto px-6 md:px-12 pt-8 md:pt-12">
   <div class="aspect-[4/5] md:aspect-[16/10] overflow-hidden relative" style="-webkit-mask-image: radial-gradient(ellipse 100% 100% at center, black 50%, transparent 100%); mask-image: radial-gradient(ellipse 100% 100% at center, black 50%, transparent 100%);">
-    <img src="images/musik-hero.jpg" alt="Musik bei Kerzenlicht" class="w-full h-full object-cover" loading="eager" fetchpriority="high"/>
+    <img src="images/snacks-hero.jpg" alt="Ein Tisch mit Snacks und Kerzen" class="w-full h-full object-cover" loading="eager" fetchpriority="high"/>
   </div>
 </div>
 
-<main class="max-w-6xl mx-auto px-6 md:px-12 py-16">
+<main class="max-w-5xl mx-auto px-6 md:px-12 py-16">
 
   <!-- Hero -->
   <section class="mb-16">
-    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Klanglicher Rahmen</p>
-    <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight mb-8">Musik für Deinen Abend.</h1>
+    <p class="font-label uppercase tracking-[0.2em] text-[11px] text-secondary mb-4">Was auf den Tisch kommt</p>
+    <h1 class="font-serif text-5xl md:text-7xl leading-[1.05] tracking-tight mb-8">Kleine Dinge, die große Abende tragen.</h1>
     <p class="text-xl md:text-2xl text-on-surface-variant font-light italic leading-relaxed max-w-3xl">
-      Der richtige Klang macht einen Unterschied. Leise, instrumental, ohne Gesang der ablenkt — damit eure Worte im Vordergrund bleiben.
+      Du musst nicht kochen. Aber ein Hauch Mühe — etwas, das nach Wärme riecht, ein Bissen in der Hand — macht den Unterschied zwischen „Meeting" und „Abend". Sechs Ideen, die Du in unter 15 Minuten schaffst.
     </p>
   </section>
 
-  <!-- Intro -->
-  <section class="mb-12 max-w-3xl">
-    <div class="space-y-5 text-base md:text-lg text-on-background/80 leading-relaxed">
-      <p>
-        Diese Playlists sind kuratiert für KlarKreis-Abende: dezent genug, damit Gespräche nicht untergehen, aber mit genug Atmosphäre, damit die Stille nicht peinlich wird. Alle rein instrumental.
+  <!-- Rezepte-Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Warme Mandeln mit Rosmarin &amp; Meersalz</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">5 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Eine Handvoll Mandeln in der Pfanne mit Olivenöl, einem Zweig Rosmarin, grobem Meersalz. Dreht man einmal um, fertig. Der Duft zieht durch die ganze Wohnung — das erste Signal, dass gleich etwas anderes passiert als sonst.
       </p>
-      <p class="text-sm text-on-surface-variant italic">
-        Tipp: leise stellen, auf Bluetooth-Lautsprecher laufen lassen, vergessen.
-      </p>
+      <p class="text-sm text-on-surface-variant italic">Auch: zum Ankommen reichen, bevor ihr in der Runde sitzt.</p>
     </div>
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Datteln mit Ziegenkäse &amp; Thymianhonig</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">8 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Datteln halbieren, Kern raus, mit einem Klecks Ziegenfrischkäse füllen, einen Tropfen Honig drauf, ein Fetzen Thymian. Auf einem Holzbrett anrichten. Süß trifft salzig — die Art Bissen, die ein Gespräch pausieren lässt.
+      </p>
+      <p class="text-sm text-on-surface-variant italic">Vegan-Alternative: Cashew-Creme statt Ziegenkäse.</p>
+    </div>
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Rosmarin-Focaccia aus der Tiefkühle</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">15 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Eine gekaufte Focaccia (oder auch nur ein halber Ciabatta) im Ofen bei 180° für 10 Minuten warm machen, mit Olivenöl beträufeln, grobes Salz und Rosmarin drauf. In Stücke reißen — nicht schneiden. Das „Reißen" entspannt die Runde.
+      </p>
+      <p class="text-sm text-on-surface-variant italic">Dazu: ein kleiner Teller mit gutem Olivenöl + Balsamico zum Tunken.</p>
+    </div>
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Orangenscheiben mit dunkler Schokolade</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">5 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Bio-Orange in feine Scheiben, auf einen flachen Teller gelegt, mit grober Meersalzflocke und zerbrochener dunkler Schokolade (mindestens 70 %) bestreut. Kommt puristisch daher, schmeckt aber wie ein Ritual.
+      </p>
+      <p class="text-sm text-on-surface-variant italic">Perfekt für den späten Teil des Abends — nach der Reflexion.</p>
+    </div>
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Gebackene Feigen mit Blauschimmelkäse</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">12 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Frische Feigen vierteln, ein kleines Stück Blauschimmelkäse (Gorgonzola, Bleu d'Auvergne) hineinsetzen, mit einem Tropfen Honig und Walnusshälfte krönen, 8 Minuten bei 180° backen. Wirkt wie Restaurant, geht mit zwei Handgriffen.
+      </p>
+      <p class="text-sm text-on-surface-variant italic">Saisonal: statt Feigen Birnenhälften, wenn Herbst.</p>
+    </div>
+
+    <div class="bg-surface-container-low rounded-lg p-6 md:p-7">
+      <div class="flex items-baseline justify-between mb-3">
+        <h3 class="font-serif text-xl md:text-2xl text-primary-container">Heißer Apfelsaft mit Ingwer &amp; Zimt</h3>
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary whitespace-nowrap ml-3">10 Min</span>
+      </div>
+      <p class="text-base text-on-background/75 leading-relaxed mb-2">
+        Trüber Apfelsaft in einen Topf, frischer Ingwer (daumennagelgroßes Stück, dünn geschnitten), eine Zimtstange, ein Sternanis, auf kleinster Flamme 10 Min ziehen lassen. In Teetassen servieren.
+      </p>
+      <p class="text-sm text-on-surface-variant italic">Alkoholfrei — macht das Gespräch nicht schwerer. Für den Rest: ein Glas Wein pro Person reicht, glaub mir.</p>
+    </div>
+
   </section>
 
-  <!-- Playlist Grid -->
-  <section class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="playlistGrid"></section>
+  <!-- Daran denken -->
+  <section class="mb-16 bg-primary-container/5 border border-primary-container/10 rounded-lg p-6 md:p-8 max-w-3xl">
+    <p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary mb-3">Daran denken</p>
+    <ul class="space-y-2 text-sm md:text-base text-on-background/80 leading-relaxed">
+      <li>· <strong>Nicht zu viel</strong> — zwei bis drei Kleinigkeiten reichen. Der Abend soll nicht um Essen kreisen.</li>
+      <li>· <strong>Nichts Großes vorher servieren</strong> — Ankommen passiert leichter auf halbvollem Magen.</li>
+      <li>· <strong>Wasser in Karaffen</strong> — nicht nur Flaschen auf den Tisch. Kleine Geste, große Wirkung.</li>
+      <li>· <strong>Eine Frage beim Kochen</strong> — wenn jemand früher kommt: Lass die Person mithelfen. Schneiden entspannt.</li>
+    </ul>
+  </section>
 
-  <!-- Hinweis -->
-  <section class="mt-24 text-center border-t border-outline-variant/20 pt-12">
-    <p class="font-serif italic text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-      Du hast eine bessere Playlist? Schick sie mir: <a href="mailto:kontakt@klarkreis.de" class="text-secondary hover:underline">kontakt@klarkreis.de</a>.
+  <!-- Back-CTA -->
+  <section class="border-t border-outline-variant/20 pt-12 text-center">
+    <p class="font-serif italic text-lg md:text-xl text-on-surface-variant leading-relaxed mb-6 max-w-xl mx-auto">
+      Noch unsicher, wie Du den Abend führst? Die Gastgeber-Seite nimmt Dich in fünf Schritten mit.
     </p>
+    <a href="gastgeber.html" class="inline-flex items-center gap-2 bg-surface-container-low hover:bg-surface-container border border-outline-variant/40 hover:border-secondary/50 text-on-background px-7 py-3.5 rounded-lg text-sm uppercase tracking-widest font-semibold transition-colors">
+      Zur Gastgeber-Seite
+      <span class="material-symbols-outlined text-[18px] text-secondary">arrow_forward</span>
+    </a>
   </section>
 
 </main>
@@ -119,91 +190,6 @@
     <a class="font-['Inter'] text-xs tracking-wider uppercase text-on-surface-variant/50 hover:text-secondary transition-colors" href="datenschutz.html">Datenschutz</a>
   </div>
 </footer>
-
-<script>
-// Kuratierte Playlists für KlarKreis-Abende
-const PLAYLISTS = [
-  {
-    id: '4z6pafIELTAn7D7b0eAKWi',
-    title: 'Undiscovered Piano Gems',
-    desc: 'Zarte Piano-Stücke, wenige bekannte Namen. Melancholisch, aber nicht schwer.',
-    passtZu: ['bindung', 'achtzig']
-  },
-  {
-    id: '6uz6RZFJCHM2JR54er0WC7',
-    title: 'Instrumental Classic Covers',
-    desc: 'Bekannte Songs ohne Gesang — neu interpretiert, mit Nachklang.',
-    passtZu: ['werte', 'frageabend']
-  },
-  {
-    id: '4dtwYuPzru8iYhpt2efK3E',
-    title: 'Instrumental Guitar Covers',
-    desc: 'Akustische Gitarre, warm und erdig. Fühlt sich nach Wohnzimmer an.',
-    passtZu: ['stehe', 'heimat']
-  },
-  {
-    id: '3luHdrJ1eqOBaxGfr9ht77',
-    title: 'Positive Focus with Drive',
-    desc: 'Leichter Vorwärts-Push ohne Hektik. Für wache Runden.',
-    passtZu: ['prioritaeten']
-  },
-  {
-    id: '37i9dQZF1E8OQB5MOnNMV7',
-    title: 'Floating Radio',
-    desc: 'Ambient und schwebend. Macht den Raum weiter.',
-    passtZu: ['tag', 'zehnjahre']
-  },
-  {
-    id: '37i9dQZF1DX4sWSpwq3LiO',
-    title: 'Peaceful Piano',
-    desc: 'Klassische Klavier-Stücke, ruhig und klar. Spotify-Klassiker.',
-    passtZu: ['achtzig', 'bindung']
-  },
-  {
-    id: '37i9dQZF1DWZeKCadgRdKQ',
-    title: 'Deep Focus',
-    desc: 'Elektro-Ambient für konzentrierte Räume. Fast unhörbar, aber da.',
-    passtZu: ['prioritaeten', 'stehe']
-  },
-  {
-    id: '37i9dQZF1DX9sIqqvKsjG8',
-    title: 'Instrumental Study',
-    desc: 'Filmische Streicher und Piano, ohne Vocals. Konzentrierend.',
-    passtZu: ['werte', 'tag']
-  },
-  {
-    id: '37i9dQZF1DWVFeEut75IAL',
-    title: 'Calming Classical',
-    desc: 'Klassische Musik in beruhigendem Format — Bach, Debussy, Satie.',
-    passtZu: ['achtzig', 'heimat', 'zehnjahre']
-  },
-];
-
-const THEME_NAMES = {
-  bindung: 'Bindungsmuster',
-  werte: 'Werte',
-  prioritaeten: 'Prioritäten',
-  stehe: 'Wofür stehe ich',
-  tag: 'Idealer Tag',
-  zehnjahre: 'In 10 Jahren',
-  frageabend: 'Frageabend',
-  achtzig: '80-jähriges Ich',
-  heimat: 'Heimat',
-};
-
-const grid = document.getElementById('playlistGrid');
-grid.innerHTML = PLAYLISTS.map(p => `
-  <article class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-5 md:p-6 hover:border-secondary/40 transition-colors">
-    <iframe class="rounded-lg mb-4" src="https://open.spotify.com/embed/playlist/${p.id}?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <h3 class="font-serif text-xl md:text-2xl text-primary-container mb-2">${p.title}</h3>
-    <p class="text-sm md:text-base text-on-surface-variant italic leading-relaxed mb-4">${p.desc}</p>
-    <div class="flex flex-wrap items-center gap-2">
-      <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60">Passt zu:</span>
-      ${p.passtZu.map(id => `<a href="thema.html?id=${id}" class="font-label text-[10px] uppercase tracking-widest text-secondary hover:underline">${THEME_NAMES[id]}</a>`).join('<span class="text-on-surface-variant/40">·</span>')}
-    </div>
-  </article>
-`).join('');
-</script>
 
 <script src="config.js"></script>
 <script src="auth.js"></script>
