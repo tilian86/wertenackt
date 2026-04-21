@@ -46,7 +46,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 40 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Was bringt dich heute hierher?', duration: 10*60,
             hostNote: 'Reihum, 1–2 Sätze. Keine Rückfragen.',
@@ -188,7 +188,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 45 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie kommst du hier an?', duration: 10*60,
             hostNote: 'Reihum, 1–2 Sätze. Kein Smalltalk — was bewegt dich heute?',
@@ -287,7 +287,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 40 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Was ist diese Woche laut in deinem Kopf?', duration: 10*60,
             hostNote: 'Reihum. Kein Smalltalk, eine ehrliche Antwort reicht.',
@@ -384,7 +384,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 40 Min.',
-        people: '4-8 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie ehrlich bist du mit dir diese Woche gewesen?', duration: 10*60,
             hostNote: 'Reihum, ein Satz. Nicht das richtige Leben, das echte.',
@@ -475,7 +475,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 40 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wann war ein Tag zuletzt wirklich deiner?', duration: 10*60,
             hostNote: 'Reihum, ein Beispiel. Nicht Urlaub, sondern Alltag.',
@@ -562,7 +562,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 45 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Was würdest du heute dein 18-jähriges Ich wissen lassen?', duration: 10*60,
             hostNote: 'Reihum, ein Satz. Warm, nicht belehrend.',
@@ -659,7 +659,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~2 Std. 15 Min.',
-        people: '3-8 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie kommst du heute an?', duration: 10*60,
             hostNote: 'Reihum, ein Wort oder ein kurzer Satz. Nicht mehr.',
@@ -800,7 +800,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 30 Min.',
-        people: '3-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie geht es dir mit deiner Arbeit?', duration: 10*60,
             hostNote: 'Reihum, ein ehrlicher Satz. Nicht „läuft“ — was ist wirklich los?',
@@ -894,7 +894,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe (Vertraut)',
         duration: '~1 Std. 40 Min.',
-        people: '3-5 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Womit kommst du heute hier an?', duration: 12*60,
             hostNote: 'Reihum, ein ehrlicher Satz. Auch Schwere darf da sein.',
@@ -988,7 +988,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 20 Min.',
-        people: '3-8 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie albern bist du heute?', duration: 8*60,
             hostNote: 'Reihum, eine Geste oder ein Geräusch reicht.',
@@ -1089,7 +1089,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 45 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wie geht es dir, hier und jetzt?', duration: 8*60,
             hostNote: 'Reihum, 1–2 Sätze. Keine Rückfragen.',
@@ -1219,7 +1219,7 @@ window.THEMES = {
       group: {
         label: 'Kleine Gruppe',
         duration: '~1 Std. 45 Min.',
-        people: '4-6 Personen',
+        people: '3-10 Personen',
         stations: withFeedback([
           { name: 'Ankommen', title: 'Wo bist du heute aufgewacht?', duration: 8*60,
             hostNote: 'Reihum, 1–2 Sätze. „Innerlich“ ist genauso valide wie „äußerlich“.',
