@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="light" lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Moderationskarten — KlarKreis</title>
+<meta name="description" content="Druckbare Moderationskarten für KlarKreis-Themenabende. Pro Station eine Karte, A5 quer — zum Durchblättern beim Gastgeben."/>
+<meta name="robots" content="noindex"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  body { font-family: 'Inter', sans-serif; color: #1B1C19; background: #F0EEE9; }
+  .font-serif { font-family: 'Noto Serif', serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+
+  /* Karte: auf Bildschirm wie physische Karte, im Druck A5 landscape eine pro Seite */
+  .karte {
+    background: #FBF9F4;
+    border: 1px solid rgba(67,72,67,0.15);
+    border-radius: 8px;
+    padding: 2rem 2.25rem;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 1.25rem;
+    page-break-after: always;
+    break-after: page;
+    box-shadow: 0 4px 12px rgba(27,28,25,0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+  }
+  .karte-deck {
+    padding: 1rem;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .karte-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #924c00;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(146,76,0,0.2);
+  }
+  .karte-name { font-style: italic; color: #737973; letter-spacing: 0; text-transform: none; font-size: 12px; }
+  .karte-title {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: #1B3022;
+    margin-bottom: 1.25rem;
+  }
+  .karte-question {
+    background: #1B3022;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+  .karte-question::before { content: '?'; display: block; font-family: serif; font-size: 1.5rem; font-style: normal; color: #FDA055; margin-bottom: 0.25rem; opacity: .7; }
+  .karte-hostnote {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #434843;
+    margin-bottom: 1rem;
+    border-left: 3px solid #924c00;
+    padding: 0.35rem 1rem;
+    background: #F5F3EE;
+    border-radius: 0 4px 4px 0;
+  }
+  .karte-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #1B1C19;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+  }
+  .karte-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+  .karte-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.6rem;
+    padding: 0.35rem 0;
+    border-top: 1px dashed rgba(67,72,67,0.15);
+  }
+  .karte-item-label { font-weight: 600; color: #924c00; white-space: nowrap; }
+  .karte-quote {
+    margin-top: auto;
+    padding-top: 1rem;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #737973;
+    border-top: 1px dashed rgba(67,72,67,0.15);
+    padding-top: 0.75rem;
+  }
+  .karte-quote::before { content: '„'; }
+  .karte-quote::after { content: '" — '; }
+  .karte-quote .author { font-style: normal; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #924c00; }
+
+  /* Cover-Karte */
+  .karte-cover {
+    background: #1B3022;
+    color: #FDA055;
+    text-align: center;
+    min-height: 520px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .karte-cover h1 { font-family: 'Noto Serif', serif; font-size: 2.5rem; color: #fff; margin: 1rem 0; padding: 0 2rem; line-height: 1.15; }
+  .karte-cover .sub { font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; color: #FDA055; }
+  .karte-cover .logo { font-family: 'Noto Serif', serif; font-style: italic; font-size: 1.2rem; color: #b7895b; margin-bottom: 1.5rem; }
+  .karte-cover .format { font-size: 0.85rem; color: #FDA055; margin-top: 1.5rem; }
+
+  /* Druck: jede Karte auf eine A5-Seite quer, sauber ausgeschnitten */
+  @media print {
+    body { background: #fff; margin: 0; }
+    .no-print { display: none !important; }
+    .karte-deck { padding: 0; max-width: none; }
+    .karte {
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      max-width: none;
+      width: 100%;
+      padding: 1.5cm 1.8cm;
+      page-break-after: always;
+      min-height: auto;
+      height: auto;
+    }
+    @page { size: A5 landscape; margin: 0; }
+  }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- Top-Bar (nur Bildschirm) -->
+<div class="no-print bg-[#1B3022] text-white sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4 flex-wrap">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 text-white hover:text-[#FDA055] transition-colors">
+        <svg width="24" height="24" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#fff" stroke-width="3"/><circle cx="32" cy="32" r="3.2" fill="#FDA055"/></svg>
+        <span class="font-serif italic text-base">KlarKreis</span>
+      </a>
+      <span class="text-white/40">·</span>
+      <span class="text-sm text-white/80">Moderationskarten</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <select id="themaSelect" class="bg-[#1B3022] border border-white/20 text-white text-sm rounded px-3 py-1.5 hover:border-white/40 transition-colors"></select>
+      <select id="formatSelect" class="bg-[#1B3022] border border-white/20 text-white text-sm rounded px-3 py-1.5 hover:border-white/40 transition-colors"></select>
+      <button onclick="window.print()" class="inline-flex items-center gap-2 bg-[#FDA055] hover:bg-[#B7895B] text-[#1B3022] text-sm font-semibold uppercase tracking-widest px-4 py-2 rounded transition-colors">
+        <span class="material-symbols-outlined text-[18px]">print</span>
+        Drucken / PDF
+      </button>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 pb-3 text-xs text-white/60">
+    Tipp: Beim Drucken-Dialog „Als PDF speichern" wählen. Format: A5 quer, je eine Station pro Karte.
+  </div>
+</div>
+
+<main class="karte-deck py-8">
+  <div id="karten"></div>
+</main>
+
+<script src="themes.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+const id = params.get('thema') || 'bindung';
+const formatKey = params.get('format') || 'group';
+
+const FORMAT_LABEL = { group: 'Kleine Gruppe', pair: 'Zu zweit', solo: 'Allein' };
+
+const themaSelect = document.getElementById('themaSelect');
+const formatSelect = document.getElementById('formatSelect');
+
+function escHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function render() {
+  const theme = window.THEMES[id];
+  if (!theme) {
+    document.getElementById('karten').innerHTML = `<div class="karte"><p>Thema nicht gefunden.</p></div>`;
+    return;
+  }
+  const fmt = theme.formats[formatKey] || theme.formats.group || Object.values(theme.formats)[0];
+  if (!fmt) {
+    document.getElementById('karten').innerHTML = `<div class="karte"><p>Format nicht verfügbar.</p></div>`;
+    return;
+  }
+  // Feedback-Station ausblenden — ist für Karten nicht sinnvoll
+  const stations = fmt.stations.filter(s => s.type !== 'feedback');
+  const total = stations.length;
+
+  document.title = `Karten: ${theme.title} (${fmt.label}) — KlarKreis`;
+
+  const coverCard = `
+    <div class="karte karte-cover">
+      <div class="logo">KlarKreis</div>
+      <div class="sub">Moderationskarten · ${escHtml(theme.category || 'Themenabend')}</div>
+      <h1>${escHtml(theme.title)}</h1>
+      <div class="format">${escHtml(fmt.label)} · ${escHtml(fmt.duration)} · ${escHtml(fmt.people)}</div>
+      <div class="format" style="margin-top:2rem;opacity:.7;font-size:.7rem;">${total} Stationen · klarkreis.de</div>
+    </div>`;
+
+  const cards = stations.map((s, i) => {
+    const mins = Math.round((s.duration || 0) / 60);
+    const parts = [];
+    if (s.hostNote) parts.push(`<div class="karte-hostnote">${escHtml(s.hostNote)}</div>`);
+    if (s.description) parts.push(`<div class="karte-desc">${escHtml(s.description)}</div>`);
+    if (s.items) {
+      const items = s.items.map(it => `
+        <div class="karte-item">
+          <div class="karte-item-label">${escHtml((it.accent ? it.accent + ' ' : '') + (it.label || ''))}</div>
+          <div>${escHtml(it.text || '')}</div>
+        </div>`).join('');
+      parts.push(`<div class="karte-items">${items}</div>`);
+    }
+    if (s.question) parts.push(`<div class="karte-question">${escHtml(s.question)}</div>`);
+    const quote = s.quote
+      ? `<div class="karte-quote">${escHtml(s.quote.text)}<span class="author">${escHtml(s.quote.author || 'unbekannt')}</span></div>`
+      : '';
+    return `
+      <div class="karte">
+        <div class="karte-meta">
+          <span>Station ${i+1} / ${total} · ${mins} Min.</span>
+          <span class="karte-name">${escHtml(s.name || '')}</span>
+        </div>
+        <div class="karte-title">${escHtml(s.title || '')}</div>
+        ${parts.join('')}
+        ${quote}
+      </div>`;
+  }).join('');
+
+  document.getElementById('karten').innerHTML = coverCard + cards;
+}
+
+// Dropdown füllen
+(function buildSelects() {
+  const themes = Object.entries(window.THEMES)
+    .filter(([k]) => !k.includes('_'))
+    .map(([k, t]) => ({ k, title: t.title }));
+  themaSelect.innerHTML = themes.map(t =>
+    `<option value="${t.k}" ${t.k===id?'selected':''}>${escHtml(t.title)}</option>`
+  ).join('');
+  const theme = window.THEMES[id];
+  if (theme) {
+    formatSelect.innerHTML = Object.keys(theme.formats).map(k =>
+      `<option value="${k}" ${k===formatKey?'selected':''}>${FORMAT_LABEL[k] || k}</option>`
+    ).join('');
+  }
+  themaSelect.addEventListener('change', () => {
+    const url = new URL(location);
+    url.searchParams.set('thema', themaSelect.value);
+    url.searchParams.set('format', 'group');
+    location.href = url.toString();
+  });
+  formatSelect.addEventListener('change', () => {
+    const url = new URL(location);
+    url.searchParams.set('format', formatSelect.value);
+    location.href = url.toString();
+  });
+})();
+
+render();
+</script>
+<script src="mobile-nav.js"></script>
+</body>
+</html>
