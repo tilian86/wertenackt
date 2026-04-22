@@ -128,10 +128,10 @@ body { background-color: #FBF9F4; color: #1B1C19; position: relative; }
         <p class="text-[11px] text-on-primary-container mt-2 italic text-center">Für Gastgeber:innen, die vorbereitet starten wollen.</p>
       </div>
 
-      <!-- Hinweis: Skript ist ein Pfad, kein Käfig -->
-      <div class="mt-6 bg-surface-container-low border-l-4 border-secondary rounded-r-lg p-5 text-sm text-on-background/80 leading-relaxed">
-        <p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary mb-2">Ein Hinweis</p>
-        <p>Wenn sich ein gutes Gespräch entwickelt — <em>bleibt dabei</em>. Ignoriert die nächste Station, lasst die Zeit laufen. Später könnt ihr zurückfinden. Struktur ist dafür da, einen Abend in Gang zu bringen, nicht um ihn zu regieren.</p>
+      <!-- Hinweis: Skript ist ein Pfad, kein Käfig — format-spezifisch -->
+      <div id="hinweisBox" class="mt-6 bg-surface-container-low border-l-4 border-secondary rounded-r-lg p-5 text-sm text-on-background/80 leading-relaxed">
+        <p class="font-label uppercase tracking-[0.2em] text-[10px] text-secondary mb-2" id="hinweisLabel">Ein Hinweis</p>
+        <p id="hinweisText">Wenn sich ein gutes Gespräch entwickelt — <em>bleibt dabei</em>. Ignoriert die nächste Station, lasst die Zeit laufen. Später könnt ihr zurückfinden. Struktur ist dafür da, einen Abend in Gang zu bringen, nicht um ihn zu regieren.</p>
       </div>
     </div>
     <div class="lg:col-span-7">
@@ -229,6 +229,20 @@ function renderFormatContent() {
   document.getElementById('metaStations').textContent = uiStations.length;
   document.getElementById('startLink').href = `abend.html?thema=${encodeURIComponent(id)}&format=${currentFormat}`;
   document.getElementById('kartenLink').href = `karten.html?thema=${encodeURIComponent(id)}&format=${currentFormat}`;
+
+  // Format-spezifischer Hinweis: die Solo-Variante warnt aktiv vor „nur-durchklicken"
+  const hinweisLabel = document.getElementById('hinweisLabel');
+  const hinweisText = document.getElementById('hinweisText');
+  if (currentFormat === 'solo') {
+    hinweisLabel.textContent = 'Eine Bitte, bevor du anfängst';
+    hinweisText.innerHTML = 'Dieser Abend funktioniert nur, wenn du dir Zeit lässt. Wenn du nur schnell im Kopf antwortest und weiterklickst, bist du in zwanzig Minuten fertig — und hast nichts mitgenommen. <strong>Schreib auf, sprich laut, atme dazwischen.</strong> Die angezeigten Minuten sind Richtwerte, keine Stoppuhr. Eine Station wirklich gemacht ist mehr wert als zehn überflogen.';
+  } else if (currentFormat === 'pair') {
+    hinweisLabel.textContent = 'Ein Hinweis';
+    hinweisText.innerHTML = 'Wenn ein gutes Gespräch zwischen euch entsteht — <em>bleibt dabei</em>. Ignoriert die nächste Station, lasst die Zeit laufen. Struktur ist dafür da, einen Abend in Gang zu bringen, nicht um ihn zu regieren. Und: nicht nur im Kopf antworten. Wirklich aussprechen, was ihr sonst schluckt — das ist der eigentliche Unterschied.';
+  } else {
+    hinweisLabel.textContent = 'Ein Hinweis';
+    hinweisText.innerHTML = 'Wenn sich ein gutes Gespräch entwickelt — <em>bleibt dabei</em>. Ignoriert die nächste Station, lasst die Zeit laufen. Später könnt ihr zurückfinden. Struktur ist dafür da, einen Abend in Gang zu bringen, nicht um ihn zu regieren.';
+  }
 
   // Ablauf timeline
   const mid = Math.floor(uiStations.length / 2);
