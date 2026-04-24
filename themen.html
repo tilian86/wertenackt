@@ -142,12 +142,12 @@ function cardHref(theme) {
 }
 
 function renderGrid() {
-  // Filter: Frageabend-Varianten (frageabend_arbeit/tief/humor) werden hier nicht einzeln gelistet —
-  // sie sind via thema.html?id=frageabend_X erreichbar, aber die Übersicht zeigt nur Haupt-Themen
-  // (Parität mit der Landingpage). Featured-Thema wird NICHT mehr herausgehoben, damit das Grid
-  // durchgängig synchron ist.
+  // Filter: Frageabend-Varianten (frageabend_arbeit/tief/humor) werden hier nicht einzeln gelistet
+  // — sie sind via thema.html?id=frageabend_X erreichbar, aber die Übersicht zeigt nur Haupt-Themen.
+  // Werte-Reise Abend 1 wird gelistet (kostenloser Einstieg in die Reise); Abende 2-6 sind
+  // paywalled und werden hier nicht einzeln gezeigt — sie erscheinen nur über reise.html.
   const themes = Object.entries(window.THEMES)
-    .filter(([id, t]) => !id.includes('_'))
+    .filter(([id, t]) => !id.includes('_') || id === 'werte_reise_1')
     .map(([_, t]) => t);
   const filtered = currentFilter === 'all'
     ? themes
@@ -160,6 +160,9 @@ function renderGrid() {
   }
   grid.innerHTML = filtered.map((t, idx) => {
     const firstFormat = currentFilter !== 'all' ? t.formats[currentFilter] : (t.formats.group || t.formats.pair);
+    const reiseBadge = t.reise
+      ? `<span class="absolute top-4 left-4 bg-primary-container text-on-primary px-3 py-1 text-[9px] uppercase tracking-widest font-semibold rounded">Teil einer ${t.reise.total}-Abende-Reise</span>`
+      : '';
     return `
       <article class="group flex flex-col h-full">
         <a href="${cardHref(t)}" class="block">
@@ -167,6 +170,7 @@ function renderGrid() {
             <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" alt="${t.title}" src="${t.image}"/>
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <span class="absolute top-4 right-4 bg-surface-bright/90 backdrop-blur px-3 py-1 text-[9px] uppercase tracking-widest font-semibold text-primary">${t.category}</span>
+            ${reiseBadge}
           </div>
         </a>
         <div class="px-1 mt-4 flex flex-col flex-1">
