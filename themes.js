@@ -2515,11 +2515,11 @@ window.THEMES = {
   // =====================================================================
   date: {
     title: 'Erstes Date',
-    subtitle: 'Für zwei, die sich gerade getroffen haben',
-    lead: 'Ein geführtes Gespräch für zwei Menschen, die sich auf einer App gematcht haben und jetzt live auf einer Decke sitzen. 75 Minuten, die die Höflichkeits-Fassade des Online-Datings durchbrechen — leicht, flirty, ehrlich, mit echter Stille und einer klaren Entscheidung am Ende.',
+    subtitle: 'Für zwei, die sich gerade erst richtig treffen',
+    lead: 'Ein geführtes Gespräch für zwei Menschen beim ersten Date — egal ob ihr euch auf einer App gematcht habt, im Freundeskreis kennengelernt habt oder beim Bäcker zufällig ins Gespräch gekommen seid. 75 Minuten, die die Höflichkeits-Fassade durchbrechen — leicht, flirty, ehrlich, mit echter Stille und einer klaren Entscheidung am Ende.',
     category: 'Date',
     image: 'images/date.jpg',
-    philosophy1: 'Wir sind uns schon begegnet — in Text-Threads, Voice-Memos, im ausgewählten Licht von Fotos. Jetzt sitzen wir uns live gegenüber, und die ersten fünfzehn Minuten entscheiden, ob das ein Bewerbungsgespräch wird oder etwas anderes. Dieses Format gibt euch das Alibi für Verspieltheit — und die Struktur, um von kuratierter Selbstdarstellung zur echten Begegnung zu kommen.',
+    philosophy1: 'Das erste Date ist ein seltsamer Moment: zwei Menschen, die sich auf irgendeine Weise vorher schon gesehen haben — in Nachrichten, über Freunde, in kurzen Zufalls-Begegnungen — und jetzt ohne Fluchtweg gegenüber sitzen. Die ersten fünfzehn Minuten entscheiden, ob das ein Bewerbungsgespräch wird oder etwas anderes. Dieses Format gibt euch das Alibi für Verspieltheit — und die Struktur, um von kuratierter Selbstdarstellung zur echten Begegnung zu kommen.',
     philosophy2: 'Der Abend folgt einer kalibrierten Dramaturgie: Erst Dekompression (Nervensystem runterfahren), dann gegenseitige Selbstoffenbarung auf steigender Tiefe (Aron), dann bewusst Humor und spielerische Spannung, zwei Minuten nonverbaler Augenkontakt, und am Schluss eine ehrliche Antwort auf die einzige Frage, die zählt: wollen wir uns nochmal sehen? — Ja oder Nein, beides ist hier okay.',
     formats: {
       pair: {

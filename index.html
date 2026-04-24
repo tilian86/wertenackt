@@ -255,10 +255,7 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
           <footer class="font-label text-[11px] uppercase tracking-widest text-secondary-fixed-dim mt-8" id="funkeAuthor">—</footer>
         </blockquote>
         <div class="flex flex-wrap items-center gap-4 mt-10 pt-8 border-t border-on-primary/10">
-          <button id="funkeHear" class="hidden inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 backdrop-blur-sm text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-all duration-300 border border-on-primary/10 hover:border-on-primary/20 hover:-translate-y-0.5 hover:shadow-lg" aria-label="Impuls anhören">
-            <span class="material-symbols-outlined text-[16px]" id="funkeHearIcon">play_arrow</span>
-            <span id="funkeHearLabel">Anhören</span>
-          </button>
+          <div id="funkePlayerMount"></div>
           <button id="funkeZiehen" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 backdrop-blur-sm text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-all duration-300 border border-on-primary/10 hover:border-on-primary/20 hover:-translate-y-0.5 hover:shadow-lg">
             <span class="material-symbols-outlined text-[16px]">casino</span>
             Neuen Impuls ziehen
@@ -268,7 +265,6 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
             <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
           </a>
         </div>
-        <audio id="funkeAudio" preload="none" class="hidden"></audio>
       </div>
     </div>
   </div>
@@ -500,39 +496,38 @@ Themenkatalog ansehen
     author: document.getElementById('funkeAuthor'),
     label: document.getElementById('funkeLabel'),
     btn: document.getElementById('funkeZiehen'),
-    hear: document.getElementById('funkeHear'),
-    hearIcon: document.getElementById('funkeHearIcon'),
-    hearLabel: document.getElementById('funkeHearLabel'),
-    audio: document.getElementById('funkeAudio'),
+    mount: document.getElementById('funkePlayerMount'),
   };
   if (!el.text || !window.QUOTES || !window.QUOTES.length) return;
   const QUOTES = window.QUOTES;
 
-  // Deterministischer Index aus dem Datum — heute zeigen alle Besucher dasselbe Zitat.
   function dayIndex() {
     const d = new Date();
     const seed = d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate();
     return seed % QUOTES.length;
   }
 
-  let currentIdx = dayIndex();
-  let mode = 'tag';
-
-  // Prüft, ob eine Audio-Datei für diesen Impuls existiert (HEAD-Anfrage).
-  // Der Hear-Button erscheint nur dann.
   function audioPathFor(idx) {
     return 'audio/impulse/' + String(idx).padStart(3, '0') + '.mp3';
   }
 
-  function setHearButton(idx) {
-    el.audio.pause();
-    el.hear.classList.add('hidden');
-    el.hearIcon.textContent = 'play_arrow';
-    el.hearLabel.textContent = 'Anhören';
+  let currentIdx = dayIndex();
+  let player = null;  // KlarKreisMiniPlayer handle, lazy-created
+
+  function updatePlayerFor(idx) {
     const url = audioPathFor(idx);
-    fetch(url, { method: 'HEAD' })
-      .then(r => { if (r.ok) { el.audio.src = url; el.hear.classList.remove('hidden'); } })
-      .catch(() => {});
+    fetch(url, { method: 'HEAD' }).then(r => {
+      if (!r.ok) {
+        if (player) { player.setUrl(''); el.mount.style.display = 'none'; }
+        return;
+      }
+      el.mount.style.display = '';
+      if (!player && window.KlarKreisMiniPlayer) {
+        player = window.KlarKreisMiniPlayer.insert(el.mount, url, { theme: 'dark', label: 'Anhören' });
+      } else if (player) {
+        player.setUrl(url);
+      }
+    }).catch(() => {});
   }
 
   function showQuote(idx) {
@@ -543,7 +538,7 @@ Themenkatalog ansehen
       el.author.textContent = q.author ? '— ' + q.author + ' · ' + q.category : '— ' + q.category;
       el.text.style.opacity = '1';
     }, 180);
-    setHearButton(idx);
+    updatePlayerFor(idx);
   }
 
   function zieheZufall() {
@@ -551,27 +546,9 @@ Themenkatalog ansehen
     do { next = Math.floor(Math.random() * QUOTES.length); }
     while (QUOTES.length > 1 && next === currentIdx);
     currentIdx = next;
-    mode = 'random';
     el.label.textContent = 'Dein Impuls';
     showQuote(currentIdx);
   }
-
-  el.hear.addEventListener('click', () => {
-    if (el.audio.paused) {
-      el.audio.play().then(() => {
-        el.hearIcon.textContent = 'pause';
-        el.hearLabel.textContent = 'Pause';
-      }).catch(() => {});
-    } else {
-      el.audio.pause();
-      el.hearIcon.textContent = 'play_arrow';
-      el.hearLabel.textContent = 'Anhören';
-    }
-  });
-  el.audio.addEventListener('ended', () => {
-    el.hearIcon.textContent = 'play_arrow';
-    el.hearLabel.textContent = 'Anhören';
-  });
 
   showQuote(currentIdx);
   el.btn.addEventListener('click', zieheZufall);
@@ -600,5 +577,6 @@ document.querySelectorAll('a[href="thema.html"]').forEach(a => {
 <script src="auth.js"></script>
 <script src="login-ui.js"></script>
 <script src="mobile-nav.js"></script>
+<script src="page-audio.js"></script>
 </body>
 </html>

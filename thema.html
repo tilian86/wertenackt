@@ -263,10 +263,10 @@ function renderFormatContent() {
     const ts = i === mid ? 'text-on-tertiary-container' : 'text-secondary/60';
     const isLast = i === uiStations.length - 1;
     const mins = Math.round(s.duration / 60);
-    // Skelett-Teaser: bevorzugt explizit markierter Teaser, sonst die offene Frage
-    // (Fragen spoilern nicht — sie öffnen den Raum). Quotes/Items/Descriptions bleiben
-    // der Gastgeber:innen-Ansicht vorbehalten.
-    const teaser = s.teaser || s.question || '';
+    // Skelett-Teaser: NUR explizit gesetzter Teaser. Die Frage einer Station
+    // ist selbst ein Spoiler — Teilnehmende sollen nicht in Vorbereitung gehen,
+    // sondern im Moment reagieren. Wo kein teaser gesetzt ist: nur Titel.
+    const teaser = s.teaser || '';
     const detail = s.description || s.hostNote || s.question || '';
     return `
       <div class="relative pl-16 ${isLast ? '' : 'pb-10'}">
