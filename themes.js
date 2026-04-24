@@ -2505,6 +2505,183 @@ window.THEMES = {
         ])
       }
     }
+  },
+
+  // =====================================================================
+  // ERSTES DATE — 75 Minuten, auf einer Decke im Park, nach dem Match.
+  // Evidenzbasiert nach Aron (36 Fragen), Esther Perel, Helen Fisher,
+  // Alain de Botton, Schwartz (Paradox of Choice), Provine (Lachen).
+  // Fünf Phasen: Dekompression · Eskalation · Flirt · Stille · Ehrlichkeit.
+  // =====================================================================
+  date: {
+    title: 'Erstes Date',
+    subtitle: 'Für zwei, die sich gerade getroffen haben',
+    lead: 'Ein geführtes Gespräch für zwei Menschen, die sich auf einer App gematcht haben und jetzt live auf einer Decke sitzen. 75 Minuten, die die Höflichkeits-Fassade des Online-Datings durchbrechen — leicht, flirty, ehrlich, mit echter Stille und einer klaren Entscheidung am Ende.',
+    category: 'Date',
+    image: 'images/date.jpg',
+    philosophy1: 'Wir sind uns schon begegnet — in Text-Threads, Voice-Memos, im ausgewählten Licht von Fotos. Jetzt sitzen wir uns live gegenüber, und die ersten fünfzehn Minuten entscheiden, ob das ein Bewerbungsgespräch wird oder etwas anderes. Dieses Format gibt euch das Alibi für Verspieltheit — und die Struktur, um von kuratierter Selbstdarstellung zur echten Begegnung zu kommen.',
+    philosophy2: 'Der Abend folgt einer kalibrierten Dramaturgie: Erst Dekompression (Nervensystem runterfahren), dann gegenseitige Selbstoffenbarung auf steigender Tiefe (Aron), dann bewusst Humor und spielerische Spannung, zwei Minuten nonverbaler Augenkontakt, und am Schluss eine ehrliche Antwort auf die einzige Frage, die zählt: wollen wir uns nochmal sehen? — Ja oder Nein, beides ist hier okay.',
+    formats: {
+      pair: {
+        label: 'Zu zweit',
+        duration: '~1 Std. 15 Min.',
+        people: '2 Personen nach dem ersten Match',
+        stations: withFeedback([
+          // ---------- PHASE 1: DEKOMPRESSION & ORIENTIERUNG (0-15 Min) ----------
+          { name: 'Ankommen', title: 'Decke, Wein, ein Atemzug', duration: 3*60,
+            hostNote: 'Einer von euch hat die Decke ausgebreitet, den Wein eingeschenkt, die Snacks ausgepackt. Handys stumm und weg — außer ihr habt heute den Abend aufgenommen (optional, nur mit beidseitiger Zustimmung). Ein gemeinsamer tiefer Atemzug, bevor ihr anfangt. Keine Sprüche, keine Witze — einfach da sein.',
+            description: 'Das erste Date ist ein fragiler Moment. Ihr kommt aus Text-Chats, kuratierten Bildern, Voice-Memos — und jetzt sitzt eine echte Person da. Das Nervensystem reagiert mit einer leisen „Fight or Flight"-Mikroreaktion, auch wenn ihr euch freut. Drei Atemzüge geben dem Körper das Signal: das hier ist sicher.',
+            teaser: 'Drei Atemzüge, bevor wir anfangen.' },
+
+          { name: 'Magic Circle', title: 'Was diese 75 Minuten besonders macht', duration: 5*60,
+            hostNote: 'Eine:r liest vor. Der Cringe-Hinweis ist wichtig — am Anfang fühlt sich so ein Format fast immer komisch an. Lest es bewusst, auch die Stelle, wo es um das peinliche Gefühl geht. Dann: ein Nicken genügt als „okay, wir machen mit".',
+            quote: { text: 'Da sie sich vorher nie getroffen hatten, sind sie sicher, dass zwischen ihnen nichts gewesen sein kann. Aber was sagen die Straßen, Treppen, Flure — vielleicht sind sie sich eine Million Mal begegnet? So eine Sicherheit ist schön, aber Unsicherheit ist noch schöner.', author: 'Wisława Szymborska' },
+            description: 'Die nächsten 75 Minuten folgen einem Plan. Fragen kommen aus diesem Format, nicht von euch — das bedeutet: ihr dürft frech sein, verletzlich, albern, ehrlich, ohne für jede Regelverletzung die volle soziale Verantwortung zu tragen. Es steht auf der Karte, also dürft ihr.\n\nEin ehrlicher Hinweis: Die ersten fünf Minuten können sich komisch anfühlen. Vielleicht sogar ein bisschen cringe. Sich auf einer Decke mit einem Menschen, den man kaum kennt, durch vorgegebene Fragen zu arbeiten, ist nicht das, was ihr aus Romcoms kennt. Das ist okay. Fast jedes gute Gespräch, das länger als Smalltalk geht, hat genau diese erste schräge Minute, bevor es aufmacht. Wenn ihr euch drauf einlasst — beide, nicht nur eine:r — kippt es oft schneller, als ihr denkt. Wenn einer von euch kichern muss, kichert, macht einen Witz über die Situation, und dann weiter. Das Kichern ist Teil des Protokolls, nicht der Fehler.',
+            teaser: 'Der Abend beginnt — und er folgt einem Plan.' },
+
+          { name: 'Wer von weitem', title: 'Der erste Eindruck, ehrlich', duration: 6*60,
+            hostNote: 'Jede:r wählt 2-3 Fragen und stellt sie der/dem anderen. Antworten im Wechsel. Keine Höflichkeits-Pflicht — je ehrlicher, desto schneller wird es interessant.',
+            description: 'Ihr seid euch gerade zum ersten Mal live begegnet. Diese Fragen zwingen euch, die physische Realität des anderen bewusst wahrzunehmen — nicht das kuratierte Profil, sondern die Person auf der Decke.',
+            items: [
+              { accent: '1.', label: 'Erster Blick', text: 'Was war dein allererster Gedanke, als du mich heute von Weitem auf die Decke zukommen gesehen hast?' },
+              { accent: '2.', label: 'Warnschild', text: 'Wenn mein Dating-Profil ein ehrliches Warnschild hätte haben müssen — was hätte in fetten Buchstaben draufgestanden?' },
+              { accent: '3.', label: 'Outfit-Check', text: 'Wie viele Minuten, schätzt du, habe ich heute vor dem Spiegel gestanden, um genau diese Kombination zu wählen?' },
+              { accent: '4.', label: 'Chat vs. Live', text: 'Wirke ich live extrovertierter, leiser oder komplett anders als in unseren Nachrichten?' },
+              { accent: '5.', label: 'Wir beide', text: 'Nenne drei Dinge, von denen du intuitiv glaubst, dass wir sie bereits jetzt gemeinsam haben.' }
+            ],
+            teaser: 'Wie wirken wir live — ehrlich, aus dem Bauch?' },
+
+          // ---------- PHASE 2: KOGNITIVE & EMOTIONALE ESKALATION (15-40 Min) ----------
+          { name: 'Substanz', title: 'Was dich gerade wirklich bewegt', duration: 10*60,
+            hostNote: 'Beide nehmen sich je 4-5 Min. Wählt eine Frage aus der Liste (oder nehmt sie der Reihe nach). Wichtig: Nicht mit einer witzigen Bemerkung runterspielen, wenn die/der andere etwas Ehrliches geteilt hat. Zuhören, nachfragen, dann selbst öffnen.',
+            description: 'Smalltalk-Phase beendet. Diese Fragen zwingen euch heraus aus dem Lebenslauf-Modus (Beruf, Wohnort, Hobbys) in das, was die Psychologin Esther Perel „echte Chemie" nennt: Werte, Fragilitäten, Sehnsüchte.',
+            items: [
+              { accent: '1.', label: 'Dankbarkeit', text: 'Wofür in deinem Leben empfindest du momentan die meiste und ehrlichste Dankbarkeit?' },
+              { accent: '2.', label: 'Verlorene Überzeugung', text: 'Was ist eine tiefe Überzeugung über dich selbst, die du vor Kurzem endgültig über Bord werfen musstest?' },
+              { accent: '3.', label: 'Heimlicher Traum', text: 'Wovon träumst du schon lange — und warum hast du es bis heute nicht in die Tat umgesetzt?' },
+              { accent: '4.', label: 'Großzügigkeit', text: 'Was ist das Großzügigste, das jemals jemand für dich getan hat, ohne Gegenleistung zu erwarten?' },
+              { accent: '5.', label: 'Familie', text: 'In welchen Momenten fühlst du dich in deiner eigenen Familie manchmal wie ein Alien?' },
+              { accent: '6.', label: 'Dein jüngeres Ich', text: 'Was würdest du deinem 10 Jahre jüngeren Ich dringend ins Ohr flüstern, wenn du könntest?' }
+            ],
+            teaser: 'Jetzt wird es interessant — was wirklich zählt, nicht was auf dem Lebenslauf steht.' },
+
+          { name: 'Tief', title: 'Eine Frage, die weh tun darf', duration: 8*60,
+            hostNote: 'Jede:r wählt EINE Frage für sich selbst. Je 3-4 Min erzählen, der/die andere hört ohne zu unterbrechen. Wer nicht will, sagt „pass" und wählt eine leichtere Frage aus der vorigen Runde. Kein Druck — Verletzlichkeit nur, wenn sie freiwillig kommt.',
+            description: 'Diese Station ist optional tief. Die stärkste Bindung zwischen zwei Menschen entsteht durch reziproke Verletzlichkeit — aber nur, wenn beide freiwillig öffnen. Arons Forschung zeigt: genau das zwischen Fremden lässt messbar Nähe entstehen.',
+            items: [
+              { accent: '1.', label: 'Tränen', text: 'Wann hast du das letzte Mal vor einer anderen Person geweint — und was genau hat die Tränen ausgelöst?' },
+              { accent: '2.', label: 'Liebe heute', text: 'Welche Rolle spielen Liebe und physische Zuneigung in deinem gegenwärtigen Leben — ehrlich, nicht wunsch-deklariert?' },
+              { accent: '3.', label: 'Emotionaler Besitz', text: 'Was ist dein wertvollster materieller Besitz, der absolut keinen finanziellen, sondern nur emotionalen Wert hat?' }
+            ],
+            teaser: 'Eine Frage, die sich nicht jeden Tag stellt.' },
+
+          // ---------- PHASE 3: LUDISCHE SPANNUNG & FLIRT (40-60 Min) ----------
+          { name: 'Witz', title: 'Zeit für Quatsch', duration: 10*60,
+            hostNote: 'Nach der tiefen Runde braucht das Nervensystem Lachen — biochemisch notwendig, nicht optional. Wählt 3-4 Fragen, abwechselnd, schnell, ohne Überdenken. Das Ziel: gemeinsam lachen. Wenn ihr lacht, feuern die richtigen Hormone.',
+            description: 'Der Humor-Forscher Robert Provine hat gemessen: Lachen in Gesellschaft passiert 30-mal häufiger als allein. Es ist nicht primär Reaktion auf Humor — es ist ein Bindungssignal. Jetzt ist es dran.',
+            items: [
+              { accent: '1.', label: 'Essens-Meinung', text: 'Was ist die absolut unpopulärste oder kontroverseste Meinung, die du zum Thema Essen oder Kochen vertrittst?' },
+              { accent: '2.', label: 'Verbrechen-Raten', text: 'Wenn du für ein bizarres Verbrechen verhaftet würdest und deine Freund:innen lesen es in der Zeitung — was würden sie sofort denken, was du getan hast?' },
+              { accent: '3.', label: 'Zu-früh oder zu-spät', text: 'Für den Rest deines Lebens: immer 10 Minuten zu spät oder immer 20 Minuten zu früh. Wofür entscheidest du dich?' },
+              { accent: '4.', label: 'Nutzloses Talent', text: 'Welches absolut nutzlose Talent besitzt du, auf das du heimlich richtig stolz bist?' },
+              { accent: '5.', label: 'Teenager-Phase', text: 'Was war deine optisch oder musikalisch peinlichste Phase als Teenager — die du damals mit voller Überzeugung gelebt hast?' },
+              { accent: '6.', label: 'Kult-Regel', text: 'Wenn du ein charismatischer Kult-Führer wärst, was wäre die skurrilste Regel, die deine Anhänger:innen befolgen müssten?' },
+              { accent: '7.', label: 'Date-Fiasko', text: 'Was ist das Absurdeste oder Peinlichste, das dir je bei einem Date oder durch eine App passiert ist?' },
+              { accent: '8.', label: 'Leidenschafts-Vortrag', text: 'Worüber könntest du sofort, ohne Vorbereitung, einen 30-minütigen leidenschaftlichen Vortrag halten?' }
+            ],
+            teaser: 'Gemeinsam lachen baut schneller Nähe auf als jede ehrliche Frage.' },
+
+          { name: 'Spicy', title: 'Spannung, die darf', duration: 8*60,
+            hostNote: 'Markiert als optional. Wer nicht will, überspringt — oder wählt die harmlosesten Fragen. Regel: Jede:r darf eine Frage stellen, der/die andere darf mit einem Zwinkern auch nicht antworten. „Pass" ist hier genauso spicy.',
+            description: 'Diese Fragen zielen auf Sinnlichkeit, Anziehung und sanftes Flirten — nicht direkt auf sexuelle Historie. Der Humor-Forscher Peter McGraw nennt das Benign Violation: eine Norm wird spielerisch gekitzelt, aber der Rahmen macht klar, dass es sicher ist. Dopamin steigt. Genau das suchen wir.',
+            items: [
+              { accent: '1.', label: 'Endloser Abend', text: 'Was wäre für dich die absolut perfekteste Vorstellung eines romantischen, endlosen Abends?' },
+              { accent: '2.', label: 'Alltags-Sinnlichkeit', text: 'Was ist eine alltägliche, eigentlich nicht-sexuelle Handlung, die sich für dich unerwartet sinnlich oder intim anfühlt?' },
+              { accent: '3.', label: 'Körper-Sicherheit', text: 'Woran merkst du körperlich — am Atem, am Herzschlag — dass du dich in der Nähe einer bestimmten Person vollkommen sicher fühlst?' },
+              { accent: '4.', label: 'An dir attraktiv', text: 'Was ist die attraktivste Eigenschaft an mir, die rein gar nichts mit meinem Aussehen zu tun hat?' },
+              { accent: '5.', label: 'Ohne Worte', text: 'Wie zeigt dir jemand am besten, dass er oder sie dich begehrt, ohne ein einziges Wort zu sagen?' },
+              { accent: '6.', label: 'Erster Kuss', text: 'Wer von uns beiden macht normalerweise den ersten mutigen Schritt beim Küssen, was glaubst du?' },
+              { accent: '7.', label: 'Fallen lassen', text: 'Was braucht es emotional von einem Gegenüber, damit du dich fallen lassen und die Kontrolle abgeben kannst?' }
+            ],
+            teaser: 'Flirt ist die Kunst, Spannung spielerisch zuzulassen — und jederzeit zurücktreten zu können.' },
+
+          // ---------- PHASE 4: LIMBISCHE SYNCHRONISATION (60-65 Min) ----------
+          { name: 'Stille', title: 'Zwei Minuten in die Augen', duration: 4*60,
+            hostNote: 'Stoppuhr auf 2 Minuten. Ihr setzt euch gegenüber, Abstand ca. eine Armlänge. Keine Worte. Nur Augenkontakt — direkt, offen, ohne einander zu „analysieren". Wer kichern muss, kichert — und schaut weiter hin. Vor der Stille: das Zitat einmal laut lesen. Danach: 30 Sekunden schweigen, bevor ihr weitersprecht.',
+            quote: { text: 'Die ultimative Probe der Freundschaft und Liebe ist nicht die Verbesserung des anderen — die ultimative Probe ist das Zeugnisgeben, das Privileg, von jemandem gesehen zu werden.', author: 'David Whyte' },
+            description: 'Zwei Minuten stiller, direkter Augenkontakt zwischen Menschen, die sich gerade erst kennenlernen — das klingt harmlos und ist neurologisch der stärkste Moment des ganzen Abends. Das limbische System aktiviert, Spiegelneuronen feuern, Oxytocin wird ausgeschüttet, Cortisol fällt, die Hirnwellen synchronisieren sich im Gamma-Bereich. Und: es ist der einzige Moment, in dem ihr euch nicht hinter Sprache verstecken könnt.',
+            teaser: 'Zwei Minuten ohne Worte.' },
+
+          // ---------- PHASE 5: METAKOMMUNIKATION & ABSCHLUSS (65-75 Min) ----------
+          { name: 'Rückblick', title: 'Was ist passiert?', duration: 8*60,
+            hostNote: 'Je 3-4 Min. Erst jeder eine Frage für sich selbst ehrlich beantworten, dann die andere Runde. Keine Kommentare, nur zuhören.',
+            description: 'Die letzten 70 Minuten waren intensiver, als ihr bei einem ersten Date erwartet hättet. Bevor ihr geht, fasst ihr bewusst zusammen, was passiert ist — damit der Abend in der Erinnerung nicht zu einem diffusen Nebel wird, sondern Konturen behält.',
+            items: [
+              { accent: '1.', label: 'Erwartung vs. Realität', text: 'Ich bin heute mit der heimlichen Erwartung hergekommen, dass ___ — aber eigentlich ___.' },
+              { accent: '2.', label: 'Überraschung', text: 'Was an unserem Gespräch hat dich am meisten überrascht oder überrumpelt?' },
+              { accent: '3.', label: 'Neue Seite an mir', text: 'Welche vielleicht vergessene oder neue Seite an dir selbst hast du heute durch meine Reaktionen wiederentdeckt?' }
+            ],
+            teaser: 'Die letzten 70 Minuten — was war wirklich da?' },
+
+          { name: 'Entscheidung', title: 'Ja, Nein, oder: lass mich kurz nachdenken', duration: 6*60,
+            hostNote: 'Das ist die wichtigste Station. Beide antworten ehrlich aus dem Bauch heraus auf die EINE Frage: Wollen wir uns ein zweites Mal sehen? Ein würdevolles Nein ist genauso gültig wie ein Ja — und die Skripte darunter helfen beim Aussprechen, ohne dass es verletzend oder unklar wird.',
+            description: 'Das Ende eines Dates ist der Moment, an dem People-Pleasing am stärksten kickt. Ihr seid müde, wollt Konflikt vermeiden, und aus reiner Höflichkeit sagt man leicht „ja klar, melden wir uns" — und meint es nicht. Dieser Abend endet anders: mit einer ehrlichen Antwort. Beide sind hier okay.\n\nDie Frage: Hatten wir genug echte Begegnung und Chemie, um uns nochmal zu treffen? Antwortet aus dem Bauch, nicht aus der Höflichkeit.',
+            items: [
+              { accent: 'JA', label: 'Wenn ja:', text: 'Ich fand die letzten 75 Minuten elektrisierend. Ich würde dieses Gefühl wahnsinnig gerne bei einem zweiten Date vertiefen — wie siehst du das?' },
+              { accent: 'NEIN', label: 'Wenn nein:', text: 'Ich habe dieses Gespräch sehr genossen und danke dir für deine Offenheit. Ehrlich gesagt spüre ich von meiner Seite aber nicht den Funken, den ich suche. Ich wünsche dir alles Gute.' },
+              { accent: 'UNSICHER', label: 'Wenn du Zeit brauchst:', text: 'Ich finde dich interessant und will nicht aus Euphorie oder Höflichkeit antworten. Lass uns beide eine Nacht drüber schlafen — ich schreibe dir morgen Abend, ob ich ein zweites Date will. Ist das okay?' }
+            ],
+            teaser: 'Die einzige Frage, die heute Abend wirklich zählt.' },
+
+          { name: 'Eins', title: 'Ein Ding, das bleibt', duration: 3*60,
+            hostNote: 'Beide je einen Satz. Keine lange Begründung. Dann Decke zusammenpacken.',
+            description: 'Bevor ihr geht: ein Ding aus den letzten 75 Minuten, das dir in Erinnerung bleiben wird — eine Geste, ein Satz, ein Lachen, ein Schweigen.',
+            question: 'Was ist das Erste, woran du dich in drei Tagen erinnern wirst, wenn du an heute Abend denkst?' }
+        ])
+      },
+      solo: {
+        label: 'Vorbereitung allein',
+        duration: '~20 Min.',
+        people: 'Nur du — vor dem Date',
+        stations: withFeedback([
+          { name: 'Öffnen', title: 'Ein Moment, bevor du losgehst', duration: 2*60,
+            hostNote: 'Du hast noch 30-60 Minuten bis zum Date. Setz dich für 20 Minuten allein hin — kein Scrollen, keine Musik. Stift und Papier, oder Notizen-App. Die nächsten Minuten gehören nur dir.',
+            description: 'Diese Vorbereitung ist kein Date-Coaching. Sie ist ein kurzer innerer Raum, bevor du in die Situation gehst — damit du weißt, mit welcher Haltung du rübergehst, statt erst im Gespräch zu merken, was du eigentlich hättest sagen wollen.',
+            teaser: 'Kurz bei dir ankommen, bevor du bei jemand anderem ankommst.' },
+
+          { name: 'Wunsch', title: 'Was du dir eigentlich wünschst', duration: 3*60,
+            hostNote: 'Schreibe 2-3 Minuten am Stück. Nicht editieren, nicht schön machen. Niemand liest das außer dir.',
+            description: 'Hinter jedem Date steht eine Hoffnung. Manche davon kannst du aussprechen („Ich will jemanden, der lacht wie mein bester Freund"), manche sind leiser („Ich will nicht mehr allein sein", „Ich will gesehen werden"). Beide sind okay. Aber du gehst klarer in das Treffen, wenn du dir über deine eigenen Wünsche erst mal keine Show machst.',
+            question: 'Was wünschst du dir heute Abend wirklich — nicht das, was gut klingt, sondern das, was im Bauch ist?' },
+
+          { name: 'Angst', title: 'Was dir auch Angst macht', duration: 3*60,
+            hostNote: 'Schreibe die Sätze aus — erst die Befürchtung, dann: welche alte Geschichte hängt dran? Identifizier eigene Muster, ohne sie wegzudrücken.',
+            description: 'Angst vorm Date ist nicht peinlich — sie zeigt nur an, dass dir etwas an dieser Begegnung wichtig ist. Typische Gedanken: „Was, wenn ich nichts zu sagen habe." „Was, wenn ich zu viel rede." „Was, wenn ich ihn/sie enttäusche." „Was, wenn es kein Funke ist und ich wieder ein Date vergeudet habe."\n\nDie Forschung zeigt: wer seine Angst benennt, fährt das sympathische Nervensystem deutlich runter. Unterdrücken tut das Gegenteil.',
+            question: 'Was macht dir gerade am meisten Angst bei diesem Treffen — und welche alte Erfahrung schwingt da mit?' },
+
+          { name: 'Projektion', title: 'Was du noch nicht weißt', duration: 3*60,
+            hostNote: 'Lies und spür nach. Schreibe einen Satz: „Was ich über ihn/sie noch NICHT weiß, ist ___."',
+            description: 'Du hast bereits ein inneres Bild von der Person, die du gleich triffst — basierend auf Fotos, ein paar Nachrichten, vielleicht Voice-Memos. Dieses Bild ist größtenteils Projektion. Die Dating-Forschung nennt das den Perception-Behavior Intensification Effect: asynchrone Online-Kommunikation erzeugt eine übersteigerte, falsche Intimitätswahrnehmung.\n\nDas Beste, was du tun kannst: vorab bewusst machen, wie wenig du wirklich weißt. Dann kommt sie/er nicht „anders" — sondern lebt zum ersten Mal wirklich.',
+            question: 'Was weißt du über diesen Menschen eigentlich — und was nicht?' },
+
+          { name: 'Haltung', title: 'Mit welcher Haltung gehst du hin?', duration: 3*60,
+            hostNote: 'Lies. Schließ die Augen. Spüre nach, was heute dran ist.',
+            quote: { text: 'Das tiefste Hören ist nicht Warten, bis der andere fertig ist. Es ist Bereitschaft, überrascht zu werden.', author: 'David Whyte (sinngemäß)' },
+            description: 'Die häufigste Dynamik beim ersten Date: du hörst auf die Person, aber du hörst das, was du erwartest. Rote Flaggen werden gefunden, weil du nach ihnen suchst. Der Funke wird vermisst, weil du nach dem vertrauten Drama suchst. Die entscheidende Haltung für einen guten Abend heißt: ich bin bereit, überrascht zu werden. Von ihr, von ihm, von mir.',
+            question: 'Mit welcher einen Haltung gehst du heute rein — in einem Satz?' },
+
+          { name: 'Rot vs. Projektion', title: 'Was rote Flaggen sind — und was deine Projektion', duration: 3*60,
+            hostNote: 'Lies und notiere für dich: worauf achtest du heute Abend in beide Richtungen?',
+            description: 'Unterscheide bewusst: Rote Flaggen sind konkrete Verhaltensweisen (Grenzüberschreitung, narzisstische Monologe, Respektlosigkeit gegenüber Kellner:innen, unbegründete Wut, Lügen). Deine Projektion sind dagegen eigene Verletzungen, die du auf die andere Person legst („wirkt distanziert" kann Schutzmechanismus sein, nicht Ablehnung; „zu schnell zu persönlich" kann Offenheit sein, nicht Übergriffigkeit).\n\nWer mit dieser Unterscheidung reingeht, verliert keine echten Signale — und projiziert keine eigenen Ängste auf ein Gegenüber, das sie nicht verdient.',
+            question: 'Worauf willst du heute wirklich achten — und was ist eher deine alte Geschichte?' },
+
+          { name: 'Anker', title: 'Ein Wort in der Hosentasche', duration: 3*60,
+            hostNote: 'Ein Wort auf einen Zettel schreiben, in die Hosentasche stecken. Wenn der Abend schwer wird, kurz berühren.',
+            description: 'Ein Wort, das dich durch den Abend trägt. Nicht euer Motto, nicht euer Ziel — dein Anker, für dich. Gegen Nervosität, gegen Performance, für dich selbst.',
+            question: 'Welches Wort trägst du heute in der Hosentasche?' }
+        ])
+      }
+    }
   }
 
 };
