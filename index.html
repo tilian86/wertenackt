@@ -236,23 +236,34 @@ Kein Gastgeber-Stress. KlarKreis gibt die Struktur vor, stellt die richtigen Fra
 
 <!-- Impuls des Tages -->
 <section class="py-24">
-  <div class="max-w-4xl mx-auto bg-primary-container rounded-xl p-10 md:p-16 relative overflow-hidden">
-    <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="relative">
-      <p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-6" id="funkeLabel">Impuls des Tages</p>
-      <blockquote class="min-h-[140px]">
-        <p class="font-headline italic text-2xl md:text-4xl text-on-primary leading-snug transition-opacity duration-300" id="funkeText">—</p>
-        <footer class="font-label text-[11px] uppercase tracking-widest text-secondary-fixed-dim mt-8" id="funkeAuthor">—</footer>
-      </blockquote>
-      <div class="flex flex-wrap items-center gap-4 mt-10 pt-8 border-t border-on-primary/10">
-        <button id="funkeZiehen" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-colors">
-          <span class="material-symbols-outlined text-[16px]">casino</span>
-          Neuen Impuls ziehen
-        </button>
-        <a href="impulse.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-secondary-fixed-dim hover:text-on-primary transition-colors">
-          Alle Impulse ansehen
-          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-        </a>
+  <div class="max-w-4xl mx-auto relative">
+    <!-- Atmosphärische Orbs außerhalb der Card — erzeugen das weiche Glas-Glühen -->
+    <div class="absolute -top-16 -right-16 w-80 h-80 bg-secondary/25 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-on-tertiary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Glas-Panel: halbtransparent + backdrop-blur, dezent umrandet -->
+    <div class="relative bg-primary-container/85 backdrop-blur-2xl rounded-2xl p-10 md:p-16 overflow-hidden border border-on-primary/10 shadow-[0_40px_100px_-20px_rgba(6,27,14,0.55)]">
+      <!-- Innerer Highlight-Strich oben: gibt der „Scheibe\" ihre Glas-Kante -->
+      <div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-on-primary/25 to-transparent pointer-events-none"></div>
+      <!-- Sanfte Vignette: fadet Inhalt weich zum Rand hin aus, ohne den Text zu beschneiden -->
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);"></div>
+
+      <div class="relative">
+        <p class="font-label text-[11px] uppercase tracking-[0.2em] text-secondary-fixed-dim mb-8" id="funkeLabel">Impuls des Tages</p>
+        <blockquote class="min-h-[140px]">
+          <p class="font-headline italic text-2xl md:text-4xl text-on-primary leading-snug transition-all duration-500" id="funkeText">—</p>
+          <footer class="font-label text-[11px] uppercase tracking-widest text-secondary-fixed-dim mt-8" id="funkeAuthor">—</footer>
+        </blockquote>
+        <div class="flex flex-wrap items-center gap-4 mt-10 pt-8 border-t border-on-primary/10">
+          <button id="funkeZiehen" class="inline-flex items-center gap-2 bg-on-primary/10 hover:bg-on-primary/20 backdrop-blur-sm text-on-primary px-5 py-3 rounded-lg text-[11px] uppercase tracking-widest font-semibold transition-all duration-300 border border-on-primary/10 hover:border-on-primary/20 hover:-translate-y-0.5 hover:shadow-lg">
+            <span class="material-symbols-outlined text-[16px]">casino</span>
+            Neuen Impuls ziehen
+          </button>
+          <a href="impulse.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-secondary-fixed-dim hover:text-on-primary transition-colors group">
+            Alle Impulse ansehen
+            <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
