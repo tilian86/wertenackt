@@ -412,7 +412,7 @@ window.QUESTIONS = [
   { text: "Was war die ehrlichste Sache, die jemand jemals zu dir gesagt hat?", category: "100 Kennenlern-Fragen" },
   { text: "Wie sieht für dich ein perfekter gemeinsamer Abend in fünf Jahren aus?", category: "100 Kennenlern-Fragen" },
   { text: "Was an dir wird in einer guten Beziehung sichtbar, das sonst keiner sieht?", category: "100 Kennenlern-Fragen" },
-  { text: "Welche „rote Flagge" bei anderen ist eigentlich heimlich dein Typ?", category: "100 Kennenlern-Fragen" },
+  { text: "Welche rote Flagge bei anderen ist eigentlich heimlich dein Typ?", category: "100 Kennenlern-Fragen" },
 
   // — Phase 5 · Wurzeln & Familie — woher du kommst, was du mitschleppst
   { text: "Wer in deiner Familie hat dich am stärksten geprägt — und wie?", category: "100 Kennenlern-Fragen" },
